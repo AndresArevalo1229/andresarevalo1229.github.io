@@ -19,6 +19,7 @@ Portafolio estatico para mostrar experiencia Full Stack Jr. sin exponer informac
 - Barberia Admin.
 - Sistema WMS.
 - Proyecto Finanzas.
+- Mapa de modulos privados agrupados por dominio.
 
 ## Privacidad
 

@@ -528,6 +528,29 @@ h3 {
   height: 88%;
 }
 
+.module-section {
+  background: #fbfcfb;
+  border-top: 1px solid var(--line);
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.module-card {
+  min-height: 248px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.module-card p:not(.tag) {
+  color: var(--muted);
+}
+
 .band {
   background: var(--white);
   border-top: 1px solid var(--line);
@@ -638,6 +661,7 @@ pre {
   }
 
   .case-grid,
+  .module-grid,
   .repo-grid {
     grid-template-columns: 1fr;
   }
