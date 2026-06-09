@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andres Arevalo Navarro | Full Stack Jr.</title>
+    <meta
+      name="description"
+      content="Portafolio profesional de Andres Arevalo Navarro, desarrollador Full Stack Jr. con experiencia en React, Node.js, Express, Prisma y MySQL."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand-mark">AA</span>
+        <span>Andres Arevalo</span>
+      </a>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#casos">Casos</a>
+        <a href="#codigo">Codigo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="intro">
+        <div class="intro-copy">
+          <p class="eyebrow">Desarrollador Full Stack Jr.</p>
+          <h1>React, Node.js, Express, Prisma y MySQL para sistemas administrativos.</h1>
+          <p class="lead">
+            Construyo modulos para clientes, contratos, inventarios, pedidos, recibos y
+            reportes. Mis mejores trabajos son proyectos privados, por eso aqui los presento
+            como casos de estudio seguros y con datos ficticios.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/AndresArevalo1229">GitHub</a>
+            <a class="button secondary" href="mailto:andres.arevalonavarro@gmail.com">Email</a>
+          </div>
+        </div>
+        <div class="system-preview" aria-label="Vista previa de dashboard administrativo">
+          <div class="preview-top">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="preview-grid">
+            <div class="metric teal">
+              <strong>Contratos</strong>
+              <span>128 activos</span>
+            </div>
+            <div class="metric amber">
+              <strong>Inventario</strong>
+              <span>34 movimientos</span>
+            </div>
+            <div class="metric green">
+              <strong>Pedidos</strong>
+              <span>19 hoy</span>
+            </div>
+            <div class="table-preview">
+              <div class="row head"><span>Modulo</span><span>Estado</span></div>
+              <div class="row"><span>Clientes</span><span>Validado</span></div>
+              <div class="row"><span>Recibos</span><span>En revision</span></div>
+              <div class="row"><span>Proveedor</span><span>Activo</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Trabajo destacado</p>
+          <h2>Proyectos reales documentados sin exponer informacion privada.</h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div class="project-main">
+              <p class="tag">Proyecto privado</p>
+              <h3>Sistema de arrendamiento</h3>
+              <p>
+                Sistema administrativo privado para clientes, contratos, equipos,
+                seguros y recibos. Participe en pantallas de captura, consulta e
+                integracion con APIs REST.
+              </p>
+              <ul class="stack">
+                <li>React</li>
+                <li>APIs REST</li>
+                <li>MySQL</li>
+                <li>Formularios</li>
+              </ul>
+            </div>
+            <div class="project-visual rental" aria-hidden="true">
+              <div class="mini-toolbar"></div>
+              <div class="mini-lines">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="mini-status">Contrato activo</div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-main">
+              <p class="tag">Backend / Full stack</p>
+              <h3>Delice Flow</h3>
+              <p>
+                Plataforma administrativa para restaurante con gestion de menu,
+                pedidos, inventario, proveedores y movimientos. La version real se
+                mantiene privada.
+              </p>
+              <ul class="stack">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Prisma</li>
+                <li>MySQL</li>
+              </ul>
+            </div>
+            <div class="project-visual restaurant" aria-hidden="true">
+              <div class="ticket"></div>
+              <div class="plate"></div>
+              <div class="mini-status">Pedidos e inventario</div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-main">
+              <p class="tag">Inventarios</p>
+              <h3>Sistema WMS</h3>
+              <p>
+                Control de existencias, entradas, salidas, ubicaciones, lotes y viajes
+                de proveedores. El enfoque principal fue ordenar el flujo operativo y
+                el modelo de datos.
+              </p>
+              <ul class="stack">
+                <li>React</li>
+                <li>MySQL</li>
+                <li>Modelo de datos</li>
+                <li>Inventario</li>
+              </ul>
+            </div>
+            <div class="project-visual inventory" aria-hidden="true">
+              <div class="bins"><span></span><span></span><span></span></div>
+              <div class="mini-status">Movimientos trazables</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="casos" class="section band">
+        <div class="section-heading compact">
+          <p class="eyebrow">Confidencialidad</p>
+          <h2>Como presento proyectos privados de forma profesional.</h2>
+        </div>
+        <div class="case-grid">
+          <article class="case">
+            <h3>Problema</h3>
+            <p>
+              Los equipos necesitaban administrar informacion operativa como clientes,
+              contratos, inventarios y recibos sin depender de hojas o procesos manuales.
+            </p>
+          </article>
+          <article class="case">
+            <h3>Solucion</h3>
+            <p>
+              Desarrollo de modulos administrativos con formularios, consultas, APIs REST,
+              validaciones y estructura de datos para operaciones reales.
+            </p>
+          </article>
+          <article class="case">
+            <h3>Privacidad</h3>
+            <p>
+              No publico codigo privado, datos productivos, URLs internas, capturas reales,
+              credenciales, recibos, contratos ni informacion de clientes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="codigo" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Codigo publico seguro</p>
+          <h2>Demos recreadas con datos ficticios, separadas del trabajo privado.</h2>
+        </div>
+        <div class="code-panel">
+          <pre><code>type InventoryMovement = {
+  productId: string;
+  warehouseId: string;
+  quantity: number;
+  type: "IN" | "OUT";
+};
+
+function validateMovement(input: InventoryMovement) {
+  if (!input.productId) return "Producto requerido";
+  if (!input.warehouseId) return "Almacen requerido";
+  if (input.quantity <= 0) return "Cantidad invalida";
+  return null;
+}</code></pre>
+        </div>
+        <div class="repo-grid">
+          <a href="https://github.com/AndresArevalo1229/FrontFinanzas">
+            FrontFinanzas <span>TypeScript</span>
+          </a>
+          <a href="https://github.com/AndresArevalo1229/ProyectofinanzasBackebd">
+            ProyectofinanzasBackebd <span>TypeScript</span>
+          </a>
+          <a href="https://github.com/AndresArevalo1229/Imdelice_BackEnd">
+            Imdelice_BackEnd <span>TypeScript</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="contacto" class="contact">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>Disponible para oportunidades Full Stack Jr.</h2>
+        </div>
+        <div class="contact-actions">
+          <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com">
+            Copiar email
+          </button>
+          <a class="button secondary" href="https://github.com/AndresArevalo1229">Ver GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
