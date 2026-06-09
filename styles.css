@@ -254,6 +254,7 @@ h3 {
 }
 
 .section {
+  scroll-margin-top: 80px;
   padding: clamp(48px, 7vw, 88px) clamp(18px, 4vw, 56px);
 }
 
@@ -337,6 +338,22 @@ h3 {
 
 .project-visual.inventory {
   background: #eff5f0;
+}
+
+.project-visual.school {
+  background: #eef4fb;
+}
+
+.project-visual.notes {
+  background: #f7f3e8;
+}
+
+.project-visual.barber {
+  background: #f3f5f6;
+}
+
+.project-visual.finance {
+  background: #edf5f3;
 }
 
 .mini-toolbar {
@@ -424,6 +441,91 @@ h3 {
     linear-gradient(#bfd0c4 0 0) 14px 18px / 70% 10px no-repeat,
     linear-gradient(#bfd0c4 0 0) 14px 42px / 54% 10px no-repeat,
     var(--white);
+}
+
+.school-board {
+  height: 76px;
+  margin: 24px 24px 0;
+  border: 1px solid #afc3d6;
+  border-radius: 8px;
+  background:
+    linear-gradient(#afc3d6 0 0) 18px 20px / 42% 8px no-repeat,
+    linear-gradient(#afc3d6 0 0) 18px 44px / 68% 8px no-repeat,
+    var(--white);
+}
+
+.note-card {
+  position: absolute;
+  width: 42%;
+  height: 88px;
+  border: 1px solid #d7bf7b;
+  border-radius: 8px;
+  background:
+    linear-gradient(#d7bf7b 0 0) 14px 20px / 70% 8px no-repeat,
+    linear-gradient(#d7bf7b 0 0) 14px 44px / 46% 8px no-repeat,
+    var(--white);
+}
+
+.note-card.one {
+  top: 24px;
+  left: 24px;
+}
+
+.note-card.two {
+  top: 52px;
+  left: 34%;
+}
+
+.note-card.three {
+  top: 84px;
+  left: 18%;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 30px 24px 0;
+}
+
+.calendar-grid span {
+  min-height: 58px;
+  border: 1px solid #c8d0d3;
+  border-radius: 8px;
+  background:
+    linear-gradient(#c8d0d3 0 0) 12px 16px / 70% 8px no-repeat,
+    linear-gradient(#c8d0d3 0 0) 12px 38px / 48% 8px no-repeat,
+    var(--white);
+}
+
+.chart-bars {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  height: 142px;
+  padding: 28px 24px 0;
+}
+
+.chart-bars span {
+  flex: 1;
+  border-radius: 8px 8px 0 0;
+  background: #98bdb6;
+}
+
+.chart-bars span:nth-child(1) {
+  height: 38%;
+}
+
+.chart-bars span:nth-child(2) {
+  height: 72%;
+}
+
+.chart-bars span:nth-child(3) {
+  height: 54%;
+}
+
+.chart-bars span:nth-child(4) {
+  height: 88%;
 }
 
 .band {
