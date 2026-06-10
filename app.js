@@ -1,4 +1,413 @@
+const projects = [
+  {
+    id: "arrendamiento",
+    title: "Sistema de arrendamiento",
+    label: "Administrativo",
+    categories: ["Full stack", "Administrativo"],
+    summary:
+      "Sistema para clientes, contratos, equipos, seguros y recibos. Presentado como caso privado con datos ficticios.",
+    role: "Frontend y apoyo backend",
+    status: "Proyecto privado",
+    stack: ["React", "APIs REST", "MySQL", "Formularios"],
+    visual: "rental",
+    problem:
+      "El equipo necesitaba consultar clientes, contratos, equipos, seguros y recibos sin depender de hojas o procesos manuales.",
+    solution:
+      "Se organizaron pantallas de captura, consulta y seguimiento conectadas a APIs REST para operaciones administrativas.",
+    proves:
+      "Manejo de formularios, vistas administrativas, integración API y estructura de datos orientada a negocio.",
+    privacy:
+      "No se publican contratos, recibos, clientes, URLs internas, capturas reales ni código privado.",
+  },
+  {
+    id: "delice-flow",
+    title: "Delice Flow",
+    label: "Restaurante / Full stack",
+    categories: ["Full stack", "Backend", "Inventarios", "Administrativo"],
+    summary:
+      "Plataforma administrativa para menú, pedidos, inventario, proveedores y movimientos de restaurante.",
+    role: "Backend / Full Stack Jr.",
+    status: "Caso recreado",
+    stack: ["Node.js", "Express", "Prisma", "MySQL"],
+    visual: "restaurant",
+    problem:
+      "El restaurante requería centralizar menú, pedidos, proveedores e inventario en un flujo administrativo más ordenado.",
+    solution:
+      "Se desarrollaron endpoints REST, modelos con Prisma y módulos para consultar y registrar movimientos operativos.",
+    proves:
+      "Backend REST, modelado relacional, reglas de negocio, validaciones e integración con frontend administrativo.",
+    privacy:
+      "La versión real permanece privada; las demos usan productos, pedidos y proveedores ficticios.",
+  },
+  {
+    id: "schoolback",
+    title: "SchoolBack",
+    label: "Educación / Backend",
+    categories: ["Backend", "Administrativo"],
+    summary:
+      "Backend escolar para usuarios, permisos, registros y módulos administrativos sin datos de alumnos.",
+    role: "Backend",
+    status: "Proyecto privado",
+    stack: ["Node.js", "Express", "Prisma", "Auth"],
+    visual: "school",
+    problem:
+      "El sistema escolar necesitaba separar usuarios, permisos, registros y módulos administrativos de forma mantenible.",
+    solution:
+      "Se trabajó con rutas, servicios, autenticación, estructura de datos y separación de responsabilidades.",
+    proves:
+      "Organización backend, permisos, autenticación básica, servicios y estructura modular.",
+    privacy:
+      "No se muestran alumnos, credenciales, URLs internas, registros reales ni código fuente privado.",
+  },
+  {
+    id: "ag-note",
+    title: "AG Note",
+    label: "Productividad",
+    categories: ["Frontend", "Administrativo"],
+    summary:
+      "Módulo para seguimiento de notas, tareas, estados, filtros y flujo de información por equipo.",
+    role: "Frontend",
+    status: "Caso privado",
+    stack: ["React", "Node.js", "MySQL", "Filtros"],
+    visual: "notes",
+    problem:
+      "El equipo necesitaba registrar notas, tareas y estados de avance con consultas rápidas por filtros.",
+    solution:
+      "Se diseñaron vistas de seguimiento con formularios, estados, filtros y organización de información por módulo.",
+    proves:
+      "UI administrativa, control de estados, filtros, organización de datos y experiencia de usuario interna.",
+    privacy:
+      "Las tareas, usuarios, comentarios y estados productivos no se publican.",
+  },
+  {
+    id: "barberia-admin",
+    title: "Barbería Admin",
+    label: "Servicios / Admin",
+    categories: ["Full stack", "Administrativo"],
+    summary:
+      "Sistema para citas, servicios, clientes y movimientos de una barbería con caso recreado.",
+    role: "Full Stack Jr.",
+    status: "Demo segura",
+    stack: ["React", "Express", "MySQL", "Reportes"],
+    visual: "service",
+    problem:
+      "El negocio requería administrar citas, servicios, clientes y movimientos desde una interfaz sencilla.",
+    solution:
+      "Se estructuraron pantallas administrativas y flujo de datos para registrar citas, servicios y consultas.",
+    proves:
+      "Diseño de módulos administrativos, CRUD, reportes simples e integración frontend-backend.",
+    privacy:
+      "No se incluyen nombres, citas, pagos, clientes ni datos reales del negocio.",
+  },
+  {
+    id: "wms",
+    title: "Sistema WMS",
+    label: "Inventarios",
+    categories: ["Frontend", "Inventarios", "Administrativo"],
+    summary:
+      "Control de existencias, entradas, salidas, ubicaciones, lotes y viajes de proveedores.",
+    role: "Frontend / Modelo de datos",
+    status: "Proyecto privado",
+    stack: ["React", "MySQL", "Inventario", "Movimientos"],
+    visual: "inventory",
+    problem:
+      "La operación necesitaba trazabilidad para existencias, entradas, salidas, ubicaciones, lotes y viajes.",
+    solution:
+      "Se organizaron pantallas y estructura de datos para registrar movimientos y consultar inventario operativo.",
+    proves:
+      "Pensamiento de inventarios, trazabilidad, modelado de entidades y flujos administrativos.",
+    privacy:
+      "No se muestran proveedores reales, movimientos productivos, precios, lotes ni ubicaciones reales.",
+  },
+  {
+    id: "finanzas",
+    title: "Proyecto Finanzas",
+    label: "Repo público",
+    categories: ["Full stack", "Backend", "Frontend", "Repo público"],
+    summary:
+      "Proyecto público separado en frontend y backend para demostrar TypeScript, estructura y flujo full stack.",
+    role: "Frontend y backend",
+    status: "Repo público",
+    stack: ["TypeScript", "React", "Node.js", "Backend"],
+    visual: "finance",
+    problem:
+      "Era necesario tener un ejemplo público que mostrara estructura real de app sin depender de repos privados.",
+    solution:
+      "Se separó frontend y backend para mostrar consumo de API, organización de código y lógica de aplicación.",
+    proves:
+      "TypeScript, separación de capas, estructura full stack y capacidad de publicar trabajo revisable.",
+    privacy:
+      "El repo público no contiene credenciales ni datos privados; se usa como muestra segura.",
+  },
+];
+
+const modules = [
+  {
+    title: "Arrendamiento",
+    count: "Clientes, contratos y recibos",
+    description:
+      "Módulos para administrar contratos, equipos, seguros, recibos y consultas operativas.",
+    skills: ["React", "Node.js", "APIs REST", "MySQL"],
+  },
+  {
+    title: "Ventas",
+    count: "Flujo comercial",
+    description:
+      "Pantallas y backend para inventario, movimientos, administración y reportes de ventas.",
+    skills: ["React", "Backend", "Inventario", "Reportes"],
+  },
+  {
+    title: "Operación",
+    count: "Scrum interno",
+    description:
+      "Seguimiento de actividades, tableros, estados, sprints y control de trabajo por equipo.",
+    skills: ["Estados", "Filtros", "Tableros", "Seguimiento"],
+  },
+  {
+    title: "Inventarios",
+    count: "Movimientos y proveedores",
+    description:
+      "Entradas, salidas, existencias, viajes, lotes y control operativo de almacén.",
+    skills: ["MySQL", "Movimientos", "Proveedores", "Trazabilidad"],
+  },
+  {
+    title: "Personal",
+    count: "Checador administrativo",
+    description:
+      "Interfaz para asistencia, horarios, registros de personal y consulta de actividad.",
+    skills: ["React", "Formularios", "Consultas", "UX admin"],
+  },
+  {
+    title: "APIs",
+    count: "Servicios versionados",
+    description:
+      "Rutas, servicios, validaciones y estructura de datos para integraciones internas.",
+    skills: ["Node.js", "REST", "Servicios", "Validación"],
+  },
+];
+
+const repos = [
+  {
+    name: "Portafolio principal",
+    url: "https://github.com/AndresArevalo1229/andresarevalo1229.github.io",
+    note: "GitHub Pages",
+    description:
+      "Página entregable para mostrar casos privados como experiencia profesional segura.",
+    role: "Demuestra criterio de presentación, privacidad y comunicación técnica.",
+    stack: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+  },
+  {
+    name: "FrontFinanzas",
+    url: "https://github.com/AndresArevalo1229/FrontFinanzas",
+    note: "Repo público",
+    description:
+      "Frontend público para mostrar estructura de aplicación, consumo de datos y componentes.",
+    role: "Buen repo para fijar porque enseña React y TypeScript en una app concreta.",
+    stack: ["React", "TypeScript", "Frontend", "UI"],
+  },
+  {
+    name: "Finanzas Backend",
+    url: "https://github.com/AndresArevalo1229/ProyectofinanzasBackebd",
+    note: "Repo público",
+    description:
+      "Backend separado para mostrar rutas, servicios, lógica de negocio y API.",
+    role: "Complementa el frontend y deja ver trabajo full stack sin exponer proyectos privados.",
+    stack: ["Node.js", "TypeScript", "API", "Backend"],
+  },
+  {
+    name: "Imdelice Backend",
+    url: "https://github.com/AndresArevalo1229/Imdelice_BackEnd",
+    note: "Demo segura",
+    description:
+      "Backend público relacionado con flujo de restaurante, útil para explicar APIs y módulos.",
+    role: "Se presenta como referencia pública separada del sistema privado real.",
+    stack: ["Node.js", "Express", "REST", "MySQL"],
+  },
+  {
+    name: "Android restaurante",
+    url: "https://github.com/AndresArevalo1229/Andorid",
+    note: "Repo público",
+    description:
+      "Aplicación móvil de restaurante que muestra experiencia adicional fuera del frontend web.",
+    role: "Ayuda a demostrar base móvil y capacidad de aprender otras plataformas.",
+    stack: ["Kotlin", "Android", "Mobile", "Restaurante"],
+  },
+  {
+    name: "Im-delice web",
+    url: "https://github.com/AndresArevalo1229/Im-delice",
+    note: "Repo público",
+    description:
+      "Sitio web público de restaurante que sirve como pieza visual y complemento del backend.",
+    role: "Útil si se fija junto al backend para mostrar relación entre interfaz y servicios.",
+    stack: ["HTML", "CSS", "Frontend", "UI"],
+  },
+];
+
+const projectGrid = document.querySelector("#projectGrid");
+const projectDetail = document.querySelector("#projectDetail");
+const filterButtons = document.querySelectorAll("[data-filter]");
+const moduleBoard = document.querySelector("#moduleBoard");
+const repoShowcase = document.querySelector("#repoShowcase");
 const copyButtons = document.querySelectorAll("[data-copy]");
+const counters = document.querySelectorAll("[data-count]");
+
+let activeFilter = "Todos";
+let activeProjectId = projects[0].id;
+
+function renderProjects() {
+  const visibleProjects =
+    activeFilter === "Todos"
+      ? projects
+      : projects.filter((project) => project.categories.includes(activeFilter));
+
+  if (!visibleProjects.some((project) => project.id === activeProjectId)) {
+    activeProjectId = visibleProjects[0]?.id ?? projects[0].id;
+  }
+
+  projectGrid.innerHTML = visibleProjects
+    .map(
+      (project) => `
+        <button class="project-card ${project.id === activeProjectId ? "is-active" : ""}" type="button" data-project="${project.id}" aria-pressed="${project.id === activeProjectId}">
+          <span>
+            <span class="tag">${project.label}</span>
+            <h3>${project.title}</h3>
+            <p class="project-summary">${project.summary}</p>
+            <ul class="stack">
+              ${project.stack.map((item) => `<li>${item}</li>`).join("")}
+            </ul>
+          </span>
+          <span class="mini-dashboard ${project.visual}" aria-hidden="true"></span>
+        </button>
+      `,
+    )
+    .join("");
+
+  const cards = projectGrid.querySelectorAll("[data-project]");
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      activeProjectId = card.getAttribute("data-project");
+      renderProjects();
+      renderDetail();
+    });
+  });
+
+  renderDetail();
+}
+
+function renderDetail() {
+  const project = projects.find((item) => item.id === activeProjectId) ?? projects[0];
+
+  projectDetail.innerHTML = `
+    <div class="detail-visual">
+      <div class="detail-visual-grid" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="detail-content">
+      <span class="tag">${project.status}</span>
+      <h3>${project.title}</h3>
+      <p class="detail-text">${project.summary}</p>
+      <div class="detail-meta">
+        <div>
+          <span>Rol</span>
+          <strong>${project.role}</strong>
+        </div>
+        <div>
+          <span>Stack</span>
+          <strong>${project.stack.slice(0, 3).join(" · ")}</strong>
+        </div>
+      </div>
+      <div class="detail-list">
+        <article>
+          <h4>Problema</h4>
+          <p>${project.problem}</p>
+        </article>
+        <article>
+          <h4>Solución</h4>
+          <p>${project.solution}</p>
+        </article>
+        <article>
+          <h4>Qué demuestra</h4>
+          <p>${project.proves}</p>
+        </article>
+        <article>
+          <h4>Privacidad</h4>
+          <p>${project.privacy}</p>
+        </article>
+      </div>
+    </div>
+  `;
+}
+
+function renderModules() {
+  moduleBoard.innerHTML = modules
+    .map(
+      (module) => `
+        <article class="module-domain">
+          <header>
+            <div>
+              <p class="eyebrow">${module.title}</p>
+              <h3>${module.count}</h3>
+            </div>
+            <span class="module-count">${module.skills.length} skills</span>
+          </header>
+          <p>${module.description}</p>
+          <div class="module-skills">
+            ${module.skills.map((skill) => `<span>${skill}</span>`).join("")}
+          </div>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderRepos() {
+  repoShowcase.innerHTML = repos
+    .map(
+      (repo) => `
+        <article class="repo-card">
+          <span class="repo-note">${repo.note}</span>
+          <h3>${repo.name}</h3>
+          <p>${repo.description}</p>
+          <div class="repo-role">${repo.role}</div>
+          <ul class="stack">
+            ${repo.stack.map((item) => `<li>${item}</li>`).join("")}
+          </ul>
+          <div class="repo-actions">
+            <a class="repo-link" href="${repo.url}">Ver repo</a>
+          </div>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function animateCounters() {
+  counters.forEach((counter) => {
+    const target = Number(counter.getAttribute("data-count"));
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 24));
+    const interval = window.setInterval(() => {
+      current += step;
+      if (current >= target) {
+        counter.textContent = String(target);
+        window.clearInterval(interval);
+        return;
+      }
+      counter.textContent = String(current);
+    }, 36);
+  });
+}
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    activeFilter = button.getAttribute("data-filter");
+    filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+    renderProjects();
+  });
+});
 
 copyButtons.forEach((button) => {
   button.addEventListener("click", async () => {
@@ -17,3 +426,8 @@ copyButtons.forEach((button) => {
     }
   });
 });
+
+renderProjects();
+renderModules();
+renderRepos();
+animateCounters();

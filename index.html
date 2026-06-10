@@ -6,454 +6,198 @@
     <title>Andres Arevalo Navarro | Full Stack Jr.</title>
     <meta
       name="description"
-      content="Portafolio profesional de Andres Arevalo Navarro, desarrollador Full Stack Jr. con experiencia en React, Node.js, Express, Prisma y MySQL."
+      content="Portafolio profesional de Andres Arevalo Navarro, desarrollador Full Stack Jr. con experiencia en React, Node.js, Express, Prisma y MySQL para sistemas administrativos."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#inicio" aria-label="Inicio">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
         <span class="brand-mark">AA</span>
         <span>Andres Arevalo</span>
       </a>
-      <nav class="nav" aria-label="Secciones">
+      <nav class="nav" aria-label="Secciones principales">
         <a href="#proyectos">Proyectos</a>
-        <a href="#modulos">Modulos</a>
-        <a href="#casos">Privacidad</a>
-        <a href="#codigo">Repos</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#privacidad">Privacidad</a>
+        <a href="#repos">Repos</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
 
     <main>
-      <section id="inicio" class="intro">
-        <div class="intro-copy">
+      <section id="inicio" class="hero">
+        <div class="hero-copy">
           <p class="eyebrow">Desarrollador Full Stack Jr.</p>
-          <h1>React, Node.js, Express, Prisma y MySQL para sistemas administrativos.</h1>
+          <h1>Sistemas administrativos con React, Node.js, Express, Prisma y MySQL.</h1>
           <p class="lead">
-            Construyo modulos para clientes, contratos, inventarios, pedidos, recibos y
-            reportes. Mi trabajo mas fuerte esta en sistemas privados; aqui lo presento
-            como casos de estudio, demos y repos publicos seguros.
+            Desarrollo módulos para clientes, contratos, inventarios, pedidos, recibos y
+            reportes. Mis mejores trabajos son privados, por eso los presento como casos
+            de estudio seguros, demos recreadas y repos públicos.
           </p>
-          <div class="actions">
-            <a class="button primary" href="https://github.com/AndresArevalo1229">GitHub</a>
-            <a class="button secondary" href="mailto:andres.arevalonavarro@gmail.com">Email</a>
+          <div class="hero-actions" aria-label="Acciones principales">
+            <a class="button primary" href="#proyectos">Ver casos</a>
+            <a class="button secondary" href="https://github.com/AndresArevalo1229">GitHub</a>
           </div>
+          <dl class="hero-stats" aria-label="Resumen profesional">
+            <div>
+              <dt data-count="7">0</dt>
+              <dd>casos documentados</dd>
+            </div>
+            <div>
+              <dt data-count="9">0</dt>
+              <dd>dominios de módulos</dd>
+            </div>
+            <div>
+              <dt data-count="6">0</dt>
+              <dd>repos seguros</dd>
+            </div>
+          </dl>
         </div>
-        <div class="system-preview" aria-label="Vista previa de dashboard administrativo">
-          <div class="preview-top">
+
+        <div class="dashboard-shell" aria-label="Dashboard administrativo ficticio">
+          <div class="window-bar">
             <span></span>
             <span></span>
             <span></span>
+            <strong>Admin workspace</strong>
           </div>
-          <div class="preview-grid">
-            <div class="metric teal">
-              <strong>Contratos</strong>
-              <span>128 activos</span>
-            </div>
-            <div class="metric amber">
-              <strong>Inventario</strong>
-              <span>34 movimientos</span>
-            </div>
-            <div class="metric green">
-              <strong>Pedidos</strong>
-              <span>19 hoy</span>
-            </div>
-            <div class="table-preview">
-              <div class="row head"><span>Modulo</span><span>Estado</span></div>
-              <div class="row"><span>Clientes</span><span>Validado</span></div>
-              <div class="row"><span>Recibos</span><span>En revision</span></div>
-              <div class="row"><span>Proveedor</span><span>Activo</span></div>
-            </div>
+          <div class="dashboard-grid">
+            <article class="metric-card metric-contracts">
+              <span>Contratos</span>
+              <strong>128</strong>
+              <small>activos</small>
+            </article>
+            <article class="metric-card metric-inventory">
+              <span>Inventario</span>
+              <strong>34</strong>
+              <small>movimientos</small>
+            </article>
+            <article class="metric-card metric-orders">
+              <span>Pedidos</span>
+              <strong>19</strong>
+              <small>hoy</small>
+            </article>
+            <article class="operations-panel">
+              <div class="panel-heading">
+                <span>Módulo</span>
+                <span>Estado</span>
+              </div>
+              <div class="operation-row">
+                <span>Clientes</span>
+                <strong>Validado</strong>
+              </div>
+              <div class="operation-row">
+                <span>Recibos</span>
+                <strong>En revisión</strong>
+              </div>
+              <div class="operation-row">
+                <span>Proveedor</span>
+                <strong>Activo</strong>
+              </div>
+            </article>
+            <article class="flow-panel">
+              <span class="flow-step is-active">Captura</span>
+              <span class="flow-line"></span>
+              <span class="flow-step">Validación</span>
+              <span class="flow-line"></span>
+              <span class="flow-step">Reporte</span>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="proyectos" class="section">
+      <section id="proyectos" class="section projects-section">
         <div class="section-heading">
           <p class="eyebrow">Trabajo destacado</p>
-          <h2>Proyectos reales documentados sin exponer informacion privada.</h2>
+          <h2>Casos reales, presentados con contexto profesional y datos ficticios.</h2>
+          <p>
+            Cada caso resume el problema, mi participación y lo que demuestra técnicamente
+            sin publicar código privado, datos productivos ni capturas reales.
+          </p>
         </div>
-        <div class="project-list">
-          <article class="project">
-            <div class="project-main">
-              <p class="tag">Proyecto privado</p>
-              <h3>Sistema de arrendamiento</h3>
-              <p>
-                Sistema administrativo privado para clientes, contratos, equipos,
-                seguros y recibos. Participe en pantallas de captura, consulta e
-                integracion con APIs REST.
-              </p>
-              <ul class="stack">
-                <li>React</li>
-                <li>APIs REST</li>
-                <li>MySQL</li>
-                <li>Formularios</li>
-              </ul>
-            </div>
-            <div class="project-visual rental" aria-hidden="true">
-              <div class="mini-toolbar"></div>
-              <div class="mini-lines">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="mini-status">Contrato activo</div>
-            </div>
-          </article>
 
-          <article class="project">
-            <div class="project-main">
-              <p class="tag">Restaurante / Full stack</p>
-              <h3>Delice Flow</h3>
-              <p>
-                Plataforma administrativa para restaurante con gestion de menu,
-                pedidos, inventario, proveedores y movimientos. La version real se
-                mantiene privada.
-              </p>
-              <ul class="stack">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Prisma</li>
-                <li>MySQL</li>
-              </ul>
-            </div>
-            <div class="project-visual restaurant" aria-hidden="true">
-              <div class="ticket"></div>
-              <div class="plate"></div>
-              <div class="mini-status">Pedidos e inventario</div>
-            </div>
-          </article>
+        <div class="filter-row" aria-label="Filtrar proyectos">
+          <button class="filter-button is-active" type="button" data-filter="Todos">Todos</button>
+          <button class="filter-button" type="button" data-filter="Full stack">Full stack</button>
+          <button class="filter-button" type="button" data-filter="Backend">Backend</button>
+          <button class="filter-button" type="button" data-filter="Frontend">Frontend</button>
+          <button class="filter-button" type="button" data-filter="Inventarios">Inventarios</button>
+          <button class="filter-button" type="button" data-filter="Administrativo">Administrativo</button>
+          <button class="filter-button" type="button" data-filter="Repo público">Repo público</button>
+        </div>
 
-          <article class="project">
-            <div class="project-main">
-              <p class="tag">Educacion / Backend</p>
-              <h3>SchoolBack</h3>
-              <p>
-                Sistema escolar privado para organizar usuarios, registros, permisos y
-                modulos administrativos. El caso se muestra sin datos de alumnos,
-                credenciales ni URLs internas.
-              </p>
-              <ul class="stack">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Prisma</li>
-                <li>MySQL</li>
-                <li>Auth</li>
-              </ul>
-            </div>
-            <div class="project-visual school" aria-hidden="true">
-              <div class="school-board"></div>
-              <div class="mini-lines">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="mini-status">Usuarios y permisos</div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-main">
-              <p class="tag">Productividad</p>
-              <h3>AG Note</h3>
-              <p>
-                Modulo para seguimiento de notas, tareas y estados de trabajo. El valor
-                esta en la organizacion de informacion, filtros, formularios y flujo de
-                seguimiento.
-              </p>
-              <ul class="stack">
-                <li>React</li>
-                <li>Node.js</li>
-                <li>MySQL</li>
-                <li>Filtros</li>
-                <li>Estados</li>
-              </ul>
-            </div>
-            <div class="project-visual notes" aria-hidden="true">
-              <div class="note-card one"></div>
-              <div class="note-card two"></div>
-              <div class="note-card three"></div>
-              <div class="mini-status">Seguimiento</div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-main">
-              <p class="tag">Servicios / Admin</p>
-              <h3>Barberia Admin</h3>
-              <p>
-                Sistema para administrar citas, servicios, clientes y movimientos de una
-                barberia. Se documenta como caso recreado para evitar exponer datos del
-                negocio real.
-              </p>
-              <ul class="stack">
-                <li>React</li>
-                <li>Express</li>
-                <li>MySQL</li>
-                <li>Citas</li>
-                <li>Reportes</li>
-              </ul>
-            </div>
-            <div class="project-visual barber" aria-hidden="true">
-              <div class="calendar-grid"><span></span><span></span><span></span><span></span></div>
-              <div class="mini-status">Citas y clientes</div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-main">
-              <p class="tag">Inventarios</p>
-              <h3>Sistema WMS</h3>
-              <p>
-                Control de existencias, entradas, salidas, ubicaciones, lotes y viajes
-                de proveedores. El enfoque principal fue ordenar el flujo operativo y
-                el modelo de datos.
-              </p>
-              <ul class="stack">
-                <li>React</li>
-                <li>MySQL</li>
-                <li>Modelo de datos</li>
-                <li>Inventario</li>
-              </ul>
-            </div>
-            <div class="project-visual inventory" aria-hidden="true">
-              <div class="bins"><span></span><span></span><span></span></div>
-              <div class="mini-status">Movimientos trazables</div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-main">
-              <p class="tag">Repo publico</p>
-              <h3>Proyecto Finanzas</h3>
-              <p>
-                Proyecto publico separado en frontend y backend. Es buen candidato para
-                fijarlo en GitHub porque muestra TypeScript, estructura de app y trabajo
-                full stack.
-              </p>
-              <ul class="stack">
-                <li>TypeScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Backend</li>
-              </ul>
-            </div>
-            <div class="project-visual finance" aria-hidden="true">
-              <div class="chart-bars"><span></span><span></span><span></span><span></span></div>
-              <div class="mini-status">Front + Back</div>
-            </div>
-          </article>
+        <div class="project-layout">
+          <div class="project-grid" id="projectGrid" aria-label="Lista de proyectos"></div>
+          <aside class="detail-panel" aria-live="polite">
+            <div class="detail-sticky" id="projectDetail"></div>
+          </aside>
         </div>
       </section>
 
-      <section id="modulos" class="section module-section">
+      <section id="modulos" class="section modules-section">
         <div class="section-heading">
           <p class="eyebrow">Mapa de experiencia</p>
-          <h2>Mas repos de trabajo convertidos en dominios presentables.</h2>
+          <h2>Módulos privados convertidos en dominios presentables.</h2>
+          <p>
+            Esta sección agrupa trabajo real por dominio funcional. La idea es mostrar
+            criterio técnico y contexto de negocio sin mencionar rutas internas ni datos
+            sensibles.
+          </p>
         </div>
-        <div class="module-grid">
-          <article class="module-card">
-            <p class="tag">Arrendamiento</p>
-            <h3>AG / contratos y recibos</h3>
-            <p>
-              Frontend y backend para clientes, contratos, equipos, seguros, recibos y
-              consultas administrativas.
-            </p>
-            <ul class="stack">
-              <li>React</li>
-              <li>Node.js</li>
-              <li>APIs REST</li>
-              <li>MySQL</li>
-            </ul>
-          </article>
-          <article class="module-card">
-            <p class="tag">Ventas</p>
-            <h3>VentasApp</h3>
-            <p>
-              Modulos web y backend para flujo comercial, inventario, movimientos y
-              administracion de ventas.
-            </p>
-            <ul class="stack">
-              <li>React</li>
-              <li>Backend</li>
-              <li>Inventario</li>
-              <li>Reportes</li>
-            </ul>
-          </article>
-          <article class="module-card">
-            <p class="tag">Operacion</p>
-            <h3>Scrum interno</h3>
-            <p>
-              Herramientas para seguimiento de actividades, tableros, estados, sprints y
-              control de trabajo por equipo.
-            </p>
-            <ul class="stack">
-              <li>React</li>
-              <li>Node.js</li>
-              <li>Estados</li>
-              <li>Filtros</li>
-            </ul>
-          </article>
-          <article class="module-card">
-            <p class="tag">Inventarios</p>
-            <h3>Frutas / movimientos</h3>
-            <p>
-              Pantallas para existencias, entradas, salidas, proveedores, viajes y control
-              de operaciones de almacen.
-            </p>
-            <ul class="stack">
-              <li>Frontend</li>
-              <li>MySQL</li>
-              <li>Movimientos</li>
-              <li>Proveedores</li>
-            </ul>
-          </article>
-          <article class="module-card">
-            <p class="tag">Personal</p>
-            <h3>Checador administrativo</h3>
-            <p>
-              Interfaz para asistencia, horarios, registros de personal y consulta de
-              actividad operativa.
-            </p>
-            <ul class="stack">
-              <li>React</li>
-              <li>Formularios</li>
-              <li>Consultas</li>
-              <li>UX admin</li>
-            </ul>
-          </article>
-          <article class="module-card">
-            <p class="tag">Educacion</p>
-            <h3>Eskool / backend</h3>
-            <p>
-              Backend educativo para usuarios, permisos, registros y estructura de
-              modulos escolares.
-            </p>
-            <ul class="stack">
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>Prisma</li>
-              <li>Auth</li>
-            </ul>
-          </article>
-          <article class="module-card">
-            <p class="tag">Servicios</p>
-            <h3>Optica / frontend</h3>
-            <p>
-              Frontend administrativo para catalogos, clientes, servicios y flujo de
-              atencion comercial.
-            </p>
-            <ul class="stack">
-              <li>React</li>
-              <li>UI admin</li>
-              <li>Catalogos</li>
-              <li>Clientes</li>
-            </ul>
-          </article>
-          <article class="module-card">
-            <p class="tag">API</p>
-            <h3>EF API v3</h3>
-            <p>
-              Trabajo con APIs versionadas, rutas, servicios, validaciones y estructura
-              de datos para integraciones.
-            </p>
-            <ul class="stack">
-              <li>Node.js</li>
-              <li>REST</li>
-              <li>Servicios</li>
-              <li>Validacion</li>
-            </ul>
-          </article>
-          <article class="module-card">
-            <p class="tag">Full stack</p>
-            <h3>PartyDnD</h3>
-            <p>
-              Proyecto con frontend y backend separados, util para mostrar estructura de
-              aplicacion completa y colaboracion por repos.
-            </p>
-            <ul class="stack">
-              <li>Frontend</li>
-              <li>Backend</li>
-              <li>APIs</li>
-              <li>Equipo</li>
-            </ul>
-          </article>
-        </div>
+        <div class="module-board" id="moduleBoard"></div>
       </section>
 
-      <section id="casos" class="section band">
+      <section id="privacidad" class="section privacy-section">
         <div class="section-heading compact">
           <p class="eyebrow">Confidencialidad</p>
-          <h2>Como presento proyectos privados de forma profesional.</h2>
+          <h2>Cómo presento proyectos privados sin comprometer información.</h2>
         </div>
-        <div class="case-grid">
-          <article class="case">
-            <h3>Problema</h3>
+        <div class="privacy-grid">
+          <article class="privacy-card">
+            <span>01</span>
+            <h3>Contexto</h3>
             <p>
-              Los equipos necesitaban administrar informacion operativa como clientes,
-              contratos, inventarios y recibos sin depender de hojas o procesos manuales.
+              Explico el problema operativo, los usuarios del sistema y el flujo general
+              sin revelar clientes, contratos, ventas ni información interna.
             </p>
           </article>
-          <article class="case">
-            <h3>Solucion</h3>
+          <article class="privacy-card">
+            <span>02</span>
+            <h3>Ejecución</h3>
             <p>
-              Desarrollo de modulos administrativos con formularios, consultas, APIs REST,
-              validaciones y estructura de datos para operaciones reales.
+              Muestro responsabilidades: módulos, formularios, APIs REST, validaciones,
+              consultas, modelos de datos y pruebas funcionales.
             </p>
           </article>
-          <article class="case">
-            <h3>Privacidad</h3>
+          <article class="privacy-card">
+            <span>03</span>
+            <h3>Seguridad</h3>
             <p>
-              No publico codigo privado, datos productivos, URLs internas, capturas reales,
-              credenciales, recibos, contratos ni informacion de clientes.
+              No publico código privado, credenciales, URLs internas, capturas reales,
+              datos productivos, recibos, contratos ni información de clientes.
             </p>
           </article>
         </div>
       </section>
 
-      <section id="codigo" class="section">
+      <section id="repos" class="section repos-section">
         <div class="section-heading">
-          <p class="eyebrow">Repos publicos seguros</p>
-          <h2>Lo que conviene fijar en GitHub para que no se vean solo practicas.</h2>
+          <p class="eyebrow">Repos públicos seguros</p>
+          <h2>Repos que conviene mostrar para que el perfil no parezca solo escolar.</h2>
+          <p>
+            Estos enlaces se presentan con el valor técnico que demuestran. Cuando un repo
+            es demo o recreación, se indica para mantener claridad.
+          </p>
         </div>
-        <div class="code-panel">
-          <pre><code>type InventoryMovement = {
-  productId: string;
-  warehouseId: string;
-  quantity: number;
-  type: "IN" | "OUT";
-};
-
-function validateMovement(input: InventoryMovement) {
-  if (!input.productId) return "Producto requerido";
-  if (!input.warehouseId) return "Almacen requerido";
-  if (input.quantity <= 0) return "Cantidad invalida";
-  return null;
-}</code></pre>
-        </div>
-        <div class="repo-grid">
-          <a href="https://github.com/AndresArevalo1229/andresarevalo1229.github.io">
-            Portafolio principal <span>GitHub Pages</span>
-          </a>
-          <a href="https://github.com/AndresArevalo1229/FrontFinanzas">
-            FrontFinanzas <span>React / TS</span>
-          </a>
-          <a href="https://github.com/AndresArevalo1229/ProyectofinanzasBackebd">
-            Finanzas Backend <span>Node / TS</span>
-          </a>
-          <a href="https://github.com/AndresArevalo1229/Imdelice_BackEnd">
-            Imdelice Backend <span>Node / TS</span>
-          </a>
-          <a href="https://github.com/AndresArevalo1229/Andorid">
-            Android restaurante <span>Kotlin</span>
-          </a>
-          <a href="https://github.com/AndresArevalo1229/Im-delice">
-            Im-delice web <span>CSS</span>
-          </a>
-        </div>
+        <div class="repo-showcase" id="repoShowcase"></div>
       </section>
 
-      <section id="contacto" class="contact">
+      <section id="contacto" class="contact-section">
         <div>
           <p class="eyebrow">Contacto</p>
           <h2>Disponible para oportunidades Full Stack Jr.</h2>
+          <p>React, Node.js, Express, Prisma, MySQL y sistemas administrativos.</p>
         </div>
         <div class="contact-actions">
           <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com">
