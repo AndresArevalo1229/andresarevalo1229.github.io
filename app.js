@@ -122,12 +122,12 @@ const projects = [
   {
     id: "finanzas",
     title: "Proyecto Finanzas",
-    label: "Repo público",
-    categories: ["Full stack", "Backend", "Frontend", "Repo público"],
+    label: "Repo publico",
+    categories: ["Full stack", "Backend", "Frontend", "Repo publico"],
     summary:
       "Proyecto público separado en frontend y backend para demostrar TypeScript, estructura y flujo full stack.",
     role: "Frontend y backend",
-    status: "Repo público",
+    status: "Repo publico",
     stack: ["TypeScript", "React", "Node.js", "Backend"],
     visual: "finance",
     problem:
@@ -199,7 +199,7 @@ const repos = [
   {
     name: "FrontFinanzas",
     url: "https://github.com/AndresArevalo1229/FrontFinanzas",
-    note: "Repo público",
+    note: "Repo publico",
     description:
       "Frontend público para mostrar estructura de aplicación, consumo de datos y componentes.",
     role: "Buen repo para fijar porque enseña React y TypeScript en una app concreta.",
@@ -208,7 +208,7 @@ const repos = [
   {
     name: "Finanzas Backend",
     url: "https://github.com/AndresArevalo1229/ProyectofinanzasBackebd",
-    note: "Repo público",
+    note: "Repo publico",
     description:
       "Backend separado para mostrar rutas, servicios, lógica de negocio y API.",
     role: "Complementa el frontend y deja ver trabajo full stack sin exponer proyectos privados.",
@@ -226,7 +226,7 @@ const repos = [
   {
     name: "Android restaurante",
     url: "https://github.com/AndresArevalo1229/Andorid",
-    note: "Repo público",
+    note: "Repo publico",
     description:
       "Aplicación móvil de restaurante que muestra experiencia adicional fuera del frontend web.",
     role: "Ayuda a demostrar base móvil y capacidad de aprender otras plataformas.",
@@ -235,7 +235,7 @@ const repos = [
   {
     name: "Im-delice web",
     url: "https://github.com/AndresArevalo1229/Im-delice",
-    note: "Repo público",
+    note: "Repo publico",
     description:
       "Sitio web público de restaurante que sirve como pieza visual y complemento del backend.",
     role: "Útil si se fija junto al backend para mostrar relación entre interfaz y servicios.",
@@ -250,9 +250,93 @@ const moduleBoard = document.querySelector("#moduleBoard");
 const repoShowcase = document.querySelector("#repoShowcase");
 const copyButtons = document.querySelectorAll("[data-copy]");
 const counters = document.querySelectorAll("[data-count]");
+const views = document.querySelectorAll("[data-view]");
+const navLinks = document.querySelectorAll("[data-nav-route]");
+const routeLinks = document.querySelectorAll("[data-route-link]");
+const pageEyebrow = document.querySelector("#pageEyebrow");
+const pageTitle = document.querySelector("#pageTitle");
+const pageDescription = document.querySelector("#pageDescription");
+const workspace = document.querySelector(".workspace");
+
+const routeMeta = {
+  dashboard: {
+    eyebrow: "Portafolio",
+    title: "Dashboard profesional",
+    description:
+      "Vista principal para revisar proyectos, modulos, privacidad y repos publicos.",
+  },
+  proyectos: {
+    eyebrow: "Casos de estudio",
+    title: "Proyectos documentados",
+    description:
+      "Pantalla para filtrar proyectos y revisar el detalle tecnico de cada caso.",
+  },
+  modulos: {
+    eyebrow: "Mapa de experiencia",
+    title: "Modulos por dominio",
+    description:
+      "Trabajo agrupado por areas funcionales como inventarios, ventas, APIs y administracion.",
+  },
+  privacidad: {
+    eyebrow: "Confidencialidad",
+    title: "Privacidad profesional",
+    description:
+      "Como presentar trabajo privado sin exponer codigo, clientes, credenciales ni datos reales.",
+  },
+  repos: {
+    eyebrow: "GitHub",
+    title: "Repos publicos seguros",
+    description:
+      "Repos que conviene mostrar con contexto para que el perfil se vea mas profesional.",
+  },
+  contacto: {
+    eyebrow: "Contacto",
+    title: "Oportunidades Full Stack Jr.",
+    description:
+      "Contacto directo y GitHub para compartir el perfil con reclutadores o equipos.",
+  },
+};
 
 let activeFilter = "Todos";
 let activeProjectId = projects[0].id;
+let countersAnimated = false;
+
+function normalizeRoute() {
+  const route = window.location.hash.replace("#", "") || "dashboard";
+  return routeMeta[route] ? route : "dashboard";
+}
+
+function setRoute(route) {
+  const meta = routeMeta[route] ?? routeMeta.dashboard;
+
+  views.forEach((view) => {
+    const isActive = view.getAttribute("data-view") === route;
+    view.hidden = !isActive;
+    view.classList.toggle("is-active", isActive);
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.toggle("is-active", link.getAttribute("data-nav-route") === route);
+  });
+
+  pageEyebrow.textContent = meta.eyebrow;
+  pageTitle.textContent = meta.title;
+  pageDescription.textContent = meta.description;
+  document.title = `${meta.title} | Andres Arevalo`;
+  document.body.setAttribute("data-route", route);
+
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+
+  if (workspace) {
+    workspace.scrollTo({ top: 0, behavior: "auto" });
+  }
+
+  if (route === "dashboard") {
+    animateCounters();
+  }
+}
 
 function renderProjects() {
   const visibleProjects =
@@ -385,6 +469,9 @@ function renderRepos() {
 }
 
 function animateCounters() {
+  if (countersAnimated) return;
+  countersAnimated = true;
+
   counters.forEach((counter) => {
     const target = Number(counter.getAttribute("data-count"));
     let current = 0;
@@ -400,6 +487,26 @@ function animateCounters() {
     }, 36);
   });
 }
+
+routeLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const route = link.getAttribute("href")?.replace("#", "");
+    if (!route || !routeMeta[route]) return;
+
+    event.preventDefault();
+
+    if (normalizeRoute() === route) {
+      setRoute(route);
+      return;
+    }
+
+    window.location.hash = route;
+  });
+});
+
+window.addEventListener("hashchange", () => {
+  setRoute(normalizeRoute());
+});
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -430,4 +537,4 @@ copyButtons.forEach((button) => {
 renderProjects();
 renderModules();
 renderRepos();
-animateCounters();
+setRoute(normalizeRoute());
