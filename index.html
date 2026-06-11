@@ -8,7 +8,7 @@
       name="description"
       content="Portafolio dashboard de Andres Arevalo Navarro, desarrollador Full Stack Jr. con experiencia en React, Node.js, Express, Prisma y MySQL para sistemas administrativos."
     />
-    <link rel="stylesheet" href="./styles.css?v=dashboard-pages" />
+    <link rel="stylesheet" href="./styles.css?v=project-modal" />
   </head>
   <body>
     <div class="app-shell">
@@ -183,9 +183,6 @@
 
           <div class="project-layout">
             <div class="project-grid" id="projectGrid" aria-label="Lista de proyectos"></div>
-            <aside class="detail-panel" aria-live="polite">
-              <div class="detail-sticky" id="projectDetail"></div>
-            </aside>
           </div>
         </section>
 
@@ -264,6 +261,14 @@
       </main>
     </div>
 
-    <script src="./app.js?v=dashboard-pages"></script>
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" hidden>
+      <button class="project-modal-backdrop" type="button" data-modal-close tabindex="-1" aria-label="Cerrar detalles"></button>
+      <section class="project-modal-card" tabindex="-1">
+        <button class="modal-close" type="button" data-modal-close>Cerrar</button>
+        <div id="projectModalContent"></div>
+      </section>
+    </div>
+
+    <script src="./app.js?v=project-modal"></script>
   </body>
 </html>

@@ -36,6 +36,10 @@ body {
   line-height: 1.5;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 button,
 a {
   color: inherit;
@@ -282,8 +286,9 @@ h4 {
 .section-heading,
 .project-layout,
 .project-grid,
-.detail-panel,
-.detail-sticky,
+.project-modal,
+.project-modal-card,
+.project-modal-layout,
 .module-domain,
 .repo-card,
 .privacy-card,
@@ -597,14 +602,12 @@ h4 {
 }
 
 .project-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(340px, 0.96fr);
-  gap: 18px;
-  align-items: start;
+  display: block;
 }
 
 .project-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 14px;
 }
 
@@ -618,16 +621,23 @@ h4 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
-  cursor: pointer;
   transition:
     transform 180ms ease,
     border-color 180ms ease,
     box-shadow 180ms ease;
 }
 
-.project-card.is-active {
+.project-card:hover,
+.project-card:focus-within {
   border-color: rgba(22, 125, 134, 0.72);
   box-shadow: 0 16px 40px rgba(18, 48, 57, 0.1);
+}
+
+.project-card-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .tag,
@@ -647,13 +657,36 @@ h4 {
 }
 
 .project-card h3,
-.detail-panel h3,
+.detail-content h3,
 .repo-card h3 {
   margin-top: 12px;
 }
 
 .project-summary {
   margin-bottom: 0;
+}
+
+.project-detail-button {
+  min-height: 38px;
+  margin-top: auto;
+  padding: 0 13px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--white);
+  font-weight: 820;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.project-detail-button:hover,
+.project-detail-button:focus-visible {
+  background: var(--ink-soft);
+  box-shadow: 0 10px 24px rgba(18, 48, 57, 0.16);
+  transform: translateY(-1px);
 }
 
 .stack {
@@ -729,20 +762,6 @@ h4 {
 
 .mini-dashboard.finance {
   background: #edf5f3;
-}
-
-.detail-panel {
-  min-width: 0;
-}
-
-.detail-sticky {
-  position: sticky;
-  top: 128px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--panel);
-  box-shadow: var(--shadow);
 }
 
 .detail-visual {
@@ -824,6 +843,99 @@ h4 {
 .detail-list p {
   margin: 0;
   color: var(--muted);
+}
+
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.project-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project-modal[hidden] {
+  display: none !important;
+}
+
+.project-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(15, 44, 53, 0.72);
+  cursor: pointer;
+}
+
+.project-modal-card {
+  position: relative;
+  width: min(1060px, 100%);
+  max-height: min(820px, calc(100vh - 48px));
+  overflow: auto;
+  border: 1px solid rgba(217, 226, 229, 0.92);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 32px 90px rgba(18, 48, 57, 0.32);
+  outline: none;
+  transform: translateY(18px) scale(0.98);
+  transition: transform 180ms ease;
+}
+
+.project-modal.is-open .project-modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: sticky;
+  top: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 38px;
+  margin: 12px 12px -50px auto;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--ink);
+  font-weight: 820;
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(18, 48, 57, 0.12);
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  border-color: var(--ink);
+}
+
+.project-modal-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.84fr) minmax(0, 1.16fr);
+  gap: 0;
+}
+
+.modal-visual {
+  min-height: 100%;
+  border-right: 1px solid var(--line);
+}
+
+.modal-visual .detail-visual-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  min-height: 100%;
+}
+
+.modal-stack {
+  margin-top: 0;
 }
 
 .module-board,
@@ -1026,13 +1138,18 @@ h4 {
 }
 
 @media (max-width: 1180px) {
-  .overview-grid,
-  .project-layout {
+  .overview-grid {
     grid-template-columns: 1fr;
   }
 
-  .detail-sticky {
-    position: static;
+  .project-modal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-visual {
+    min-height: 260px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .dashboard-shortcuts,
@@ -1114,13 +1231,14 @@ h4 {
   .dashboard-shell,
   .dashboard-grid,
   .hero-stats,
-  .dashboard-shortcuts,
-  .project-layout,
-  .project-grid,
-  .detail-sticky,
-  .module-board,
-  .repo-showcase,
-  .privacy-grid {
+    .dashboard-shortcuts,
+    .project-layout,
+    .project-grid,
+    .project-modal,
+    .project-modal-card,
+    .module-board,
+    .repo-showcase,
+    .privacy-grid {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -1144,6 +1262,14 @@ h4 {
 
   .project-card {
     grid-template-columns: 1fr;
+  }
+
+  .project-modal {
+    padding: 16px;
+  }
+
+  .project-modal-card {
+    max-height: calc(100vh - 32px);
   }
 
   .mini-dashboard {
@@ -1180,11 +1306,12 @@ h4 {
   .view,
   .workspace-top,
   .intro-panel,
-  .dashboard-grid,
-  .detail-content,
-  .project-card,
-  .repo-card,
-  .module-domain,
+    .dashboard-grid,
+    .detail-content,
+    .project-modal-card,
+    .project-card,
+    .repo-card,
+    .module-domain,
   .privacy-card {
     padding: 14px;
   }
@@ -1196,6 +1323,20 @@ h4 {
   }
 
   .detail-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-close {
+    width: calc(100% - 24px);
+    margin: 12px 12px 12px;
+    justify-content: center;
+  }
+
+  .modal-visual {
+    min-height: 210px;
+  }
+
+  .modal-visual .detail-visual-grid {
     grid-template-columns: 1fr;
   }
 

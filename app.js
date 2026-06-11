@@ -244,7 +244,6 @@ const repos = [
 ];
 
 const projectGrid = document.querySelector("#projectGrid");
-const projectDetail = document.querySelector("#projectDetail");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const moduleBoard = document.querySelector("#moduleBoard");
 const repoShowcase = document.querySelector("#repoShowcase");
@@ -257,6 +256,10 @@ const pageEyebrow = document.querySelector("#pageEyebrow");
 const pageTitle = document.querySelector("#pageTitle");
 const pageDescription = document.querySelector("#pageDescription");
 const workspace = document.querySelector(".workspace");
+const projectModal = document.querySelector("#projectModal");
+const projectModalCard = document.querySelector(".project-modal-card");
+const projectModalContent = document.querySelector("#projectModalContent");
+const modalCloseButtons = document.querySelectorAll("[data-modal-close]");
 
 const routeMeta = {
   dashboard: {
@@ -300,6 +303,8 @@ const routeMeta = {
 let activeFilter = "Todos";
 let activeProjectId = projects[0].id;
 let countersAnimated = false;
+let lastFocusedElement = null;
+let modalCloseTimer = null;
 
 function normalizeRoute() {
   const route = window.location.hash.replace("#", "") || "dashboard";
@@ -351,78 +356,144 @@ function renderProjects() {
   projectGrid.innerHTML = visibleProjects
     .map(
       (project) => `
-        <button class="project-card ${project.id === activeProjectId ? "is-active" : ""}" type="button" data-project="${project.id}" aria-pressed="${project.id === activeProjectId}">
-          <span>
+        <article class="project-card" data-project-card="${project.id}">
+          <div class="project-card-copy">
             <span class="tag">${project.label}</span>
             <h3>${project.title}</h3>
             <p class="project-summary">${project.summary}</p>
             <ul class="stack">
               ${project.stack.map((item) => `<li>${item}</li>`).join("")}
             </ul>
-          </span>
+            <button class="project-detail-button" type="button" data-project="${project.id}">
+              Ver detalles
+            </button>
+          </div>
           <span class="mini-dashboard ${project.visual}" aria-hidden="true"></span>
-        </button>
+        </article>
       `,
     )
     .join("");
 
-  const cards = projectGrid.querySelectorAll("[data-project]");
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      activeProjectId = card.getAttribute("data-project");
-      renderProjects();
-      renderDetail();
+  const detailButtons = projectGrid.querySelectorAll("[data-project]");
+  detailButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      openProjectModal(button.getAttribute("data-project"));
     });
   });
-
-  renderDetail();
 }
 
-function renderDetail() {
-  const project = projects.find((item) => item.id === activeProjectId) ?? projects[0];
+function getProjectDetailMarkup(project) {
+  return `
+    <div class="project-modal-layout">
+      <div class="detail-visual modal-visual ${project.visual}">
+        <div class="detail-visual-grid" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
 
-  projectDetail.innerHTML = `
-    <div class="detail-visual">
-      <div class="detail-visual-grid" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="detail-content">
-      <span class="tag">${project.status}</span>
-      <h3>${project.title}</h3>
-      <p class="detail-text">${project.summary}</p>
-      <div class="detail-meta">
-        <div>
-          <span>Rol</span>
-          <strong>${project.role}</strong>
+      <div class="detail-content">
+        <span class="tag">${project.status}</span>
+        <h3 id="projectModalTitle">${project.title}</h3>
+        <p class="detail-text">${project.summary}</p>
+        <div class="detail-meta">
+          <div>
+            <span>Categoria</span>
+            <strong>${project.label}</strong>
+          </div>
+          <div>
+            <span>Rol</span>
+            <strong>${project.role}</strong>
+          </div>
         </div>
-        <div>
-          <span>Stack</span>
-          <strong>${project.stack.slice(0, 3).join(" · ")}</strong>
+        <ul class="stack modal-stack" aria-label="Stack del proyecto">
+          ${project.stack.map((item) => `<li>${item}</li>`).join("")}
+        </ul>
+        <div class="detail-list">
+          <article>
+            <h4>Problema</h4>
+            <p>${project.problem}</p>
+          </article>
+          <article>
+            <h4>Solución</h4>
+            <p>${project.solution}</p>
+          </article>
+          <article>
+            <h4>Qué demuestra</h4>
+            <p>${project.proves}</p>
+          </article>
+          <article>
+            <h4>Privacidad</h4>
+            <p>${project.privacy}</p>
+          </article>
         </div>
-      </div>
-      <div class="detail-list">
-        <article>
-          <h4>Problema</h4>
-          <p>${project.problem}</p>
-        </article>
-        <article>
-          <h4>Solución</h4>
-          <p>${project.solution}</p>
-        </article>
-        <article>
-          <h4>Qué demuestra</h4>
-          <p>${project.proves}</p>
-        </article>
-        <article>
-          <h4>Privacidad</h4>
-          <p>${project.privacy}</p>
-        </article>
       </div>
     </div>
   `;
+}
+
+function openProjectModal(projectId) {
+  const project = projects.find((item) => item.id === projectId);
+  if (!project || !projectModal || !projectModalContent || !projectModalCard) return;
+
+  window.clearTimeout(modalCloseTimer);
+  activeProjectId = project.id;
+  lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  projectModalContent.innerHTML = getProjectDetailMarkup(project);
+  projectModal.hidden = false;
+  document.body.classList.add("modal-open");
+
+  window.requestAnimationFrame(() => {
+    projectModal.classList.add("is-open");
+    projectModalCard.focus({ preventScroll: true });
+  });
+}
+
+function closeProjectModal() {
+  if (!projectModal || projectModal.hidden) return;
+
+  projectModal.classList.remove("is-open");
+  document.body.classList.remove("modal-open");
+
+  modalCloseTimer = window.setTimeout(() => {
+    projectModal.hidden = true;
+    if (projectModalContent) {
+      projectModalContent.innerHTML = "";
+    }
+    if (lastFocusedElement) {
+      lastFocusedElement.focus({ preventScroll: true });
+    }
+    lastFocusedElement = null;
+  }, 180);
+}
+
+function trapModalFocus(event) {
+  if (event.key !== "Tab" || !projectModal || projectModal.hidden) return;
+
+  const focusableElements = projectModal.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+  );
+  const focusable = Array.from(focusableElements).filter(
+    (element) => !element.hasAttribute("disabled") && element.tabIndex >= 0,
+  );
+
+  if (!focusable.length) return;
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+    return;
+  }
+
+  if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
 }
 
 function renderModules() {
@@ -506,6 +577,19 @@ routeLinks.forEach((link) => {
 
 window.addEventListener("hashchange", () => {
   setRoute(normalizeRoute());
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeProjectModal();
+    return;
+  }
+
+  trapModalFocus(event);
+});
+
+modalCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeProjectModal);
 });
 
 filterButtons.forEach((button) => {
