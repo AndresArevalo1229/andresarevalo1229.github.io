@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Mockup de administracion de barberia</title>
+  <desc id="desc">Dashboard ficticio con citas, servicios y clientes demo.</desc>
+  <rect width="960" height="600" rx="32" fill="#f2f5f6"/>
+  <rect x="34" y="34" width="892" height="532" rx="26" fill="#ffffff" stroke="#d8e3e5"/>
+  <rect x="70" y="72" width="820" height="96" rx="22" fill="#123039"/>
+  <text x="102" y="132" fill="#ffffff" font-family="Inter, Arial" font-size="30" font-weight="900">Barberia Admin</text>
+  <text x="704" y="132" fill="#a9d8d4" font-family="Inter, Arial" font-size="17" font-weight="800">Agenda demo</text>
+  <rect x="70" y="206" width="258" height="294" rx="20" fill="#fbfcfb" stroke="#d8e3e5"/>
+  <text x="98" y="248" fill="#123039" font-family="Inter, Arial" font-size="22" font-weight="850">Citas de hoy</text>
+  <rect x="98" y="282" width="202" height="52" rx="13" fill="#ffffff" stroke="#d8e3e5"/>
+  <text x="120" y="314" fill="#167d86" font-family="Inter, Arial" font-size="16" font-weight="850">10:30 Servicio demo</text>
+  <rect x="98" y="354" width="202" height="52" rx="13" fill="#ffffff" stroke="#d8e3e5"/>
+  <text x="120" y="386" fill="#bf7a23" font-family="Inter, Arial" font-size="16" font-weight="850">12:00 Cliente demo</text>
+  <rect x="98" y="426" width="202" height="52" rx="13" fill="#ffffff" stroke="#d8e3e5"/>
+  <text x="120" y="458" fill="#4f7a5c" font-family="Inter, Arial" font-size="16" font-weight="850">14:15 Confirmada</text>
+  <rect x="366" y="206" width="226" height="132" rx="18" fill="#fff8ec" stroke="#ecd7ba"/>
+  <text x="394" y="248" fill="#5c6f76" font-family="Inter, Arial" font-size="18" font-weight="700">Servicios</text>
+  <text x="394" y="296" fill="#123039" font-family="Inter, Arial" font-size="48" font-weight="900">18</text>
+  <rect x="624" y="206" width="266" height="132" rx="18" fill="#eff5f0" stroke="#d4e2d8"/>
+  <text x="652" y="248" fill="#5c6f76" font-family="Inter, Arial" font-size="18" font-weight="700">Clientes demo</text>
+  <text x="652" y="296" fill="#123039" font-family="Inter, Arial" font-size="48" font-weight="900">54</text>
+  <rect x="366" y="368" width="524" height="132" rx="18" fill="#fbfcfb" stroke="#d8e3e5"/>
+  <text x="394" y="410" fill="#123039" font-family="Inter, Arial" font-size="22" font-weight="850">Movimientos</text>
+  <rect x="394" y="438" width="384" height="12" rx="6" fill="#d8e3e5"/>
+  <rect x="394" y="466" width="278" height="12" rx="6" fill="#d8e3e5"/>
+  <rect x="800" y="424" width="54" height="54" rx="18" fill="#167d86"/>
+</svg>

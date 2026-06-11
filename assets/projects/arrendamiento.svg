@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Mockup de sistema administrativo de arrendamiento</title>
+  <desc id="desc">Dashboard ficticio con contratos, clientes y recibos demo.</desc>
+  <rect width="960" height="600" rx="32" fill="#eef5f4"/>
+  <rect x="32" y="32" width="896" height="536" rx="26" fill="#ffffff" stroke="#cfdcdf"/>
+  <rect x="32" y="32" width="896" height="72" rx="26" fill="#123039"/>
+  <circle cx="76" cy="68" r="10" fill="#8fd1ca"/>
+  <circle cx="106" cy="68" r="10" fill="#efc178"/>
+  <circle cx="136" cy="68" r="10" fill="#7fae8b"/>
+  <text x="180" y="74" fill="#ffffff" font-family="Inter, Arial" font-size="23" font-weight="800">Arrendamiento demo</text>
+  <rect x="64" y="140" width="246" height="138" rx="18" fill="#f8fbfa" stroke="#d8e3e5"/>
+  <text x="92" y="178" fill="#5c6f76" font-family="Inter, Arial" font-size="18" font-weight="700">Contratos activos</text>
+  <text x="92" y="232" fill="#123039" font-family="Inter, Arial" font-size="54" font-weight="900">128</text>
+  <rect x="92" y="248" width="164" height="12" rx="6" fill="#d8ece9"/>
+  <rect x="350" y="140" width="246" height="138" rx="18" fill="#fff8ec" stroke="#ecd7ba"/>
+  <text x="378" y="178" fill="#5c6f76" font-family="Inter, Arial" font-size="18" font-weight="700">Recibos demo</text>
+  <text x="378" y="232" fill="#123039" font-family="Inter, Arial" font-size="54" font-weight="900">42</text>
+  <rect x="378" y="248" width="136" height="12" rx="6" fill="#f2d9b8"/>
+  <rect x="636" y="140" width="228" height="138" rx="18" fill="#f5f8fc" stroke="#cfdae8"/>
+  <text x="664" y="178" fill="#5c6f76" font-family="Inter, Arial" font-size="18" font-weight="700">Clientes demo</text>
+  <text x="664" y="232" fill="#123039" font-family="Inter, Arial" font-size="54" font-weight="900">76</text>
+  <rect x="664" y="248" width="122" height="12" rx="6" fill="#d7e2ef"/>
+  <rect x="64" y="316" width="540" height="200" rx="18" fill="#ffffff" stroke="#d8e3e5"/>
+  <text x="92" y="356" fill="#123039" font-family="Inter, Arial" font-size="22" font-weight="850">Seguimiento de contratos</text>
+  <line x1="92" y1="384" x2="576" y2="384" stroke="#d8e3e5" stroke-width="2"/>
+  <text x="92" y="424" fill="#5c6f76" font-family="Inter, Arial" font-size="17" font-weight="700">Cliente demo A</text>
+  <text x="350" y="424" fill="#167d86" font-family="Inter, Arial" font-size="17" font-weight="800">Contrato activo</text>
+  <text x="92" y="468" fill="#5c6f76" font-family="Inter, Arial" font-size="17" font-weight="700">Equipo demo B</text>
+  <text x="350" y="468" fill="#bf7a23" font-family="Inter, Arial" font-size="17" font-weight="800">Recibo pendiente</text>
+  <rect x="636" y="316" width="228" height="200" rx="18" fill="#f8fbfa" stroke="#d8e3e5"/>
+  <text x="664" y="356" fill="#123039" font-family="Inter, Arial" font-size="21" font-weight="850">Flujo</text>
+  <circle cx="690" cy="404" r="14" fill="#167d86"/>
+  <line x1="690" y1="418" x2="690" y2="470" stroke="#9fc8c8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="690" cy="486" r="14" fill="#4f7a5c"/>
+  <text x="724" y="411" fill="#123039" font-family="Inter, Arial" font-size="17" font-weight="800">Captura</text>
+  <text x="724" y="493" fill="#123039" font-family="Inter, Arial" font-size="17" font-weight="800">Validacion</text>
+</svg>

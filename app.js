@@ -10,6 +10,8 @@ const projects = [
     status: "Proyecto privado",
     stack: ["React", "APIs REST", "MySQL", "Formularios"],
     visual: "rental",
+    image: "./assets/projects/arrendamiento.svg",
+    imageAlt: "Mockup ficticio de sistema de arrendamiento con contratos y recibos demo.",
     problem:
       "El equipo necesitaba consultar clientes, contratos, equipos, seguros y recibos sin depender de hojas o procesos manuales.",
     solution:
@@ -30,6 +32,8 @@ const projects = [
     status: "Caso recreado",
     stack: ["Node.js", "Express", "Prisma", "MySQL"],
     visual: "restaurant",
+    image: "./assets/projects/delice-flow.svg",
+    imageAlt: "Mockup ficticio de plataforma para restaurante con pedidos e inventario demo.",
     problem:
       "El restaurante requería centralizar menú, pedidos, proveedores e inventario en un flujo administrativo más ordenado.",
     solution:
@@ -50,6 +54,8 @@ const projects = [
     status: "Proyecto privado",
     stack: ["Node.js", "Express", "Prisma", "Auth"],
     visual: "school",
+    image: "./assets/projects/schoolback.svg",
+    imageAlt: "Mockup ficticio de backend escolar con usuarios, permisos y modulos demo.",
     problem:
       "El sistema escolar necesitaba separar usuarios, permisos, registros y módulos administrativos de forma mantenible.",
     solution:
@@ -70,6 +76,8 @@ const projects = [
     status: "Caso privado",
     stack: ["React", "Node.js", "MySQL", "Filtros"],
     visual: "notes",
+    image: "./assets/projects/ag-note.svg",
+    imageAlt: "Mockup ficticio de tablero para notas, tareas y estados demo.",
     problem:
       "El equipo necesitaba registrar notas, tareas y estados de avance con consultas rápidas por filtros.",
     solution:
@@ -90,6 +98,8 @@ const projects = [
     status: "Demo segura",
     stack: ["React", "Express", "MySQL", "Reportes"],
     visual: "service",
+    image: "./assets/projects/barberia-admin.svg",
+    imageAlt: "Mockup ficticio de administracion de barberia con citas y servicios demo.",
     problem:
       "El negocio requería administrar citas, servicios, clientes y movimientos desde una interfaz sencilla.",
     solution:
@@ -110,6 +120,8 @@ const projects = [
     status: "Proyecto privado",
     stack: ["React", "MySQL", "Inventario", "Movimientos"],
     visual: "inventory",
+    image: "./assets/projects/wms.svg",
+    imageAlt: "Mockup ficticio de sistema WMS con ubicaciones, lotes y movimientos demo.",
     problem:
       "La operación necesitaba trazabilidad para existencias, entradas, salidas, ubicaciones, lotes y viajes.",
     solution:
@@ -130,6 +142,8 @@ const projects = [
     status: "Repo publico",
     stack: ["TypeScript", "React", "Node.js", "Backend"],
     visual: "finance",
+    image: "./assets/projects/finanzas.svg",
+    imageAlt: "Mockup ficticio de proyecto de finanzas con graficas e indicadores demo.",
     problem:
       "Era necesario tener un ejemplo público que mostrara estructura real de app sin depender de repos privados.",
     solution:
@@ -343,6 +357,36 @@ function setRoute(route) {
   }
 }
 
+function getProjectImageMarkup(project, variant = "card") {
+  const isLarge = variant === "modal";
+  const loading = isLarge ? "eager" : "lazy";
+
+  return `
+    <figure class="project-image ${isLarge ? "project-image-large" : ""} ${project.visual}">
+      <img
+        src="${project.image}"
+        alt="${project.imageAlt}"
+        loading="${loading}"
+        decoding="async"
+        data-project-image
+      />
+      <figcaption>${project.title}</figcaption>
+    </figure>
+  `;
+}
+
+function bindProjectImages(scope) {
+  scope.querySelectorAll("[data-project-image]").forEach((image) => {
+    image.addEventListener("error", () => {
+      const wrapper = image.closest(".project-image");
+      if (wrapper) {
+        wrapper.classList.add("is-fallback");
+      }
+      image.hidden = true;
+    });
+  });
+}
+
 function renderProjects() {
   const visibleProjects =
     activeFilter === "Todos"
@@ -368,11 +412,13 @@ function renderProjects() {
               Ver detalles
             </button>
           </div>
-          <span class="mini-dashboard ${project.visual}" aria-hidden="true"></span>
+          ${getProjectImageMarkup(project)}
         </article>
       `,
     )
     .join("");
+
+  bindProjectImages(projectGrid);
 
   const detailButtons = projectGrid.querySelectorAll("[data-project]");
   detailButtons.forEach((button) => {
@@ -385,14 +431,7 @@ function renderProjects() {
 function getProjectDetailMarkup(project) {
   return `
     <div class="project-modal-layout">
-      <div class="detail-visual modal-visual ${project.visual}">
-        <div class="detail-visual-grid" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
+      ${getProjectImageMarkup(project, "modal")}
 
       <div class="detail-content">
         <span class="tag">${project.status}</span>
@@ -442,13 +481,12 @@ function openProjectModal(projectId) {
   activeProjectId = project.id;
   lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
   projectModalContent.innerHTML = getProjectDetailMarkup(project);
+  bindProjectImages(projectModalContent);
   projectModal.hidden = false;
   document.body.classList.add("modal-open");
-
-  window.requestAnimationFrame(() => {
-    projectModal.classList.add("is-open");
-    projectModalCard.focus({ preventScroll: true });
-  });
+  void projectModal.offsetHeight;
+  projectModal.classList.add("is-open");
+  projectModalCard.focus({ preventScroll: true });
 }
 
 function closeProjectModal() {
@@ -579,7 +617,7 @@ window.addEventListener("hashchange", () => {
   setRoute(normalizeRoute());
 });
 
-document.addEventListener("keydown", (event) => {
+window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeProjectModal();
     return;

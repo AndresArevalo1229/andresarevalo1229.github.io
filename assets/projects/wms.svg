@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Mockup de sistema WMS de inventarios</title>
+  <desc id="desc">Dashboard ficticio con ubicaciones, lotes y movimientos demo.</desc>
+  <rect width="960" height="600" rx="32" fill="#eff5f0"/>
+  <rect x="34" y="34" width="892" height="532" rx="26" fill="#ffffff" stroke="#d4e2d8"/>
+  <text x="72" y="92" fill="#123039" font-family="Inter, Arial" font-size="32" font-weight="900">Sistema WMS</text>
+  <text x="72" y="124" fill="#5c6f76" font-family="Inter, Arial" font-size="17" font-weight="700">Inventario, lotes y movimientos demo</text>
+  <rect x="72" y="166" width="520" height="332" rx="22" fill="#f8fbfa" stroke="#d8e3e5"/>
+  <text x="102" y="208" fill="#123039" font-family="Inter, Arial" font-size="22" font-weight="850">Mapa de almacen</text>
+  <g fill="#ffffff" stroke="#bfd2c6" stroke-width="2">
+    <rect x="104" y="242" width="118" height="74" rx="12"/>
+    <rect x="246" y="242" width="118" height="74" rx="12"/>
+    <rect x="388" y="242" width="118" height="74" rx="12"/>
+    <rect x="104" y="342" width="118" height="74" rx="12"/>
+    <rect x="246" y="342" width="118" height="74" rx="12"/>
+    <rect x="388" y="342" width="118" height="74" rx="12"/>
+  </g>
+  <text x="130" y="286" fill="#4f7a5c" font-family="Inter, Arial" font-size="17" font-weight="900">A-12</text>
+  <text x="272" y="286" fill="#4f7a5c" font-family="Inter, Arial" font-size="17" font-weight="900">B-04</text>
+  <text x="414" y="286" fill="#4f7a5c" font-family="Inter, Arial" font-size="17" font-weight="900">C-08</text>
+  <text x="130" y="386" fill="#4f7a5c" font-family="Inter, Arial" font-size="17" font-weight="900">D-02</text>
+  <text x="272" y="386" fill="#4f7a5c" font-family="Inter, Arial" font-size="17" font-weight="900">E-10</text>
+  <text x="414" y="386" fill="#4f7a5c" font-family="Inter, Arial" font-size="17" font-weight="900">F-06</text>
+  <path d="M162 454 C250 488 366 486 476 452" fill="none" stroke="#167d86" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="162" cy="454" r="14" fill="#167d86"/>
+  <circle cx="476" cy="452" r="14" fill="#bf7a23"/>
+  <rect x="626" y="166" width="262" height="146" rx="20" fill="#ffffff" stroke="#d8e3e5"/>
+  <text x="654" y="208" fill="#5c6f76" font-family="Inter, Arial" font-size="18" font-weight="700">Movimientos</text>
+  <text x="654" y="260" fill="#123039" font-family="Inter, Arial" font-size="52" font-weight="900">34</text>
+  <rect x="626" y="352" width="262" height="146" rx="20" fill="#ffffff" stroke="#d8e3e5"/>
+  <text x="654" y="394" fill="#5c6f76" font-family="Inter, Arial" font-size="18" font-weight="700">Lote demo</text>
+  <text x="654" y="446" fill="#123039" font-family="Inter, Arial" font-size="42" font-weight="900">A12</text>
+</svg>
