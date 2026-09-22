@@ -28,9 +28,9 @@ Backend / Full Stack Jr.
 
 La version real se mantiene privada. No se publican ventas, proveedores, movimientos reales, credenciales ni codigo original.
 
-## Version demo recomendada
+## Fragmentos técnicos sugeridos
 
-Crear `restaurant-admin-demo` con:
+Los ejemplos de `demos/restaurant-admin-demo/` ilustran estas ideas con datos ficticios; son fragmentos y no una aplicación completa:
 
 - Productos ficticios.
 - Proveedores genericos.

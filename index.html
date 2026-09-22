@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Andres Arevalo Navarro | Full Stack Jr.</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <meta
       name="description"
       content="Portafolio dashboard de Andres Arevalo Navarro, desarrollador Full Stack Jr. con experiencia en React, Node.js, Express, Prisma y MySQL para sistemas administrativos."
@@ -22,7 +23,7 @@
         </a>
 
         <nav class="nav" aria-label="Vistas del dashboard">
-          <a href="#dashboard" data-route-link data-nav-route="dashboard">Dashboard</a>
+          <a href="#dashboard" data-route-link data-nav-route="dashboard" aria-current="page">Dashboard</a>
           <a href="#proyectos" data-route-link data-nav-route="proyectos">Proyectos</a>
           <a href="#modulos" data-route-link data-nav-route="modulos">Modulos</a>
           <a href="#privacidad" data-route-link data-nav-route="privacidad">Privacidad</a>
@@ -47,12 +48,15 @@
             </p>
           </div>
           <div class="workspace-actions">
-            <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com">
+            <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com" aria-describedby="copyStatus">
               Copiar email
             </button>
+            <a class="button secondary" href="mailto:andres.arevalonavarro@gmail.com">Enviar correo</a>
             <a class="button secondary" href="https://github.com/AndresArevalo1229">GitHub</a>
           </div>
         </header>
+
+        <span class="visually-hidden" id="copyStatus" role="status" aria-live="polite" aria-atomic="true"></span>
 
         <section class="view dashboard-view is-active" id="view-dashboard" data-view="dashboard">
           <div class="overview-grid">
@@ -62,15 +66,15 @@
               <p class="lead">
                 Desarrollo modulos para clientes, contratos, inventarios, pedidos, recibos
                 y reportes. Mis mejores trabajos son privados, por eso los presento como
-                casos de estudio seguros, demos recreadas y repos publicos.
+                casos de estudio seguros, ejemplos técnicos con datos ficticios y repos públicos.
               </p>
-              <div class="hero-actions" aria-label="Acciones principales">
+              <div class="hero-actions" role="group" aria-label="Acciones principales">
                 <a class="button primary" href="#proyectos" data-route-link>Ver proyectos</a>
                 <a class="button secondary" href="#repos" data-route-link>Ver repos</a>
               </div>
             </article>
 
-            <div class="dashboard-shell" aria-label="Dashboard administrativo ficticio">
+            <div class="dashboard-shell" role="img" aria-label="Vista ilustrativa de un dashboard administrativo ficticio">
               <div class="window-bar">
                 <span></span>
                 <span></span>
@@ -137,7 +141,7 @@
             </div>
           </dl>
 
-          <div class="dashboard-shortcuts" aria-label="Accesos rapidos">
+          <nav class="dashboard-shortcuts" aria-label="Accesos rápidos">
             <a href="#proyectos" data-route-link>
               <span>01</span>
               <strong>Proyectos</strong>
@@ -158,7 +162,7 @@
               <strong>Repos</strong>
               <small>Codigo publico seguro para fijar en GitHub.</small>
             </a>
-          </div>
+          </nav>
         </section>
 
         <section class="view projects-section" id="view-proyectos" data-view="proyectos" hidden>
@@ -171,18 +175,18 @@
             </p>
           </div>
 
-          <div class="filter-row" aria-label="Filtrar proyectos">
-            <button class="filter-button is-active" type="button" data-filter="Todos">Todos</button>
-            <button class="filter-button" type="button" data-filter="Full stack">Full stack</button>
-            <button class="filter-button" type="button" data-filter="Backend">Backend</button>
-            <button class="filter-button" type="button" data-filter="Frontend">Frontend</button>
-            <button class="filter-button" type="button" data-filter="Inventarios">Inventarios</button>
-            <button class="filter-button" type="button" data-filter="Administrativo">Administrativo</button>
-            <button class="filter-button" type="button" data-filter="Repo publico">Repo publico</button>
+          <div class="filter-row" role="group" aria-label="Filtrar proyectos">
+            <button class="filter-button is-active" type="button" data-filter="Todos" aria-pressed="true">Todos</button>
+            <button class="filter-button" type="button" data-filter="Full stack" aria-pressed="false">Full stack</button>
+            <button class="filter-button" type="button" data-filter="Backend" aria-pressed="false">Backend</button>
+            <button class="filter-button" type="button" data-filter="Frontend" aria-pressed="false">Frontend</button>
+            <button class="filter-button" type="button" data-filter="Inventarios" aria-pressed="false">Inventarios</button>
+            <button class="filter-button" type="button" data-filter="Administrativo" aria-pressed="false">Administrativo</button>
+            <button class="filter-button" type="button" data-filter="Repo publico" aria-pressed="false">Repo publico</button>
           </div>
 
           <div class="project-layout">
-            <div class="project-grid" id="projectGrid" aria-label="Lista de proyectos"></div>
+            <div class="project-grid" id="projectGrid" role="list" aria-label="Proyectos filtrados"></div>
           </div>
         </section>
 
@@ -195,7 +199,7 @@
               criterio tecnico y contexto de negocio sin mencionar rutas internas ni datos sensibles.
             </p>
           </div>
-          <div class="module-board" id="moduleBoard"></div>
+          <div class="module-board" id="moduleBoard" role="list" aria-label="Dominios de experiencia"></div>
         </section>
 
         <section class="view privacy-section" id="view-privacidad" data-view="privacidad" hidden>
@@ -236,11 +240,11 @@
             <p class="eyebrow">Repos publicos seguros</p>
             <h2>Repos que conviene mostrar para que el perfil no parezca solo escolar.</h2>
             <p>
-              Estos enlaces se presentan con el valor tecnico que demuestran. Cuando un repo
-              es demo o recreacion, se indica para mantener claridad.
+              Estos enlaces se presentan con el valor técnico que demuestran. Cuando un repo
+              contiene ejemplos técnicos o una recreación, se indica para mantener claridad.
             </p>
           </div>
-          <div class="repo-showcase" id="repoShowcase"></div>
+          <div class="repo-showcase" id="repoShowcase" role="list" aria-label="Repositorios públicos"></div>
         </section>
 
         <section class="view contact-section" id="view-contacto" data-view="contacto" hidden>
@@ -251,9 +255,10 @@
               <p>React, Node.js, Express, Prisma, MySQL y sistemas administrativos.</p>
             </div>
             <div class="contact-actions">
-              <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com">
+              <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com" aria-describedby="copyStatus">
                 Copiar email
               </button>
+              <a class="button secondary" href="mailto:andres.arevalonavarro@gmail.com">Enviar correo</a>
               <a class="button secondary" href="https://github.com/AndresArevalo1229">Ver GitHub</a>
             </div>
           </div>

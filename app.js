@@ -41,7 +41,7 @@ const projects = [
     proves:
       "Backend REST, modelado relacional, reglas de negocio, validaciones e integración con frontend administrativo.",
     privacy:
-      "La versión real permanece privada; las demos usan productos, pedidos y proveedores ficticios.",
+      "La versión real permanece privada; los ejemplos técnicos usan productos, pedidos y proveedores ficticios.",
   },
   {
     id: "schoolback",
@@ -95,7 +95,7 @@ const projects = [
     summary:
       "Sistema para citas, servicios, clientes y movimientos de una barbería con caso recreado.",
     role: "Full Stack Jr.",
-    status: "Demo segura",
+    status: "Caso recreado",
     stack: ["React", "Express", "MySQL", "Reportes"],
     visual: "service",
     image: "./assets/projects/barberia-admin.svg",
@@ -231,7 +231,7 @@ const repos = [
   {
     name: "Imdelice Backend",
     url: "https://github.com/AndresArevalo1229/Imdelice_BackEnd",
-    note: "Demo segura",
+    note: "Repo público",
     description:
       "Backend público relacionado con flujo de restaurante, útil para explicar APIs y módulos.",
     role: "Se presenta como referencia pública separada del sistema privado real.",
@@ -274,6 +274,8 @@ const projectModal = document.querySelector("#projectModal");
 const projectModalCard = document.querySelector(".project-modal-card");
 const projectModalContent = document.querySelector("#projectModalContent");
 const modalCloseButtons = document.querySelectorAll("[data-modal-close]");
+const appShell = document.querySelector(".app-shell");
+const copyStatus = document.querySelector("#copyStatus");
 
 const routeMeta = {
   dashboard: {
@@ -335,7 +337,13 @@ function setRoute(route) {
   });
 
   navLinks.forEach((link) => {
-    link.classList.toggle("is-active", link.getAttribute("data-nav-route") === route);
+    const isCurrent = link.getAttribute("data-nav-route") === route;
+    link.classList.toggle("is-active", isCurrent);
+    if (isCurrent) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
   });
 
   pageEyebrow.textContent = meta.eyebrow;
@@ -373,6 +381,25 @@ function getProjectImageMarkup(project, variant = "card") {
       <figcaption>${project.title}</figcaption>
     </figure>
   `;
+}
+
+function createProjectImageElement(project, variant = "card") {
+  const isLarge = variant === "modal";
+  const figure = document.createElement("figure");
+  figure.className = `project-image ${isLarge ? "project-image-large" : ""} ${project.visual}`.trim();
+
+  const image = document.createElement("img");
+  image.src = project.image;
+  image.alt = project.imageAlt;
+  image.loading = isLarge ? "eager" : "lazy";
+  image.decoding = "async";
+  image.setAttribute("data-project-image", "");
+
+  const caption = document.createElement("figcaption");
+  caption.textContent = project.title;
+
+  figure.append(image, caption);
+  return figure;
 }
 
 function bindProjectImages(scope) {
@@ -419,6 +446,7 @@ function renderProjects() {
     .join("");
 
   bindProjectImages(projectGrid);
+  projectGrid.querySelectorAll(".project-card").forEach((card) => card.setAttribute("role", "listitem"));
 
   const detailButtons = projectGrid.querySelectorAll("[data-project]");
   detailButtons.forEach((button) => {
@@ -428,49 +456,67 @@ function renderProjects() {
   });
 }
 
-function getProjectDetailMarkup(project) {
-  return `
-    <div class="project-modal-layout">
-      ${getProjectImageMarkup(project, "modal")}
+function createProjectDetailMarkup(project) {
+  const layout = document.createElement("div");
+  layout.className = "project-modal-layout";
+  layout.append(createProjectImageElement(project, "modal"));
 
-      <div class="detail-content">
-        <span class="tag">${project.status}</span>
-        <h3 id="projectModalTitle">${project.title}</h3>
-        <p class="detail-text">${project.summary}</p>
-        <div class="detail-meta">
-          <div>
-            <span>Categoria</span>
-            <strong>${project.label}</strong>
-          </div>
-          <div>
-            <span>Rol</span>
-            <strong>${project.role}</strong>
-          </div>
-        </div>
-        <ul class="stack modal-stack" aria-label="Stack del proyecto">
-          ${project.stack.map((item) => `<li>${item}</li>`).join("")}
-        </ul>
-        <div class="detail-list">
-          <article>
-            <h4>Problema</h4>
-            <p>${project.problem}</p>
-          </article>
-          <article>
-            <h4>Solución</h4>
-            <p>${project.solution}</p>
-          </article>
-          <article>
-            <h4>Qué demuestra</h4>
-            <p>${project.proves}</p>
-          </article>
-          <article>
-            <h4>Privacidad</h4>
-            <p>${project.privacy}</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  `;
+  const content = document.createElement("div");
+  content.className = "detail-content";
+
+  const status = document.createElement("span");
+  status.className = "tag";
+  status.textContent = project.status;
+
+  const title = document.createElement("h3");
+  title.id = "projectModalTitle";
+  title.textContent = project.title;
+
+  const summary = document.createElement("p");
+  summary.className = "detail-text";
+  summary.textContent = project.summary;
+
+  const meta = document.createElement("div");
+  meta.className = "detail-meta";
+  for (const [label, value] of [["Categoria", project.label], ["Rol", project.role]]) {
+    const item = document.createElement("div");
+    const caption = document.createElement("span");
+    caption.textContent = label;
+    const detail = document.createElement("strong");
+    detail.textContent = value;
+    item.append(caption, detail);
+    meta.append(item);
+  }
+
+  const stack = document.createElement("ul");
+  stack.className = "stack modal-stack";
+  stack.setAttribute("aria-label", "Tecnologías del proyecto");
+  for (const item of project.stack) {
+    const listItem = document.createElement("li");
+    listItem.textContent = item;
+    stack.append(listItem);
+  }
+
+  const detailList = document.createElement("div");
+  detailList.className = "detail-list";
+  for (const [heading, value] of [
+    ["Problema", project.problem],
+    ["Solución", project.solution],
+    ["Qué demuestra", project.proves],
+    ["Privacidad", project.privacy],
+  ]) {
+    const article = document.createElement("article");
+    const subheading = document.createElement("h4");
+    subheading.textContent = heading;
+    const paragraph = document.createElement("p");
+    paragraph.textContent = value;
+    article.append(subheading, paragraph);
+    detailList.append(article);
+  }
+
+  content.append(status, title, summary, meta, stack, detailList);
+  layout.append(content);
+  return layout;
 }
 
 function openProjectModal(projectId) {
@@ -480,8 +526,9 @@ function openProjectModal(projectId) {
   window.clearTimeout(modalCloseTimer);
   activeProjectId = project.id;
   lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-  projectModalContent.innerHTML = getProjectDetailMarkup(project);
+  projectModalContent.replaceChildren(createProjectDetailMarkup(project));
   bindProjectImages(projectModalContent);
+  if (appShell) appShell.inert = true;
   projectModal.hidden = false;
   document.body.classList.add("modal-open");
   void projectModal.offsetHeight;
@@ -497,8 +544,9 @@ function closeProjectModal() {
 
   modalCloseTimer = window.setTimeout(() => {
     projectModal.hidden = true;
+    if (appShell) appShell.inert = false;
     if (projectModalContent) {
-      projectModalContent.innerHTML = "";
+      projectModalContent.replaceChildren();
     }
     if (lastFocusedElement) {
       lastFocusedElement.focus({ preventScroll: true });
@@ -514,7 +562,7 @@ function trapModalFocus(event) {
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
   );
   const focusable = Array.from(focusableElements).filter(
-    (element) => !element.hasAttribute("disabled") && element.tabIndex >= 0,
+    (element) => !element.hasAttribute("disabled") && element.tabIndex >= 0 && element.getClientRects().length,
   );
 
   if (!focusable.length) return;
@@ -522,7 +570,13 @@ function trapModalFocus(event) {
   const first = focusable[0];
   const last = focusable[focusable.length - 1];
 
-  if (event.shiftKey && document.activeElement === first) {
+  if (!projectModal.contains(document.activeElement)) {
+    event.preventDefault();
+    (event.shiftKey ? last : first).focus();
+    return;
+  }
+
+  if (event.shiftKey && (document.activeElement === first || document.activeElement === projectModalCard)) {
     event.preventDefault();
     last.focus();
     return;
@@ -554,6 +608,7 @@ function renderModules() {
       `,
     )
     .join("");
+  moduleBoard.querySelectorAll(".module-domain").forEach((card) => card.setAttribute("role", "listitem"));
 }
 
 function renderRepos() {
@@ -575,6 +630,7 @@ function renderRepos() {
       `,
     )
     .join("");
+  repoShowcase.querySelectorAll(".repo-card").forEach((card) => card.setAttribute("role", "listitem"));
 }
 
 function animateCounters() {
@@ -633,7 +689,11 @@ modalCloseButtons.forEach((button) => {
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     activeFilter = button.getAttribute("data-filter");
-    filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+    filterButtons.forEach((item) => {
+      const isSelected = item === button;
+      item.classList.toggle("is-active", isSelected);
+      item.setAttribute("aria-pressed", String(isSelected));
+    });
     renderProjects();
   });
 });
@@ -647,10 +707,12 @@ copyButtons.forEach((button) => {
       await navigator.clipboard.writeText(value);
       const previous = button.textContent;
       button.textContent = "Email copiado";
+      if (copyStatus) copyStatus.textContent = "Correo copiado al portapapeles.";
       window.setTimeout(() => {
         button.textContent = previous;
       }, 1600);
     } catch {
+      if (copyStatus) copyStatus.textContent = "Abriendo la aplicación de correo.";
       window.location.href = `mailto:${value}`;
     }
   });

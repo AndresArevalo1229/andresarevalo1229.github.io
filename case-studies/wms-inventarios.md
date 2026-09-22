@@ -26,9 +26,9 @@ Desarrollador web.
 
 No se publican proveedores reales, cantidades, costos, ubicaciones internas, historiales ni capturas productivas.
 
-## Version demo recomendada
+## Fragmentos técnicos sugeridos
 
-Crear `inventory-wms-demo` con:
+Los ejemplos de `demos/inventory-wms-demo/` ilustran estas ideas con datos ficticios; son fragmentos y no una aplicación completa:
 
 - Productos genericos.
 - Ubicaciones ficticias.

@@ -27,9 +27,9 @@ Desarrollador Full Stack Jr.
 
 No se publica codigo fuente, datos reales, capturas productivas, URLs internas, contratos, recibos ni informacion de clientes.
 
-## Version demo recomendada
+## Fragmentos técnicos sugeridos
 
-Crear un repo nuevo llamado `rental-admin-demo` con datos ficticios:
+Los ejemplos de `demos/rental-admin-demo/` ilustran estas ideas con datos ficticios; son fragmentos y no una aplicación completa:
 
 - Clientes ficticios.
 - Equipos genericos.

@@ -18,7 +18,7 @@ Este documento agrupa repositorios privados y de organizacion por dominio funcio
 
 ## Como se presenta publicamente
 
-En el portafolio estos repos no se publican con nombres internos ni codigo original. Se convierten en casos de estudio, dominios funcionales y demos recreadas con datos ficticios.
+En el portafolio estos repos no se publican con nombres internos ni codigo original. Se convierten en casos de estudio, dominios funcionales y fragmentos técnicos demostrativos con datos ficticios.
 
 ## Privacidad
 

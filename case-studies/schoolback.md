@@ -29,9 +29,9 @@ Desarrollador Backend / Full Stack Jr.
 
 No se publican nombres de alumnos, usuarios reales, credenciales, URLs internas, capturas productivas ni codigo fuente privado.
 
-## Version demo recomendada
+## Fragmentos técnicos sugeridos
 
-Crear una demo separada con:
+Los ejemplos demostrativos pueden ilustrar estas ideas sin formar una aplicación ejecutable completa:
 
 - Usuarios ficticios.
 - Roles genericos.

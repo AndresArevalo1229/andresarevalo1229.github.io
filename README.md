@@ -1,58 +1,26 @@
-# Andres Arevalo Navarro - Portafolio
+# Portafolio de Andres Arevalo Navarro
 
-Portafolio estatico para mostrar experiencia Full Stack Jr. sin exponer informacion privada de clientes o proyectos reales.
+Este repositorio es [`AndresArevalo1229/andresarevalo1229.github.io`](https://github.com/AndresArevalo1229/andresarevalo1229.github.io), un sitio estático construido con HTML, CSS y JavaScript, sin dependencias de ejecución.
 
-## Archivos
+## Verlo localmente
 
-- `index.html`: sitio principal.
-- `styles.css`: estilos responsivos.
-- `app.js`: accion para copiar email.
-- `case-studies/`: casos de estudio de proyectos privados.
-- `demos/`: demos y snippets genericos para mostrar logica sin exponer codigo real.
+Desde la raíz del repositorio, ejecuta:
 
-## Casos incluidos
+```sh
+python3 -m http.server 8000
+```
 
-- Sistema de arrendamiento.
-- Delice Flow.
-- SchoolBack.
-- AG Note.
-- Barberia Admin.
-- Sistema WMS.
-- Proyecto Finanzas.
-- Mapa de modulos privados agrupados por dominio.
+Abre <http://localhost:8000> en el navegador. Para detener el servidor, pulsa `Ctrl+C` en la terminal.
 
-## Privacidad
+## Publicación
 
-Los proyectos privados se muestran como casos de estudio. No se publican:
+El sitio se publica con GitHub Pages desde la rama `main` y la raíz del repositorio (`/(root)`). No requiere un proceso de compilación.
 
-- Codigo privado.
-- Datos reales.
-- Capturas productivas.
-- Credenciales.
-- URLs internas.
-- Contratos, recibos o clientes reales.
-- Nombres internos que no sea necesario publicar.
+## Contenido
 
-## Publicacion sugerida
+- `index.html`, `styles.css` y `app.js`: página y comportamiento del portafolio.
+- `assets/`: recursos locales, incluido el favicon.
+- `case-studies/`: documentación de casos privados con descripciones anonimizadas; no contiene código original, marcas de terceros, credenciales ni datos reales.
+- `demos/`: fragmentos y ejemplos técnicos demostrativos. No son aplicaciones ejecutables completas.
 
-Este sitio puede publicarse en GitHub Pages, Netlify o Vercel. El repo recomendado:
-
-`portfolio-andres-arevalo`
-
-Para GitHub Pages:
-
-1. Crear un repo publico llamado `portfolio-andres-arevalo`.
-2. Subir estos archivos.
-3. Activar Pages desde `Settings > Pages`.
-4. Seleccionar rama `main` y carpeta `/root`.
-
-## Repos recomendados para fijar en GitHub
-
-GitHub permite mostrar hasta 6 repos fijados en el perfil. Para un perfil Full Stack Jr. conviene usar:
-
-- `andresarevalo1229.github.io`
-- `FrontFinanzas`
-- `ProyectofinanzasBackebd`
-- `Imdelice_BackEnd`
-- `Andorid`
-- `Im-delice`
+Los casos privados describen problemas y responsabilidades de forma general. No se copian código original, nombres de clientes o empresas, credenciales, URLs internas, capturas productivas ni datos reales.

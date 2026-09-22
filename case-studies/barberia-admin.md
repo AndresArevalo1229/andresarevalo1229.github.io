@@ -28,9 +28,9 @@ Desarrollador Full Stack Jr.
 
 No se publican clientes reales, horarios productivos, precios internos, ventas, capturas reales, credenciales ni codigo privado.
 
-## Version demo recomendada
+## Fragmentos técnicos sugeridos
 
-Crear una demo separada con:
+Los ejemplos demostrativos pueden ilustrar estas ideas sin formar una aplicación ejecutable completa:
 
 - Clientes ficticios.
 - Servicios genericos.

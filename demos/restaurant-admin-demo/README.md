@@ -1,10 +1,10 @@
 # restaurant-admin-demo
 
-Demo publica inspirada en un sistema administrativo para restaurante. No contiene codigo privado ni datos reales.
+Fragmentos técnicos públicos sobre administración para restaurante. No contienen código privado ni datos reales y no forman una aplicación ejecutable completa.
 
 ## Objetivo
 
-Mostrar logica de backend para menu, pedidos, proveedores e inventario usando datos ficticios.
+Ilustrar lógica de backend para menú, pedidos, proveedores e inventario usando datos ficticios.
 
 ## Stack sugerido
 
@@ -24,4 +24,4 @@ Mostrar logica de backend para menu, pedidos, proveedores e inventario usando da
 
 ## Privacidad
 
-Este proyecto debe construirse desde cero. No copiar codigo, modelos, datos ni capturas de proyectos reales.
+Si estos ejemplos se amplían, deben construirse desde cero. No copiar código, modelos, datos ni capturas de proyectos reales.
