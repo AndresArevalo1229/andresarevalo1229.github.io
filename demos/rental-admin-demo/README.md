@@ -1,14 +1,16 @@
-# rental-admin-demo
+# Fragmentos de administración de arrendamiento
 
-Demo publica inspirada en administracion de contratos y activos. No contiene codigo privado ni datos reales.
+Fragmentos técnicos públicos sobre administración de contratos y activos. No contienen código privado ni datos reales y no forman una aplicación ejecutable completa.
 
 ## Objetivo
 
-Mostrar una estructura segura para documentar experiencia en sistemas de arrendamiento sin exponer el proyecto real.
+Ilustrar de forma segura conceptos de sistemas de arrendamiento sin exponer el proyecto real.
 
 ## Stack sugerido
 
 - React
+- TypeScript
+- APIs REST
 - Node.js
 - Express
 - MySQL
@@ -16,10 +18,10 @@ Mostrar una estructura segura para documentar experiencia en sistemas de arrenda
 ## Modulos
 
 - Clientes ficticios
-- Equipos genericos
+- Equipos genéricos
 - Contratos simulados
-- Recibos de prueba
+- Pagos, documentos y reportes simulados
 
 ## Privacidad
 
-Este proyecto debe usar datos inventados y nombres genericos.
+Estos ejemplos usan datos inventados y nombres genéricos.

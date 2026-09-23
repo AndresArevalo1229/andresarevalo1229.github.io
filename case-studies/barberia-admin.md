@@ -1,38 +1,28 @@
-# Barberia Admin - Caso de estudio privado
+# Administración de servicios y citas
 
-## Resumen
+## Problema
 
-Sistema administrativo para una barberia, enfocado en citas, clientes, servicios y movimientos del negocio. Se presenta como caso recreado para proteger datos comerciales.
+Coordinar clientes, citas, servicios y productos junto con inventario, ventas y acceso de usuarios.
 
-## Mi rol
+## Solución
 
-Desarrollador Full Stack Jr.
+Un panel web recreado reúne la agenda y las tareas de administración diaria en una interfaz sencilla.
 
-## Tecnologias
+## Participación
 
-- React
-- Node.js
-- Express
-- MySQL
-- APIs REST
+Desarrollo full stack de pantallas, integración con APIs REST y flujos de administración.
 
-## Responsabilidades
+## Funciones
 
-- Desarrollo de modulos para citas y servicios.
-- Captura y consulta de clientes.
-- Apoyo en flujo de movimientos y reportes.
-- Validaciones de formularios administrativos.
-- Ajustes de interfaz para uso diario.
+- Gestión de clientes y citas.
+- Catálogo de servicios y productos.
+- Consulta de inventario y ventas.
+- Administración de usuarios y roles.
+
+## Tecnologías
+
+React, APIs REST y MySQL.
 
 ## Privacidad
 
-No se publican clientes reales, horarios productivos, precios internos, ventas, capturas reales, credenciales ni codigo privado.
-
-## Version demo recomendada
-
-Crear una demo separada con:
-
-- Clientes ficticios.
-- Servicios genericos.
-- Citas simuladas.
-- Reportes recreados.
+Mockup nuevo con contenido anonimizado y ficticio. No utiliza marcas, logotipos, clientes ni información de un negocio real.

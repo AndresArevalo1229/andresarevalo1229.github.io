@@ -1,58 +1,34 @@
-# Andres Arevalo Navarro - Portafolio
+# Portafolio de Andrés Arévalo
 
-Portafolio estatico para mostrar experiencia Full Stack Jr. sin exponer informacion privada de clientes o proyectos reales.
+Este repositorio es [`AndresArevalo1229/andresarevalo1229.github.io`](https://github.com/AndresArevalo1229/andresarevalo1229.github.io), un portafolio estático construido con HTML, CSS y JavaScript.
 
-## Archivos
+## Verlo localmente
 
-- `index.html`: sitio principal.
-- `styles.css`: estilos responsivos.
-- `app.js`: accion para copiar email.
-- `case-studies/`: casos de estudio de proyectos privados.
-- `demos/`: demos y snippets genericos para mostrar logica sin exponer codigo real.
+Desde la raíz del repositorio, ejecuta:
 
-## Casos incluidos
+```sh
+python3 -m http.server 8000
+```
 
-- Sistema de arrendamiento.
-- Delice Flow.
-- SchoolBack.
-- AG Note.
-- Barberia Admin.
-- Sistema WMS.
-- Proyecto Finanzas.
-- Mapa de modulos privados agrupados por dominio.
+Abre <http://localhost:8000> en el navegador. Detén el servidor con `Ctrl+C`.
 
-## Privacidad
+## Publicación
 
-Los proyectos privados se muestran como casos de estudio. No se publican:
+El sitio se publica mediante GitHub Pages desde la rama `main` y la raíz del repositorio (`/(root)`). No requiere compilación ni dependencias de ejecución.
 
-- Codigo privado.
-- Datos reales.
-- Capturas productivas.
-- Credenciales.
-- URLs internas.
-- Contratos, recibos o clientes reales.
-- Nombres internos que no sea necesario publicar.
+## Perfil y contenido
 
-## Publicacion sugerida
+El portafolio presenta a Andrés Arévalo como desarrollador Full Stack en Guadalajara, Jalisco, con experiencia desde febrero de 2025 y estudios de Ingeniería en Sistemas y Tecnologías de Información en UNIVA; egresado, titulación en proceso.
 
-Este sitio puede publicarse en GitHub Pages, Netlify o Vercel. El repo recomendado:
+Los nueve casos destacados son descripciones anonimizadas y demostraciones recreadas a partir de la información profesional de este portafolio. No incluyen nombres de clientes, marcas, código privado, credenciales, rutas, capturas ni datos reales. No se atribuyen métricas ni resultados comerciales no comprobados.
 
-`portfolio-andres-arevalo`
+Los archivos SVG de `assets/projects/` son mockups originales y locales. Los archivos de `demos/` son fragmentos demostrativos; no son aplicaciones ejecutables completas.
 
-Para GitHub Pages:
+## Estructura
 
-1. Crear un repo publico llamado `portfolio-andres-arevalo`.
-2. Subir estos archivos.
-3. Activar Pages desde `Settings > Pages`.
-4. Seleccionar rama `main` y carpeta `/root`.
+- `index.html`, `styles.css` y `app.js`: vistas, diseño adaptable y comportamiento del portafolio.
+- `assets/`: favicon y recursos SVG locales.
+- `case-studies/`: documentación de experiencia y casos presentados de forma genérica.
+- `demos/`: ejemplos técnicos parciales con contenido demostrativo.
 
-## Repos recomendados para fijar en GitHub
-
-GitHub permite mostrar hasta 6 repos fijados en el perfil. Para un perfil Full Stack Jr. conviene usar:
-
-- `andresarevalo1229.github.io`
-- `FrontFinanzas`
-- `ProyectofinanzasBackebd`
-- `Imdelice_BackEnd`
-- `Andorid`
-- `Im-delice`
+Las demostraciones y documentación no contienen código original de sistemas privados ni datos productivos.

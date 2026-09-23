@@ -1,32 +1,21 @@
-# Mapa de modulos privados - Caso de experiencia
+# Capacidades técnicas y funcionales
 
 ## Resumen
 
-Este documento agrupa repositorios privados y de organizacion por dominio funcional. La intencion es mostrar experiencia real sin publicar codigo, rutas internas, credenciales, clientes, capturas productivas ni datos operativos.
+Experiencia aplicada en interfaces, servicios, persistencia, seguridad e integraciones para sistemas administrativos y operativos.
 
-## Dominios trabajados
+## Áreas
 
-- Arrendamiento: contratos, clientes, equipos, seguros y recibos.
-- Ventas: flujo comercial, inventario, movimientos y administracion.
-- Scrum interno: actividades, tableros, estados y seguimiento de equipo.
-- Inventarios: entradas, salidas, proveedores, viajes y existencias.
-- Personal: asistencia, horarios y registros administrativos.
-- Educacion: usuarios, permisos, registros y modulos escolares.
-- Servicios: catalogos, clientes y atencion comercial.
-- APIs versionadas: rutas, servicios, validaciones e integraciones.
-- Full stack colaborativo: frontend y backend separados por repos.
-
-## Como se presenta publicamente
-
-En el portafolio estos repos no se publican con nombres internos ni codigo original. Se convierten en casos de estudio, dominios funcionales y demos recreadas con datos ficticios.
+- Frontend web con React, TypeScript y Angular.
+- Aplicaciones móviles con .NET MAUI y C#.
+- Backend y APIs REST con ASP.NET Core, Node.js, Express y Sails.js.
+- Persistencia con MySQL y SQLite.
+- Autenticación, roles, permisos, JWT y OAuth.
+- Pagos, notificaciones e integraciones externas.
+- Inventarios, ventas, pedidos y reportes.
+- Pruebas, validaciones y manejo de errores.
+- Automatización y procesamiento multimedia con SignalR y FFprobe.
 
 ## Privacidad
 
-No se publica:
-
-- Codigo fuente privado.
-- URLs internas.
-- Credenciales.
-- Datos de clientes, alumnos, proveedores o empleados.
-- Recibos, contratos, ventas, historiales o registros productivos.
-- Capturas reales de sistemas privados.
+La presentación agrupa capacidades sin rutas, marcas, clientes, código, credenciales ni información operativa privada.

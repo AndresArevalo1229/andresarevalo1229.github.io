@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+<title id="title">Agenda ficticia de bienestar</title><desc id="desc">Calendario original con horarios y perfiles de demostración, sin datos clínicos.</desc>
+<rect width="960" height="600" rx="30" fill="#f3f1ec"/><rect x="28" y="28" width="904" height="544" rx="24" fill="#fff" stroke="#d9e2e5"/>
+<rect x="28" y="28" width="904" height="70" rx="24" fill="#0f2c35"/><rect x="28" y="74" width="904" height="24" fill="#0f2c35"/>
+<circle cx="64" cy="63" r="7" fill="#8ed5ce"/><circle cx="88" cy="63" r="7" fill="#bf7a23"/><text x="122" y="70" fill="#fff" font-family="Arial,sans-serif" font-size="23" font-weight="700">Agenda de bienestar</text>
+<text x="68" y="145" fill="#123039" font-family="Arial" font-size="26" font-weight="700">Disponibilidad semanal</text>
+<g font-family="Arial" font-size="16" fill="#5c6f76"><text x="94" y="194">LUN</text><text x="214" y="194">MAR</text><text x="334" y="194">MIÉ</text><text x="454" y="194">JUE</text><text x="574" y="194">VIE</text></g>
+<g fill="#f7faf9" stroke="#d9e2e5"><rect x="68" y="212" width="98" height="220" rx="10"/><rect x="188" y="212" width="98" height="220" rx="10"/><rect x="308" y="212" width="98" height="220" rx="10"/><rect x="428" y="212" width="98" height="220" rx="10"/><rect x="548" y="212" width="98" height="220" rx="10"/></g>
+<g fill="#167d86"><rect x="76" y="250" width="82" height="48" rx="8"/><rect x="196" y="326" width="82" height="48" rx="8"/><rect x="316" y="278" width="82" height="48" rx="8"/><rect x="436" y="230" width="82" height="48" rx="8"/><rect x="556" y="350" width="82" height="48" rx="8"/></g>
+<g fill="#fff" font-family="Arial" font-size="13"><text x="85" y="279">Cita demo</text><text x="205" y="355">Cita demo</text><text x="325" y="307">Cita demo</text><text x="445" y="259">Cita demo</text><text x="565" y="379">Cita demo</text></g>
+<rect x="684" y="210" width="208" height="222" rx="14" fill="#f7faf9" stroke="#d9e2e5"/><text x="708" y="250" fill="#123039" font-family="Arial" font-size="19" font-weight="700">Perfil de muestra</text><text x="708" y="290" fill="#5c6f76" font-family="Arial" font-size="16">Disponibilidad</text><rect x="708" y="306" width="146" height="9" rx="5" fill="#8ed5ce"/><text x="708" y="354" fill="#5c6f76" font-family="Arial" font-size="16">Preferencias</text><rect x="708" y="370" width="112" height="9" rx="5" fill="#bf7a23"/>
+</svg>

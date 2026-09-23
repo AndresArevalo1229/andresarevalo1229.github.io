@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+<title id="title">Tablero de cocina ficticio</title><desc id="desc">Panel recreado de pedidos y preparación con contenido de demostración.</desc>
+<rect width="960" height="600" rx="30" fill="#f6f1e8"/><rect x="28" y="28" width="904" height="544" rx="24" fill="#fff" stroke="#d9e2e5"/>
+<rect x="28" y="28" width="904" height="70" rx="24" fill="#0f2c35"/><rect x="28" y="74" width="904" height="24" fill="#0f2c35"/>
+<circle cx="64" cy="63" r="7" fill="#8ed5ce"/><circle cx="88" cy="63" r="7" fill="#bf7a23"/><text x="122" y="70" fill="#fff" font-family="Arial,sans-serif" font-size="23" font-weight="700">Operación de cocina</text>
+<text x="66" y="146" fill="#123039" font-family="Arial" font-size="26" font-weight="700">Pedidos y preparación</text>
+<g><rect x="66" y="178" width="258" height="340" rx="14" fill="#fffaf0" stroke="#e8ddc8"/><rect x="350" y="178" width="258" height="340" rx="14" fill="#f7faf9" stroke="#d9e2e5"/><rect x="634" y="178" width="258" height="340" rx="14" fill="#f3f7f3" stroke="#d9e2e5"/></g>
+<g font-family="Arial" font-size="19" font-weight="700"><text x="92" y="222" fill="#bf7a23">Por preparar</text><text x="376" y="222" fill="#167d86">En cocina</text><text x="660" y="222" fill="#4f7a5c">Listos</text></g>
+<g><rect x="88" y="244" width="214" height="94" rx="10" fill="#fff" stroke="#e8ddc8"/><rect x="88" y="354" width="214" height="94" rx="10" fill="#fff" stroke="#e8ddc8"/><rect x="372" y="244" width="214" height="94" rx="10" fill="#fff" stroke="#d9e2e5"/><rect x="656" y="244" width="214" height="94" rx="10" fill="#fff" stroke="#d9e2e5"/></g>
+<g fill="#123039" font-family="Arial" font-size="16" font-weight="700"><text x="108" y="278">Pedido de muestra</text><text x="108" y="388">Combo ficticio</text><text x="392" y="278">Preparación demo</text><text x="676" y="278">Pedido completado</text></g><g fill="#5c6f76" font-family="Arial" font-size="14"><text x="108" y="310">Productos genéricos</text><text x="108" y="420">Datos ilustrativos</text><text x="392" y="310">Flujo de cocina</text><text x="676" y="310">Listo para entregar</text></g>
+</svg>

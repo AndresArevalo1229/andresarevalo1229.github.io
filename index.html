@@ -2,273 +2,205 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Andres Arevalo Navarro | Full Stack Jr.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f2c35" />
+    <title>Andrés Arévalo | Desarrollador Full Stack</title>
     <meta
       name="description"
-      content="Portafolio dashboard de Andres Arevalo Navarro, desarrollador Full Stack Jr. con experiencia en React, Node.js, Express, Prisma y MySQL para sistemas administrativos."
+      content="Portafolio de Andrés Arévalo, desarrollador Full Stack en Guadalajara, Jalisco. Experiencia en aplicaciones web, móviles, APIs REST y sistemas administrativos."
     />
-    <link rel="stylesheet" href="./styles.css?v=project-visuals" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=portfolio-refresh-2026.2" />
+    <script src="./app.js?v=portfolio-refresh-2026.1" defer></script>
   </head>
   <body>
-    <div class="app-shell">
-      <aside class="sidebar" aria-label="Navegacion del portafolio">
-        <a class="brand" href="#dashboard" data-route-link>
-          <span class="brand-mark">AA</span>
+    <div class="app-shell" id="appShell">
+      <aside class="sidebar" aria-label="Navegación del portafolio">
+        <a class="brand" href="#inicio" data-route-link>
+          <span class="brand-mark" aria-hidden="true">AA</span>
           <span>
-            <strong>Andres Arevalo</strong>
-            <small>Full Stack Jr.</small>
+            <strong>Andrés Arévalo</strong>
+            <small>Desarrollador Full Stack</small>
           </span>
         </a>
 
-        <nav class="nav" aria-label="Vistas del dashboard">
-          <a href="#dashboard" data-route-link data-nav-route="dashboard">Dashboard</a>
+        <nav class="nav" aria-label="Vistas del portafolio">
+          <a href="#inicio" data-route-link data-nav-route="inicio" aria-current="page">Inicio</a>
           <a href="#proyectos" data-route-link data-nav-route="proyectos">Proyectos</a>
-          <a href="#modulos" data-route-link data-nav-route="modulos">Modulos</a>
-          <a href="#privacidad" data-route-link data-nav-route="privacidad">Privacidad</a>
-          <a href="#repos" data-route-link data-nav-route="repos">Repos</a>
+          <a href="#capacidades" data-route-link data-nav-route="capacidades">Capacidades</a>
+          <a href="#forma-de-trabajo" data-route-link data-nav-route="forma-de-trabajo">Forma de trabajo</a>
+          <a href="#github" data-route-link data-nav-route="github">GitHub</a>
           <a href="#contacto" data-route-link data-nav-route="contacto">Contacto</a>
         </nav>
 
         <div class="sidebar-card">
-          <p class="eyebrow">Perfil</p>
-          <strong>React, Node.js, Express, Prisma y MySQL</strong>
-          <span>Casos privados explicados sin exponer codigo ni datos reales.</span>
+          <p class="eyebrow">Tecnologías principales</p>
+          <strong>React · TypeScript · .NET MAUI · Angular</strong>
+          <span>ASP.NET Core, APIs REST, MySQL y SQLite.</span>
         </div>
       </aside>
 
-      <main class="workspace">
+      <main class="workspace" id="mainContent" tabindex="-1">
         <header class="workspace-top">
-          <div>
+          <div class="workspace-heading">
             <p class="eyebrow" id="pageEyebrow">Portafolio</p>
-            <h1 id="pageTitle">Dashboard profesional</h1>
-            <p id="pageDescription">
-              Vista principal para revisar proyectos, modulos, privacidad y repos publicos.
-            </p>
+            <h1 id="pageTitle">Desarrollador Full Stack</h1>
+            <p id="pageDescription">Aplicaciones web, móviles y sistemas administrativos.</p>
           </div>
-          <div class="workspace-actions">
-            <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com">
-              Copiar email
+          <div class="workspace-actions" role="group" aria-label="Contacto rápido">
+            <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com" aria-describedby="copyStatus">
+              Copiar correo
             </button>
-            <a class="button secondary" href="https://github.com/AndresArevalo1229">GitHub</a>
+            <a class="button secondary" href="mailto:andres.arevalonavarro@gmail.com">Enviar correo</a>
+            <a class="button secondary" href="https://github.com/AndresArevalo1229" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </header>
 
-        <section class="view dashboard-view is-active" id="view-dashboard" data-view="dashboard">
+        <p class="visually-hidden" id="copyStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+
+        <section class="view dashboard-view is-active" id="view-inicio" data-view="inicio">
           <div class="overview-grid">
             <article class="intro-panel">
-              <p class="eyebrow">Desarrollador Full Stack Jr.</p>
-              <h2>Sistemas administrativos presentados como dashboard profesional.</h2>
+              <p class="eyebrow">Andrés Arévalo · Guadalajara, Jalisco</p>
+              <h2>Desarrollo soluciones full stack para operaciones reales.</h2>
               <p class="lead">
-                Desarrollo modulos para clientes, contratos, inventarios, pedidos, recibos
-                y reportes. Mis mejores trabajos son privados, por eso los presento como
-                casos de estudio seguros, demos recreadas y repos publicos.
+                Construyo aplicaciones web y móviles para administrar clientes, inventarios,
+                ventas, citas, pagos, reportes y procesos internos. Los proyectos privados
+                se presentan mediante casos anonimizados y demostraciones recreadas.
               </p>
-              <div class="hero-actions" aria-label="Acciones principales">
-                <a class="button primary" href="#proyectos" data-route-link>Ver proyectos</a>
-                <a class="button secondary" href="#repos" data-route-link>Ver repos</a>
+              <div class="hero-actions" role="group" aria-label="Acciones principales">
+                <a class="button primary" href="#proyectos" data-route-link>Explorar proyectos</a>
+                <a class="button secondary" href="#contacto" data-route-link>Hablemos</a>
+              </div>
+              <div class="profile-facts" aria-label="Perfil profesional">
+                <div><span>Experiencia actual</span><strong>Desarrollador Full Stack</strong><small>Febrero 2025 – Actualidad</small></div>
+                <div><span>Educación</span><strong>Ingeniería en Sistemas y Tecnologías de Información</strong><small>UNIVA · egresado, titulación en proceso</small></div>
               </div>
             </article>
 
-            <div class="dashboard-shell" aria-label="Dashboard administrativo ficticio">
+            <div class="dashboard-shell" role="img" aria-label="Resumen visual de áreas de desarrollo, con datos ilustrativos">
               <div class="window-bar">
-                <span></span>
-                <span></span>
-                <span></span>
-                <strong>Admin workspace</strong>
+                <span></span><span></span><span></span>
+                <strong>Áreas de desarrollo</strong>
               </div>
               <div class="dashboard-grid">
-                <article class="metric-card metric-contracts">
-                  <span>Contratos</span>
-                  <strong>128</strong>
-                  <small>activos</small>
-                </article>
-                <article class="metric-card metric-inventory">
-                  <span>Inventario</span>
-                  <strong>34</strong>
-                  <small>movimientos</small>
-                </article>
-                <article class="metric-card metric-orders">
-                  <span>Pedidos</span>
-                  <strong>19</strong>
-                  <small>hoy</small>
-                </article>
+                <article class="metric-card metric-contracts"><span>Web</span><strong>UI</strong><small>React · Angular</small></article>
+                <article class="metric-card metric-inventory"><span>Móvil</span><strong>Apps</strong><small>.NET MAUI</small></article>
+                <article class="metric-card metric-orders"><span>Backend</span><strong>API</strong><small>ASP.NET Core · REST</small></article>
                 <article class="operations-panel">
-                  <div class="panel-heading">
-                    <span>Modulo</span>
-                    <span>Estado</span>
-                  </div>
-                  <div class="operation-row">
-                    <span>Clientes</span>
-                    <strong>Validado</strong>
-                  </div>
-                  <div class="operation-row">
-                    <span>Recibos</span>
-                    <strong>En revision</strong>
-                  </div>
-                  <div class="operation-row">
-                    <span>Proveedor</span>
-                    <strong>Activo</strong>
-                  </div>
+                  <div class="panel-heading"><span>Enfoque</span><span>Áreas</span></div>
+                  <div class="operation-row"><span>Persistencia</span><strong>MySQL · SQLite</strong></div>
+                  <div class="operation-row"><span>Integraciones</span><strong>Servicios y pagos</strong></div>
+                  <div class="operation-row"><span>Operación</span><strong>Inventarios · ventas</strong></div>
                 </article>
-                <article class="flow-panel">
-                  <span class="flow-step is-active">Captura</span>
-                  <span class="flow-line"></span>
-                  <span class="flow-step">Validacion</span>
-                  <span class="flow-line"></span>
-                  <span class="flow-step">Reporte</span>
+                <article class="flow-panel" aria-label="Flujo de trabajo: interfaz, servicios y datos">
+                  <span class="flow-step is-active">Interfaz</span><span class="flow-line" aria-hidden="true"></span>
+                  <span class="flow-step">Servicios</span><span class="flow-line" aria-hidden="true"></span>
+                  <span class="flow-step">Datos</span>
                 </article>
               </div>
             </div>
           </div>
 
-          <dl class="hero-stats" aria-label="Resumen profesional">
-            <div>
-              <dt data-count="7">0</dt>
-              <dd>casos documentados</dd>
-            </div>
-            <div>
-              <dt data-count="9">0</dt>
-              <dd>dominios de modulos</dd>
-            </div>
-            <div>
-              <dt data-count="6">0</dt>
-              <dd>repos seguros</dd>
-            </div>
+          <dl class="hero-stats" aria-label="Resumen del portafolio">
+            <div><dt>9</dt><dd>casos profesionales</dd></div>
+            <div role="group" aria-label="9 capacidades"><dt>9</dt><dd>capacidades</dd></div>
+            <div><dt>8</dt><dd>tecnologías principales</dd></div>
           </dl>
 
-          <div class="dashboard-shortcuts" aria-label="Accesos rapidos">
-            <a href="#proyectos" data-route-link>
-              <span>01</span>
-              <strong>Proyectos</strong>
-              <small>Casos con problema, solucion, rol y privacidad.</small>
-            </a>
-            <a href="#modulos" data-route-link>
-              <span>02</span>
-              <strong>Modulos</strong>
-              <small>Mapa de experiencia por dominio funcional.</small>
-            </a>
-            <a href="#privacidad" data-route-link>
-              <span>03</span>
-              <strong>Privacidad</strong>
-              <small>Como se protege el trabajo real y datos sensibles.</small>
-            </a>
-            <a href="#repos" data-route-link>
-              <span>04</span>
-              <strong>Repos</strong>
-              <small>Codigo publico seguro para fijar en GitHub.</small>
-            </a>
-          </div>
+          <section class="tech-strip" aria-labelledby="techTitle">
+            <div><p class="eyebrow">Stack principal</p><h2 id="techTitle">Tecnologías</h2></div>
+            <ul class="stack" aria-label="Tecnologías principales">
+              <li>React</li><li>TypeScript</li><li>.NET MAUI</li><li>Angular</li>
+              <li>ASP.NET Core</li><li>APIs REST</li><li>MySQL</li><li>SQLite</li>
+            </ul>
+          </section>
+
+          <nav class="dashboard-shortcuts" aria-label="Accesos rápidos">
+            <a href="#proyectos" data-route-link><span>01</span><strong>Proyectos</strong><small>Nueve casos anonimizados, con contexto y participación.</small></a>
+            <a href="#capacidades" data-route-link><span>02</span><strong>Capacidades</strong><small>Experiencia aplicada en interfaz, backend, datos e integraciones.</small></a>
+            <a href="#forma-de-trabajo" data-route-link><span>03</span><strong>Forma de trabajo</strong><small>Un proceso responsable desde el análisis hasta la documentación.</small></a>
+            <a href="#github" data-route-link><span>04</span><strong>GitHub</strong><small>Repositorios públicos seleccionados y verificables.</small></a>
+          </nav>
         </section>
 
         <section class="view projects-section" id="view-proyectos" data-view="proyectos" hidden>
           <div class="section-heading">
             <p class="eyebrow">Trabajo destacado</p>
-            <h2>Casos reales, presentados con contexto profesional y datos ficticios.</h2>
-            <p>
-              Cada caso resume el problema, mi participacion y lo que demuestra
-              tecnicamente sin publicar codigo privado, datos productivos ni capturas reales.
-            </p>
+            <h2>Proyectos con enfoque en producto y operación.</h2>
+            <p>Casos profesionales anonimizados y demostraciones recreadas. No incluyen código privado, marcas, clientes ni datos productivos.</p>
           </div>
-
-          <div class="filter-row" aria-label="Filtrar proyectos">
-            <button class="filter-button is-active" type="button" data-filter="Todos">Todos</button>
-            <button class="filter-button" type="button" data-filter="Full stack">Full stack</button>
-            <button class="filter-button" type="button" data-filter="Backend">Backend</button>
-            <button class="filter-button" type="button" data-filter="Frontend">Frontend</button>
-            <button class="filter-button" type="button" data-filter="Inventarios">Inventarios</button>
-            <button class="filter-button" type="button" data-filter="Administrativo">Administrativo</button>
-            <button class="filter-button" type="button" data-filter="Repo publico">Repo publico</button>
+          <div class="filter-row" role="group" aria-label="Filtrar proyectos">
+            <button class="filter-button is-active" type="button" data-filter="Todos" aria-pressed="true">Todos</button>
+            <button class="filter-button" type="button" data-filter="Web" aria-pressed="false">Web</button>
+            <button class="filter-button" type="button" data-filter="Móvil" aria-pressed="false">Móvil</button>
+            <button class="filter-button" type="button" data-filter="Backend" aria-pressed="false">Backend</button>
+            <button class="filter-button" type="button" data-filter="Full Stack" aria-pressed="false">Full Stack</button>
+            <button class="filter-button" type="button" data-filter="Inventarios" aria-pressed="false">Inventarios</button>
+            <button class="filter-button" type="button" data-filter="Ventas" aria-pressed="false">Ventas</button>
+            <button class="filter-button" type="button" data-filter="Automatización" aria-pressed="false">Automatización</button>
           </div>
-
-          <div class="project-layout">
-            <div class="project-grid" id="projectGrid" aria-label="Lista de proyectos"></div>
-          </div>
+          <p class="visually-hidden" id="filterStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+          <div class="project-grid" id="projectGrid" role="list" aria-label="Proyectos"></div>
         </section>
 
-        <section class="view modules-section" id="view-modulos" data-view="modulos" hidden>
+        <section class="view modules-section" id="view-capacidades" data-view="capacidades" hidden>
           <div class="section-heading">
-            <p class="eyebrow">Mapa de experiencia</p>
-            <h2>Modulos privados convertidos en dominios presentables.</h2>
-            <p>
-              Esta pantalla agrupa trabajo real por dominio funcional. La idea es mostrar
-              criterio tecnico y contexto de negocio sin mencionar rutas internas ni datos sensibles.
-            </p>
+            <p class="eyebrow">Experiencia aplicada</p>
+            <h2>Capacidades técnicas y funcionales</h2>
+            <p>Experiencia aplicada en interfaces, servicios, datos, seguridad e integraciones para sistemas administrativos.</p>
           </div>
-          <div class="module-board" id="moduleBoard"></div>
+          <div class="module-board" id="moduleBoard" role="list" aria-label="Capacidades técnicas"></div>
         </section>
 
-        <section class="view privacy-section" id="view-privacidad" data-view="privacidad" hidden>
-          <div class="section-heading compact">
-            <p class="eyebrow">Confidencialidad</p>
-            <h2>Como presento proyectos privados sin comprometer informacion.</h2>
-          </div>
-          <div class="privacy-grid">
-            <article class="privacy-card">
-              <span>01</span>
-              <h3>Contexto</h3>
-              <p>
-                Explico el problema operativo, los usuarios del sistema y el flujo general
-                sin revelar clientes, contratos, ventas ni informacion interna.
-              </p>
-            </article>
-            <article class="privacy-card">
-              <span>02</span>
-              <h3>Ejecucion</h3>
-              <p>
-                Muestro responsabilidades: modulos, formularios, APIs REST, validaciones,
-                consultas, modelos de datos y pruebas funcionales.
-              </p>
-            </article>
-            <article class="privacy-card">
-              <span>03</span>
-              <h3>Seguridad</h3>
-              <p>
-                No publico codigo privado, credenciales, URLs internas, capturas reales,
-                datos productivos, recibos, contratos ni informacion de clientes.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="view repos-section" id="view-repos" data-view="repos" hidden>
+        <section class="view privacy-section" id="view-forma-de-trabajo" data-view="forma-de-trabajo" hidden>
           <div class="section-heading">
-            <p class="eyebrow">Repos publicos seguros</p>
-            <h2>Repos que conviene mostrar para que el perfil no parezca solo escolar.</h2>
-            <p>
-              Estos enlaces se presentan con el valor tecnico que demuestran. Cuando un repo
-              es demo o recreacion, se indica para mantener claridad.
-            </p>
+            <p class="eyebrow">Criterio profesional</p>
+            <h2>Desarrollo responsable de proyectos</h2>
+            <p>Presento mi experiencia protegiendo código, información de clientes y datos operativos.</p>
           </div>
-          <div class="repo-showcase" id="repoShowcase"></div>
+          <div class="privacy-grid" id="workSteps" role="list" aria-label="Etapas de trabajo"></div>
+        </section>
+
+        <section class="view repos-section" id="view-github" data-view="github" hidden>
+          <div class="section-heading">
+            <p class="eyebrow">GitHub</p>
+            <h2>Repositorios públicos seleccionados</h2>
+            <p>Proyectos y demostraciones públicas que muestran estructura, componentes, APIs y prácticas de desarrollo.</p>
+          </div>
+          <div class="repo-showcase" id="repoShowcase" role="list" aria-label="Repositorios públicos"></div>
+          <p class="repo-verification-note" id="repoVerificationNote" hidden></p>
         </section>
 
         <section class="view contact-section" id="view-contacto" data-view="contacto" hidden>
           <div class="contact-panel">
-            <div>
+            <div class="contact-intro">
               <p class="eyebrow">Contacto</p>
-              <h2>Disponible para oportunidades Full Stack Jr.</h2>
-              <p>React, Node.js, Express, Prisma, MySQL y sistemas administrativos.</p>
+              <h2>Disponible para oportunidades de desarrollo Full Stack</h2>
+              <p>Guadalajara, Jalisco · Experiencia desde febrero de 2025</p>
             </div>
-            <div class="contact-actions">
-              <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com">
-                Copiar email
-              </button>
-              <a class="button secondary" href="https://github.com/AndresArevalo1229">Ver GitHub</a>
+            <dl class="contact-details">
+              <div><dt>Correo profesional</dt><dd><a href="mailto:andres.arevalonavarro@gmail.com">andres.arevalonavarro@gmail.com</a></dd></div>
+              <div><dt>GitHub</dt><dd><a href="https://github.com/AndresArevalo1229" target="_blank" rel="noopener noreferrer">github.com/AndresArevalo1229</a></dd></div>
+              <div><dt>Educación</dt><dd>Ingeniería en Sistemas y Tecnologías de Información · UNIVA · titulación en proceso</dd></div>
+              <div><dt>Tecnologías principales</dt><dd>React, TypeScript, .NET MAUI, Angular, ASP.NET Core, APIs REST, MySQL y SQLite</dd></div>
+            </dl>
+            <div class="contact-actions" role="group" aria-label="Acciones de contacto">
+              <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com" aria-describedby="copyStatus">Copiar correo</button>
+              <a class="button secondary" href="mailto:andres.arevalonavarro@gmail.com">Enviar correo</a>
+              <a class="button secondary" href="https://github.com/AndresArevalo1229" target="_blank" rel="noopener noreferrer">Ver GitHub</a>
             </div>
           </div>
         </section>
       </main>
     </div>
 
-    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" hidden>
-      <button class="project-modal-backdrop" type="button" data-modal-close tabindex="-1" aria-label="Cerrar detalles"></button>
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-describedby="projectModalSummary" hidden>
+      <button class="project-modal-backdrop" type="button" data-modal-close tabindex="-1" aria-label="Cerrar detalles del proyecto"></button>
       <section class="project-modal-card" tabindex="-1">
-        <button class="modal-close" type="button" data-modal-close>Cerrar</button>
+        <button class="modal-close" type="button" data-modal-close aria-label="Cerrar detalles del proyecto">Cerrar</button>
         <div id="projectModalContent"></div>
       </section>
     </div>
-
-    <script src="./app.js?v=project-visuals"></script>
   </body>
 </html>

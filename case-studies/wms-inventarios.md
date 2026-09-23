@@ -1,36 +1,28 @@
-# Sistema WMS - Caso de estudio privado
+# WMS para inventario de alimentos
 
-## Resumen
+## Problema
 
-Sistema tipo WMS para controlar existencias, entradas, salidas, ubicaciones, lotes y viajes de proveedores.
+Seguir existencias y movimientos entre entradas, salidas, viajes, ventas y proveedores.
 
-## Mi rol
+## Solución
 
-Desarrollador web.
+Una interfaz web organiza los registros de almacén y las consultas operativas con trazabilidad de movimientos.
 
-## Tecnologias
+## Participación
 
-- React
-- MySQL
-- APIs REST
-- Modelado de datos
+Desarrollo full stack de vistas de operación e integración con servicios REST.
 
-## Responsabilidades
+## Funciones
 
-- Modelado de productos, lotes, ubicaciones y movimientos.
-- Desarrollo de pantallas administrativas.
-- Captura y consulta de entradas y salidas.
-- Organizacion de informacion para control operativo.
+- Inventario, entradas y salidas.
+- Viajes y ventas.
+- Gestión de proveedores.
+- Trazabilidad de movimientos.
+
+## Tecnologías
+
+React, TypeScript, APIs REST y MySQL.
 
 ## Privacidad
 
-No se publican proveedores reales, cantidades, costos, ubicaciones internas, historiales ni capturas productivas.
-
-## Version demo recomendada
-
-Crear `inventory-wms-demo` con:
-
-- Productos genericos.
-- Ubicaciones ficticias.
-- Movimientos simulados.
-- Reportes recreados.
+Mockup diseñado de nuevo con contenido demostrativo. No se publican cantidades, costos, proveedores, ubicaciones ni datos de operación reales.

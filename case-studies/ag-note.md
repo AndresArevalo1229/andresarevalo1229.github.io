@@ -29,9 +29,9 @@ Desarrollador Full Stack Jr.
 
 No se publican notas reales, nombres internos, usuarios, capturas productivas, URLs privadas ni codigo original.
 
-## Version demo recomendada
+## Fragmentos técnicos sugeridos
 
-Crear una demo con:
+Los ejemplos demostrativos pueden ilustrar estas ideas sin formar una aplicación ejecutable completa:
 
 - Notas ficticias.
 - Estados genericos.

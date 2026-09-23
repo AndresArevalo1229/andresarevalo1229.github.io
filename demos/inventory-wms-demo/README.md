@@ -1,22 +1,22 @@
-# inventory-wms-demo
+# Fragmentos de inventario para alimentos
 
-Demo publica para explicar logica de inventarios tipo WMS con datos ficticios.
+Fragmentos técnicos públicos para explicar lógica de inventarios tipo WMS con datos ficticios. No forman una aplicación ejecutable completa.
 
 ## Objetivo
 
-Mostrar control de existencias, lotes, ubicaciones y movimientos sin publicar informacion privada.
+Ilustrar control de existencias, lotes, ubicaciones y movimientos sin publicar información privada.
 
-## Stack sugerido
+## Tecnologías ilustradas
 
 - React
-- Node.js
-- MySQL
 - TypeScript
+- APIs REST
+- MySQL
 
 ## Modulos
 
-- Productos genericos
+- Productos genéricos
 - Lotes
 - Ubicaciones
 - Entradas y salidas
-- Reportes recreados
+- Trazabilidad y reportes recreados

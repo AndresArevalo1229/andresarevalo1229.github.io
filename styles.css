@@ -21,13 +21,11 @@
 
 html {
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {
   min-height: 100%;
   margin: 0;
-  overflow-x: hidden;
   background: var(--paper);
   color: var(--ink);
   font-family:
@@ -197,9 +195,7 @@ h4 {
 }
 
 .workspace-top {
-  position: sticky;
-  top: 0;
-  z-index: 20;
+  position: static;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -313,6 +309,24 @@ h4 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
+}
+
+.intro-panel h2 {
+  max-width: 30ch;
+  font-size: clamp(1.65rem, 2.15vw, 2.2rem);
+  line-height: 1.08;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .eyebrow {
@@ -1180,20 +1194,18 @@ h4 {
   .sidebar,
   .workspace {
     width: 100%;
+    min-width: 0;
     max-width: 100vw;
-    overflow-x: hidden;
-  }
-
-  body {
-    overflow-x: hidden;
   }
 
   .app-shell {
     display: block;
+    min-width: 0;
   }
 
   .sidebar {
-    position: sticky;
+    position: relative;
+    top: auto;
     z-index: 50;
     height: auto;
     padding: 14px 16px;
@@ -1206,6 +1218,7 @@ h4 {
 
   .nav {
     width: 100%;
+    min-width: 0;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
   }
@@ -1224,6 +1237,7 @@ h4 {
   }
 
   .workspace {
+    min-width: 0;
     height: auto;
     min-height: calc(100vh - 154px);
     overflow: visible;
@@ -1256,8 +1270,8 @@ h4 {
   .repo-showcase,
   .privacy-grid {
     width: 100%;
+    min-width: 0;
     max-width: 100%;
-    overflow-x: hidden;
   }
 
   .dashboard-grid,
@@ -1305,6 +1319,11 @@ h4 {
 
   h2 {
     font-size: 1.75rem;
+  }
+
+  .intro-panel h2 {
+    max-width: none;
+    font-size: clamp(1.7rem, 7vw, 1.9rem);
   }
 
   h1,
@@ -1363,5 +1382,492 @@ h4 {
   .sidebar {
     padding-right: 12px;
     padding-left: 12px;
+  }
+}
+
+/* Etapa 2: contenido profesional y densidad responsiva. */
+body {
+  font-size: 16px;
+}
+
+h1 {
+  max-width: 26ch;
+  font-size: clamp(1.55rem, 2.6vw, 2.25rem);
+  text-wrap: balance;
+}
+
+h2,
+h3,
+p {
+  text-wrap: pretty;
+}
+
+.workspace-heading {
+  min-width: 0;
+}
+
+.workspace-top {
+  align-items: center;
+}
+
+.workspace-top p {
+  max-width: 62ch;
+}
+
+.intro-panel h2 {
+  max-width: 24ch;
+  font-size: clamp(1.8rem, 2.45vw, 2.25rem);
+  line-height: 1.04;
+}
+
+@media (min-width: 1181px) {
+  .overview-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+}
+
+.profile-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.profile-facts > div {
+  min-width: 0;
+  padding: 14px;
+  border-left: 3px solid var(--teal);
+  background: #f7faf9;
+}
+
+.profile-facts span,
+.profile-facts strong,
+.profile-facts small {
+  display: block;
+}
+
+.profile-facts span {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.profile-facts strong {
+  line-height: 1.25;
+}
+
+.profile-facts small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.tech-strip {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  margin: 18px 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.tech-strip h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.tech-strip .eyebrow {
+  margin-bottom: 4px;
+}
+
+.tech-strip .stack {
+  margin: 0;
+}
+
+.hero-stats dt {
+  font-size: 1.9rem;
+}
+
+.hero-stats dd,
+.dashboard-shortcuts small,
+.lead,
+.section-heading p,
+.project-summary,
+.detail-text,
+.module-domain p,
+.repo-card p,
+.privacy-card p,
+.contact-panel p {
+  font-size: 1rem;
+}
+
+.section-heading h2 {
+  max-width: 28ch;
+}
+
+.section-heading p {
+  max-width: 72ch;
+}
+
+.project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.project-card {
+  grid-template-columns: minmax(0, 1.08fr) minmax(180px, 0.92fr);
+  padding: 16px;
+}
+
+.project-role {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.93rem;
+  font-weight: 760;
+}
+
+.project-card .stack {
+  margin: 12px 0 16px;
+}
+
+.project-detail-button {
+  margin-top: auto;
+}
+
+.project-modal-card:focus-visible,
+.modal-close:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 3px;
+}
+
+.detail-meta dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 820;
+  text-transform: uppercase;
+}
+
+.detail-meta dd {
+  margin: 4px 0 0;
+  font-weight: 760;
+}
+
+.detail-list h3 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.detail-list p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.module-board {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.capability-card {
+  min-height: 0;
+}
+
+.capability-card header {
+  margin-bottom: 8px;
+}
+
+.capability-card .eyebrow {
+  margin: 0;
+}
+
+.capability-card h3 {
+  margin: 0 0 8px;
+}
+
+.capability-card .module-skills {
+  padding: 0;
+  list-style: none;
+}
+
+.capability-card .module-skills li {
+  padding: 5px 8px;
+  border-radius: 7px;
+  background: #eef4f3;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.privacy-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.privacy-card {
+  min-height: 200px;
+}
+
+.repo-showcase {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.repo-card {
+  min-height: 0;
+}
+
+.repo-card .stack {
+  margin-top: auto;
+}
+
+.repo-pending,
+.repo-verification-note {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.repo-verification-note {
+  margin-top: 16px;
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  min-height: 0;
+}
+
+.contact-intro h2 {
+  max-width: 20ch;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.contact-details > div {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact-details dt {
+  color: #a7ded8;
+  font-size: 0.83rem;
+  font-weight: 820;
+  text-transform: uppercase;
+}
+
+.contact-details dd {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  overflow-wrap: anywhere;
+}
+
+.contact-details a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-actions {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1180px) {
+  .project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-card {
+    grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
+  }
+
+  .module-board,
+  .repo-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .workspace-top {
+    align-items: flex-start;
+  }
+
+  .workspace-actions {
+    width: 100%;
+  }
+
+  .overview-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tech-strip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-panel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-actions {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .intro-panel h2 {
+    max-width: none;
+    font-size: clamp(1.65rem, 6.2vw, 1.8rem);
+  }
+
+  h1 {
+    max-width: 20ch;
+    font-size: clamp(1.45rem, 7vw, 1.8rem);
+  }
+
+  .workspace-actions .button {
+    flex: 1 1 auto;
+  }
+
+  .project-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-image {
+    min-height: 190px;
+  }
+
+  .profile-facts,
+  .contact-details,
+  .module-board,
+  .repo-showcase,
+  .privacy-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .profile-facts {
+    margin-top: 18px;
+  }
+
+  .dashboard-shortcuts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard-shortcuts a {
+    min-height: 0;
+  }
+
+  .dashboard-shortcuts strong {
+    margin-top: 10px;
+  }
+
+  .contact-panel {
+    padding: 20px;
+  }
+
+  .contact-actions .button {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mantén el layout móvil dentro del viewport sin ocultar desbordamientos. */
+@media (max-width: 620px) {
+  .app-shell,
+  .sidebar,
+  .nav,
+  .workspace,
+  .workspace-top,
+  .workspace-heading,
+  .view,
+  .intro-panel,
+  .overview-grid,
+  .dashboard-shell,
+  .dashboard-grid,
+  .hero-stats,
+  .dashboard-shortcuts,
+  .project-layout,
+  .project-grid,
+  .project-card,
+  .project-card-copy,
+  .project-image,
+  .project-image img,
+  .project-modal,
+  .project-modal-card,
+  .detail-content,
+  .filter-row,
+  .workspace-actions,
+  .contact-panel,
+  .contact-details,
+  .module-board,
+  .repo-showcase,
+  .privacy-grid {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .app-shell {
+    display: block;
+  }
+
+  .sidebar {
+    position: relative;
+    top: auto;
+    z-index: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workspace {
+    height: auto;
+    overflow: visible;
+  }
+
+  .workspace-top,
+  .workspace-actions,
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .workspace-actions .button,
+  .filter-button {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .project-grid,
+  .project-card,
+  .project-card-copy,
+  .project-modal-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-card {
+    min-width: 0;
+  }
+
+  .project-image,
+  .project-image img {
+    min-width: 0;
+  }
+
+  .nav a,
+  h1,
+  h2,
+  h3,
+  p,
+  .tag,
+  .filter-button,
+  .stack li {
+    overflow-wrap: anywhere;
   }
 }

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+<title id="title">Agenda ficticia de servicios</title><desc id="desc">Diseño original para administrar citas de un negocio de servicios con contenido ficticio.</desc>
+<rect width="960" height="600" rx="30" fill="#f4f2ed"/><rect x="28" y="28" width="904" height="544" rx="24" fill="#fff" stroke="#d9e2e5"/>
+<rect x="28" y="28" width="904" height="70" rx="24" fill="#0f2c35"/><rect x="28" y="74" width="904" height="24" fill="#0f2c35"/>
+<circle cx="64" cy="63" r="7" fill="#8ed5ce"/><circle cx="88" cy="63" r="7" fill="#bf7a23"/><text x="122" y="70" fill="#fff" font-family="Arial,sans-serif" font-size="23" font-weight="700">Agenda y servicios</text>
+<rect x="66" y="132" width="540" height="390" rx="16" fill="#fbfcfb" stroke="#d9e2e5"/><text x="94" y="174" fill="#123039" font-family="Arial" font-size="23" font-weight="700">Agenda diaria</text>
+<g stroke="#e5ebec"><path d="M90 218h490M90 278h490M90 338h490M90 398h490M90 458h490"/></g><g fill="#5c6f76" font-family="Arial" font-size="15"><text x="92" y="208">09:00</text><text x="92" y="268">11:00</text><text x="92" y="328">13:00</text><text x="92" y="388">15:00</text></g>
+<rect x="186" y="226" width="364" height="42" rx="9" fill="#167d86"/><text x="204" y="253" fill="#fff" font-family="Arial" font-size="15">Servicio · cita de ejemplo</text><rect x="186" y="348" width="290" height="42" rx="9" fill="#bf7a23"/><text x="204" y="375" fill="#fff" font-family="Arial" font-size="15">Consulta ficticia</text>
+<rect x="630" y="132" width="262" height="390" rx="16" fill="#183c46"/><text x="658" y="176" fill="#fff" font-family="Arial" font-size="20" font-weight="700">CATÁLOGO</text><g fill="#d2e2e3" font-family="Arial" font-size="16"><text x="658" y="232">Servicio general</text><text x="658" y="290">Producto demo</text><text x="658" y="348">Inventario</text><text x="658" y="406">Venta del día</text></g><g fill="#8ed5ce"><rect x="658" y="248" width="206" height="5" rx="3"/><rect x="658" y="306" width="180" height="5" rx="3"/><rect x="658" y="364" width="192" height="5" rx="3"/></g>
+</svg>
