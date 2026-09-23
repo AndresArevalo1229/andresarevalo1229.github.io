@@ -1,4 +1,4 @@
-# restaurant-admin-demo
+# Fragmentos de operación de restaurante
 
 Fragmentos técnicos públicos sobre administración para restaurante. No contienen código privado ni datos reales y no forman una aplicación ejecutable completa.
 
@@ -8,19 +8,20 @@ Ilustrar lógica de backend para menú, pedidos, proveedores e inventario usando
 
 ## Stack sugerido
 
+- .NET MAUI
 - Node.js
 - Express
 - Prisma
 - MySQL
-- TypeScript
 
 ## Modulos
 
-- Menu
+- Menú
 - Pedidos
 - Inventario
-- Proveedores
-- Movimientos
+- Cocina
+- Productos y combos
+- Ventas
 
 ## Privacidad
 

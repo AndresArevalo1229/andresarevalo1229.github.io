@@ -1,37 +1,28 @@
-# Sistema de arrendamiento - Caso de estudio privado
+# Plataforma de arrendamiento
 
-## Resumen
+## Problema
 
-Sistema administrativo para gestionar clientes, contratos, equipos arrendados, seguros y recibos. El proyecto se documenta como caso de estudio porque pertenece a un entorno privado.
+Administrar clientes, contratos, cobranza, pagos, documentos y reportes dentro de flujos conectados.
 
-## Mi rol
+## Solución
 
-Desarrollador Full Stack Jr.
+Una aplicación web organiza la consulta y captura administrativa mediante interfaces y servicios REST con persistencia relacional.
 
-## Tecnologias
+## Participación
 
-- React
-- APIs REST
-- MySQL
-- Formularios administrativos
+Desarrollo full stack de flujos administrativos, integración de servicios, acceso por roles y permisos.
 
-## Responsabilidades
+## Funciones
 
-- Desarrollo de pantallas administrativas.
-- Captura y consulta de informacion por modulos.
-- Integracion con APIs REST.
-- Apoyo en validaciones y pruebas funcionales.
-- Ajustes visuales y operativos para usuarios reales.
+- Gestión de clientes y contratos.
+- Seguimiento de cobranza y pagos.
+- Consulta de documentos y reportes.
+- Autenticación, roles y permisos.
+
+## Tecnologías
+
+React, TypeScript, APIs REST, Node.js, Express y MySQL.
 
 ## Privacidad
 
-No se publica codigo fuente, datos reales, capturas productivas, URLs internas, contratos, recibos ni informacion de clientes.
-
-## Fragmentos técnicos sugeridos
-
-Los ejemplos de `demos/rental-admin-demo/` ilustran estas ideas con datos ficticios; son fragmentos y no una aplicación completa:
-
-- Clientes ficticios.
-- Equipos genericos.
-- Contratos sin datos reales.
-- Recibos simulados.
+Caso anonimizado con mockup recreado. No incluye marcas, clientes, rutas, capturas, credenciales, datos reales ni código privado.
