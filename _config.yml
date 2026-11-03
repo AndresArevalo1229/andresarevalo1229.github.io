@@ -1,0 +1,16 @@
+title: Andrés Arevalo · Portafolio
+url: "https://andresarevalo1229.github.io"
+baseurl: ""
+exclude:
+  - README.md
+  - case-studies
+  - demos
+  - assets/projects/arrendamiento.svg
+  - assets/projects/automatizacion.svg
+  - assets/projects/automotriz.svg
+  - assets/projects/bienestar.svg
+  - assets/projects/joyeria.svg
+  - assets/projects/punto-venta.svg
+  - assets/projects/restaurante.svg
+  - assets/projects/servicios.svg
+  - assets/projects/wms-alimentos.svg

@@ -1,206 +1,68 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0f2c35" />
-    <title>Andrés Arévalo | Desarrollador Full Stack</title>
-    <meta
-      name="description"
-      content="Portafolio de Andrés Arévalo, desarrollador Full Stack en Guadalajara, Jalisco. Experiencia en aplicaciones web, móviles, APIs REST y sistemas administrativos."
-    />
-    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css?v=portfolio-refresh-2026.2" />
-    <script src="./app.js?v=portfolio-refresh-2026.1" defer></script>
-  </head>
-  <body>
-    <div class="app-shell" id="appShell">
-      <aside class="sidebar" aria-label="Navegación del portafolio">
-        <a class="brand" href="#inicio" data-route-link>
-          <span class="brand-mark" aria-hidden="true">AA</span>
-          <span>
-            <strong>Andrés Arévalo</strong>
-            <small>Desarrollador Full Stack</small>
-          </span>
-        </a>
-
-        <nav class="nav" aria-label="Vistas del portafolio">
-          <a href="#inicio" data-route-link data-nav-route="inicio" aria-current="page">Inicio</a>
-          <a href="#proyectos" data-route-link data-nav-route="proyectos">Proyectos</a>
-          <a href="#capacidades" data-route-link data-nav-route="capacidades">Capacidades</a>
-          <a href="#forma-de-trabajo" data-route-link data-nav-route="forma-de-trabajo">Forma de trabajo</a>
-          <a href="#github" data-route-link data-nav-route="github">GitHub</a>
-          <a href="#contacto" data-route-link data-nav-route="contacto">Contacto</a>
-        </nav>
-
-        <div class="sidebar-card">
-          <p class="eyebrow">Tecnologías principales</p>
-          <strong>React · TypeScript · .NET MAUI · Angular</strong>
-          <span>ASP.NET Core, APIs REST, MySQL y SQLite.</span>
-        </div>
-      </aside>
-
-      <main class="workspace" id="mainContent" tabindex="-1">
-        <header class="workspace-top">
-          <div class="workspace-heading">
-            <p class="eyebrow" id="pageEyebrow">Portafolio</p>
-            <h1 id="pageTitle">Desarrollador Full Stack</h1>
-            <p id="pageDescription">Aplicaciones web, móviles y sistemas administrativos.</p>
-          </div>
-          <div class="workspace-actions" role="group" aria-label="Contacto rápido">
-            <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com" aria-describedby="copyStatus">
-              Copiar correo
-            </button>
-            <a class="button secondary" href="mailto:andres.arevalonavarro@gmail.com">Enviar correo</a>
-            <a class="button secondary" href="https://github.com/AndresArevalo1229" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </header>
-
-        <p class="visually-hidden" id="copyStatus" role="status" aria-live="polite" aria-atomic="true"></p>
-
-        <section class="view dashboard-view is-active" id="view-inicio" data-view="inicio">
-          <div class="overview-grid">
-            <article class="intro-panel">
-              <p class="eyebrow">Andrés Arévalo · Guadalajara, Jalisco</p>
-              <h2>Desarrollo soluciones full stack para operaciones reales.</h2>
-              <p class="lead">
-                Construyo aplicaciones web y móviles para administrar clientes, inventarios,
-                ventas, citas, pagos, reportes y procesos internos. Los proyectos privados
-                se presentan mediante casos anonimizados y demostraciones recreadas.
-              </p>
-              <div class="hero-actions" role="group" aria-label="Acciones principales">
-                <a class="button primary" href="#proyectos" data-route-link>Explorar proyectos</a>
-                <a class="button secondary" href="#contacto" data-route-link>Hablemos</a>
-              </div>
-              <div class="profile-facts" aria-label="Perfil profesional">
-                <div><span>Experiencia actual</span><strong>Desarrollador Full Stack</strong><small>Febrero 2025 – Actualidad</small></div>
-                <div><span>Educación</span><strong>Ingeniería en Sistemas y Tecnologías de Información</strong><small>UNIVA · egresado, titulación en proceso</small></div>
-              </div>
-            </article>
-
-            <div class="dashboard-shell" role="img" aria-label="Resumen visual de áreas de desarrollo, con datos ilustrativos">
-              <div class="window-bar">
-                <span></span><span></span><span></span>
-                <strong>Áreas de desarrollo</strong>
-              </div>
-              <div class="dashboard-grid">
-                <article class="metric-card metric-contracts"><span>Web</span><strong>UI</strong><small>React · Angular</small></article>
-                <article class="metric-card metric-inventory"><span>Móvil</span><strong>Apps</strong><small>.NET MAUI</small></article>
-                <article class="metric-card metric-orders"><span>Backend</span><strong>API</strong><small>ASP.NET Core · REST</small></article>
-                <article class="operations-panel">
-                  <div class="panel-heading"><span>Enfoque</span><span>Áreas</span></div>
-                  <div class="operation-row"><span>Persistencia</span><strong>MySQL · SQLite</strong></div>
-                  <div class="operation-row"><span>Integraciones</span><strong>Servicios y pagos</strong></div>
-                  <div class="operation-row"><span>Operación</span><strong>Inventarios · ventas</strong></div>
-                </article>
-                <article class="flow-panel" aria-label="Flujo de trabajo: interfaz, servicios y datos">
-                  <span class="flow-step is-active">Interfaz</span><span class="flow-line" aria-hidden="true"></span>
-                  <span class="flow-step">Servicios</span><span class="flow-line" aria-hidden="true"></span>
-                  <span class="flow-step">Datos</span>
-                </article>
-              </div>
-            </div>
-          </div>
-
-          <dl class="hero-stats" aria-label="Resumen del portafolio">
-            <div><dt>9</dt><dd>casos profesionales</dd></div>
-            <div role="group" aria-label="9 capacidades"><dt>9</dt><dd>capacidades</dd></div>
-            <div><dt>8</dt><dd>tecnologías principales</dd></div>
-          </dl>
-
-          <section class="tech-strip" aria-labelledby="techTitle">
-            <div><p class="eyebrow">Stack principal</p><h2 id="techTitle">Tecnologías</h2></div>
-            <ul class="stack" aria-label="Tecnologías principales">
-              <li>React</li><li>TypeScript</li><li>.NET MAUI</li><li>Angular</li>
-              <li>ASP.NET Core</li><li>APIs REST</li><li>MySQL</li><li>SQLite</li>
-            </ul>
-          </section>
-
-          <nav class="dashboard-shortcuts" aria-label="Accesos rápidos">
-            <a href="#proyectos" data-route-link><span>01</span><strong>Proyectos</strong><small>Nueve casos anonimizados, con contexto y participación.</small></a>
-            <a href="#capacidades" data-route-link><span>02</span><strong>Capacidades</strong><small>Experiencia aplicada en interfaz, backend, datos e integraciones.</small></a>
-            <a href="#forma-de-trabajo" data-route-link><span>03</span><strong>Forma de trabajo</strong><small>Un proceso responsable desde el análisis hasta la documentación.</small></a>
-            <a href="#github" data-route-link><span>04</span><strong>GitHub</strong><small>Repositorios públicos seleccionados y verificables.</small></a>
-          </nav>
-        </section>
-
-        <section class="view projects-section" id="view-proyectos" data-view="proyectos" hidden>
-          <div class="section-heading">
-            <p class="eyebrow">Trabajo destacado</p>
-            <h2>Proyectos con enfoque en producto y operación.</h2>
-            <p>Casos profesionales anonimizados y demostraciones recreadas. No incluyen código privado, marcas, clientes ni datos productivos.</p>
-          </div>
-          <div class="filter-row" role="group" aria-label="Filtrar proyectos">
-            <button class="filter-button is-active" type="button" data-filter="Todos" aria-pressed="true">Todos</button>
-            <button class="filter-button" type="button" data-filter="Web" aria-pressed="false">Web</button>
-            <button class="filter-button" type="button" data-filter="Móvil" aria-pressed="false">Móvil</button>
-            <button class="filter-button" type="button" data-filter="Backend" aria-pressed="false">Backend</button>
-            <button class="filter-button" type="button" data-filter="Full Stack" aria-pressed="false">Full Stack</button>
-            <button class="filter-button" type="button" data-filter="Inventarios" aria-pressed="false">Inventarios</button>
-            <button class="filter-button" type="button" data-filter="Ventas" aria-pressed="false">Ventas</button>
-            <button class="filter-button" type="button" data-filter="Automatización" aria-pressed="false">Automatización</button>
-          </div>
-          <p class="visually-hidden" id="filterStatus" role="status" aria-live="polite" aria-atomic="true"></p>
-          <div class="project-grid" id="projectGrid" role="list" aria-label="Proyectos"></div>
-        </section>
-
-        <section class="view modules-section" id="view-capacidades" data-view="capacidades" hidden>
-          <div class="section-heading">
-            <p class="eyebrow">Experiencia aplicada</p>
-            <h2>Capacidades técnicas y funcionales</h2>
-            <p>Experiencia aplicada en interfaces, servicios, datos, seguridad e integraciones para sistemas administrativos.</p>
-          </div>
-          <div class="module-board" id="moduleBoard" role="list" aria-label="Capacidades técnicas"></div>
-        </section>
-
-        <section class="view privacy-section" id="view-forma-de-trabajo" data-view="forma-de-trabajo" hidden>
-          <div class="section-heading">
-            <p class="eyebrow">Criterio profesional</p>
-            <h2>Desarrollo responsable de proyectos</h2>
-            <p>Presento mi experiencia protegiendo código, información de clientes y datos operativos.</p>
-          </div>
-          <div class="privacy-grid" id="workSteps" role="list" aria-label="Etapas de trabajo"></div>
-        </section>
-
-        <section class="view repos-section" id="view-github" data-view="github" hidden>
-          <div class="section-heading">
-            <p class="eyebrow">GitHub</p>
-            <h2>Repositorios públicos seleccionados</h2>
-            <p>Proyectos y demostraciones públicas que muestran estructura, componentes, APIs y prácticas de desarrollo.</p>
-          </div>
-          <div class="repo-showcase" id="repoShowcase" role="list" aria-label="Repositorios públicos"></div>
-          <p class="repo-verification-note" id="repoVerificationNote" hidden></p>
-        </section>
-
-        <section class="view contact-section" id="view-contacto" data-view="contacto" hidden>
-          <div class="contact-panel">
-            <div class="contact-intro">
-              <p class="eyebrow">Contacto</p>
-              <h2>Disponible para oportunidades de desarrollo Full Stack</h2>
-              <p>Guadalajara, Jalisco · Experiencia desde febrero de 2025</p>
-            </div>
-            <dl class="contact-details">
-              <div><dt>Correo profesional</dt><dd><a href="mailto:andres.arevalonavarro@gmail.com">andres.arevalonavarro@gmail.com</a></dd></div>
-              <div><dt>GitHub</dt><dd><a href="https://github.com/AndresArevalo1229" target="_blank" rel="noopener noreferrer">github.com/AndresArevalo1229</a></dd></div>
-              <div><dt>Educación</dt><dd>Ingeniería en Sistemas y Tecnologías de Información · UNIVA · titulación en proceso</dd></div>
-              <div><dt>Tecnologías principales</dt><dd>React, TypeScript, .NET MAUI, Angular, ASP.NET Core, APIs REST, MySQL y SQLite</dd></div>
-            </dl>
-            <div class="contact-actions" role="group" aria-label="Acciones de contacto">
-              <button class="button primary" type="button" data-copy="andres.arevalonavarro@gmail.com" aria-describedby="copyStatus">Copiar correo</button>
-              <a class="button secondary" href="mailto:andres.arevalonavarro@gmail.com">Enviar correo</a>
-              <a class="button secondary" href="https://github.com/AndresArevalo1229" target="_blank" rel="noopener noreferrer">Ver GitHub</a>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-describedby="projectModalSummary" hidden>
-      <button class="project-modal-backdrop" type="button" data-modal-close tabindex="-1" aria-label="Cerrar detalles del proyecto"></button>
-      <section class="project-modal-card" tabindex="-1">
-        <button class="modal-close" type="button" data-modal-close aria-label="Cerrar detalles del proyecto">Cerrar</button>
-        <div id="projectModalContent"></div>
-      </section>
-    </div>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173f6d">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Desarrollador Full Stack Junior · React y Node.js | Andrés Arevalo</title>
+<meta name="description" content="Portafolio de Andrés Arevalo Navarro, desarrollador Full Stack Junior con React, TypeScript, Node.js y MySQL. Proyectos, experiencia y CV en español e inglés.">
+<link rel="canonical" href="https://andresarevalo1229.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Andrés Arevalo · Portafolio">
+<meta property="og:title" content="Desarrollador Full Stack Junior · React y Node.js | Andrés Arevalo">
+<meta property="og:description" content="Portafolio de Andrés Arevalo Navarro, desarrollador Full Stack Junior con React, TypeScript, Node.js y MySQL. Proyectos, experiencia y CV en español e inglés.">
+<meta property="og:url" content="https://andresarevalo1229.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css?v=2026-11-fase10">
+<script src="/app.js?v=2026-11-fase10" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="/" aria-label="Andrés Arevalo, inicio"><span class="brand-mark" aria-hidden="true">AA</span><span class="brand-name">Andrés Arevalo<small>Full Stack Developer · Junior</small></span></a>
+<button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="siteNav">Menú</button>
+<nav class="site-nav" id="siteNav" aria-label="Navegación principal" data-open="false"><a href="/" aria-current="page">Inicio</a><a href="/proyectos/">Proyectos</a><a href="/#experiencia">Experiencia</a><a href="/#cv">CV</a><a href="/#contacto" class="nav-contact">Contacto</a></nav></div></header>
+<main id="contenido" tabindex="-1">
+<section class="hero" aria-labelledby="heroTitle"><div class="container hero-grid"><div>
+<p class="eyebrow">Andrés Arevalo Navarro · Tlaquepaque, Jalisco</p><h1 id="heroTitle">Desarrollador<br>Full Stack <span>Junior.</span></h1>
+<p class="specialties">React Frontend · Node.js Backend</p>
+<p class="hero-copy">Desarrollo interfaces con React y TypeScript y APIs con Node.js, Express y MySQL. Experiencia en sistemas administrativos y productos desarrollados en equipo.</p>
+<div class="actions"><a class="button primary" href="#proyectos">Ver proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a><a class="button" href="/assets/cv/cv-andres-arevalo-full-stack-es.pdf" download>Descargar CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></a></div>
+<div class="hero-links"><a href="mailto:andres.arevalonavarro@gmail.com">Escríbeme</a><a href="https://github.com/AndresArevalo1229" target="_blank" rel="noopener noreferrer">GitHub</a><a href="/assets/cv/cv-andres-arevalo-full-stack-en.pdf" download lang="en">CV in English</a></div>
+</div><aside class="hero-aside" aria-label="Áreas de trabajo"><p class="aside-label">De la interfaz a los datos</p>
+<div class="focus-row"><span class="focus-number" aria-hidden="true">01</span><div><h2>Interfaces conectadas</h2><p>React · TypeScript<br>Formularios y APIs REST</p></div></div>
+<div class="focus-row"><span class="focus-number" aria-hidden="true">02</span><div><h2>Reglas de negocio</h2><p>Node.js · Express<br>Validaciones y permisos</p></div></div>
+<div class="focus-row"><span class="focus-number" aria-hidden="true">03</span><div><h2>Datos y consistencia</h2><p>MySQL · SQL<br>Transacciones e idempotencia</p></div></div>
+</aside></div></section>
+<section class="section soft" id="proyectos" aria-labelledby="projectsTitle"><div class="container">
+<div class="section-heading"><div><p class="eyebrow"><span class="section-number">01</span>Trabajo seleccionado</p><h2 id="projectsTitle">Código con contexto.</h2></div><p>Dos casos que muestran mi participación, sus retos técnicos y evidencia visual con datos ficticios.</p></div>
+<div class="project-grid"><article class="project-card" data-project-kind="react">
+<figure class="card-figure frutas-verduras"><img src="/assets/projects/frutas/venta-demo.png" width="1440" height="1000" alt="Formulario de venta ficticia que permite indicar cantidades en cajas y kilogramos para un viaje seleccionado." loading="lazy" decoding="async"></figure>
+<div class="card-content"><div class="card-context"><span>React Frontend</span><span>Laboral · En equipo</span></div>
+<h3><a href="/proyectos/frutas-verduras/">Gestión de frutas y verduras</a></h3><p class="card-description">Interfaces de inventario, viajes y ventas conectadas a las APIs del equipo. Formularios y validaciones para preparar ventas por cajas o kilogramos.</p>
+<ul class="stack" aria-label="Tecnologías"><li>React</li><li>TypeScript</li><li>APIs REST</li><li>Vite</li></ul><a class="text-link" href="/proyectos/frutas-verduras/">Ver caso de Gestión de frutas y verduras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a></div></article><article class="project-card" data-project-kind="escritorio">
+<figure class="card-figure travelquote"><img src="/assets/projects/travelquote/pagos-historial-macos.png" width="1920" height="1080" alt="Detalle de una cotización ficticia con saldo, pago anulado e historial de movimientos en TravelQuote para macOS." loading="lazy" decoding="async"></figure>
+<div class="card-content"><div class="card-context"><span>Escritorio</span><span>Personal · En desarrollo</span></div>
+<h3><a href="/proyectos/travelquote/">TravelQuote</a></h3><p class="card-description">Aplicación personal en C# y .NET MAUI para cotizaciones y pagos, con SQLite, PDF e historial. Evidencia visual de macOS con datos ficticios.</p>
+<ul class="stack" aria-label="Tecnologías"><li>C#</li><li>.NET MAUI</li><li>SQLite</li><li>xUnit</li></ul><a class="text-link" href="/proyectos/travelquote/">Ver caso de TravelQuote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a></div></article></div><div class="section-footer"><p class="caption-note">Las capturas muestran una interfaz local con API simulada y una aplicación de escritorio con datos de demostración.</p><a class="text-link" href="/proyectos/">Explorar proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a></div>
+</div></section>
+<section class="section" id="experiencia" aria-labelledby="experienceTitle"><div class="container">
+<div class="experience-grid"><div class="experience-heading"><p class="eyebrow"><span class="section-number">02</span>Experiencia</p><h2 id="experienceTitle">Desarrollo en equipo.<br>Aportes concretos.</h2><span class="experience-company">AlphaDev</span><p class="experience-role">Desarrollador Full Stack Junior</p><span class="experience-date">Febrero 2025 – actualidad · Guadalajara, Jalisco</span><p class="experience-description">Interfaces, servicios y mantenimiento de sistemas administrativos y portales de pacientes.</p></div>
+<div><article class="contribution"><h3>Interfaces e integración REST</h3><p>Desarrollé interfaces y formularios con React y TypeScript para inventario, cobranza y atención a pacientes, conectados con las APIs del equipo.</p></article>
+<article class="contribution"><h3>APIs y reglas de membresías</h3><p>Desarrollé y mantuve servicios REST de clientes y membresías. Implementé renovaciones con revisión fotográfica, intentos de pago idempotentes y actualizaciones transaccionales.</p></article>
+<article class="contribution"><h3>Mantenimiento y validación</h3><p>Añadí servicios de recompensas, garantías y permisos, con migraciones y pruebas automatizadas de reglas de negocio en los módulos correspondientes.</p></article></div></div>
+<div class="skills-grid"><div><h3>Frontend</h3><p>React, TypeScript, JavaScript, HTML y CSS. Formularios, estados de interfaz e integración REST.</p></div><div><h3>Backend y datos</h3><p>Node.js, Express, MySQL y SQL. Experiencia adicional con Prisma y Sails.js en los proyectos correspondientes.</p></div><div><h3>Herramientas y calidad</h3><p>Git, depuración, validaciones y pruebas de reglas backend. Mantenimiento de sistemas existentes y trabajo colaborativo.</p></div></div>
+</div></section>
+<section class="section soft" id="cv" aria-labelledby="cvTitle"><div class="container">
+<div class="cv-layout"><div class="cv-intro"><p class="eyebrow"><span class="section-number">03</span>Currículum</p><h2 id="cvTitle">El perfil adecuado<br>para cada vacante.</h2><p>Descarga mi CV principal o la versión enfocada en React Frontend o Node.js Backend. Cada uno está disponible en español e inglés.</p><a class="text-link" href="/assets/cv/cv-andres-arevalo-full-stack-es.pdf" target="_blank" rel="noopener">Ver CV Full Stack en español <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a></div><div class="cv-list"><article class="cv-row"><div><h3>Full Stack</h3><p>Versión principal · PDF, 1 página</p></div><div class="cv-actions"><a href="/assets/cv/cv-andres-arevalo-full-stack-es.pdf" download aria-label="Descargar CV Full Stack en español">Español <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></a><a href="/assets/cv/cv-andres-arevalo-full-stack-en.pdf" download aria-label="Descargar CV Full Stack en inglés"><span lang="en">English</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></a></div></article><article class="cv-row"><div><h3>React Frontend</h3><p>Interfaces e integración REST · PDF, 1 página</p></div><div class="cv-actions"><a href="/assets/cv/cv-andres-arevalo-react-es.pdf" download aria-label="Descargar CV React Frontend en español">Español <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></a><a href="/assets/cv/cv-andres-arevalo-react-en.pdf" download aria-label="Descargar CV React Frontend en inglés"><span lang="en">English</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></a></div></article><article class="cv-row"><div><h3>Node.js Backend</h3><p>APIs y reglas de negocio · PDF, 1 página</p></div><div class="cv-actions"><a href="/assets/cv/cv-andres-arevalo-node-es.pdf" download aria-label="Descargar CV Node.js Backend en español">Español <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></a><a href="/assets/cv/cv-andres-arevalo-node-en.pdf" download aria-label="Descargar CV Node.js Backend en inglés"><span lang="en">English</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></a></div></article></div></div>
+<div class="about-grid"><div><h3>Educación</h3><p>Ingeniería en Sistemas y Tecnologías de Información · UNIVA<br>Septiembre 2022 – diciembre 2025 · Egresado, titulación en proceso.</p></div><div><h3>Idiomas</h3><p>Español nativo.<br>Inglés A2, en formación.</p></div></div>
+</div></section>
+<section class="contact-section" id="contacto" aria-labelledby="contactTitle"><div class="container contact-panel"><div><p class="eyebrow">Conversemos</p><h2 id="contactTitle">¿Trabajamos en el próximo reto?</h2><p>Busco oportunidades como Full Stack Junior, React Frontend o Node.js Backend.</p></div>
+<div class="contact-details"><a class="contact-email" href="mailto:andres.arevalonavarro@gmail.com">andres.arevalonavarro@gmail.com</a><div class="actions"><button class="button" type="button" data-copy="andres.arevalonavarro@gmail.com" aria-describedby="copyStatus" hidden>Copiar correo</button><a class="button" href="https://github.com/AndresArevalo1229" target="_blank" rel="noopener noreferrer">Ver GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a></div><p class="copy-status" id="copyStatus" role="status" aria-live="polite" aria-atomic="true"></p></div></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><p>© 2026 Andrés Arevalo Navarro · Tlaquepaque, Jalisco</p><a href="https://github.com/AndresArevalo1229/andresarevalo1229.github.io" target="_blank" rel="noopener noreferrer">Código de este portafolio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a></div></footer>
+</body>
 </html>

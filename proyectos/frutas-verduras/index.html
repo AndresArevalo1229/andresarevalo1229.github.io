@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173f6d">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Gestión de frutas y verduras | Andrés Arevalo</title>
+<meta name="description" content="React y TypeScript para conectar inventario, viajes y ventas con las APIs del equipo.">
+<link rel="canonical" href="https://andresarevalo1229.github.io/proyectos/frutas-verduras/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Andrés Arevalo · Portafolio">
+<meta property="og:title" content="Gestión de frutas y verduras | Andrés Arevalo">
+<meta property="og:description" content="React y TypeScript para conectar inventario, viajes y ventas con las APIs del equipo.">
+<meta property="og:url" content="https://andresarevalo1229.github.io/proyectos/frutas-verduras/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css?v=2026-11-fase10">
+<script src="/app.js?v=2026-11-fase10" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="/" aria-label="Andrés Arevalo, inicio"><span class="brand-mark" aria-hidden="true">AA</span><span class="brand-name">Andrés Arevalo<small>Full Stack Developer · Junior</small></span></a>
+<button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="siteNav">Menú</button>
+<nav class="site-nav" id="siteNav" aria-label="Navegación principal" data-open="false"><a href="/">Inicio</a><a href="/proyectos/">Proyectos</a><a href="/#experiencia">Experiencia</a><a href="/#cv">CV</a><a href="/#contacto" class="nav-contact">Contacto</a></nav></div></header>
+<main id="contenido" tabindex="-1"><section class="page-header"><div class="container"><ol class="breadcrumb" aria-label="Ruta de navegación"><li><a href="/">Inicio</a></li><li><a href="/proyectos/">Proyectos</a></li><li aria-current="page">Gestión de frutas y verduras</li></ol><p class="eyebrow">Caso 01 · Laboral · En equipo</p><h1>Gestión de frutas y verduras</h1><p class="lead">React y TypeScript para conectar inventario, viajes y ventas con las APIs del equipo.</p><dl class="case-meta"><div><dt>Mi participación</dt><dd>Desarrollo frontend</dd></div><div><dt>Enfoque</dt><dd>Interfaz e integración REST</dd></div></dl></div></section>
+<div class="container"><figure class="case-banner"><a href="/assets/projects/frutas/venta-demo.png" target="_blank" rel="noopener" aria-label="Abrir captura de Gestión de frutas y verduras en tamaño original"><img src="/assets/projects/frutas/venta-demo.png" width="1440" height="1000" alt="Formulario de venta ficticia que permite indicar cantidades en cajas y kilogramos para un viaje seleccionado." fetchpriority="high" decoding="async"></a><figcaption>Interfaz local con datos ficticios y API simulada. Captura previa al envío de una venta.</figcaption><a class="image-link" href="/assets/projects/frutas/venta-demo.png" target="_blank" rel="noopener">Abrir captura en tamaño original <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a></figure>
+<div class="case-body"><nav class="case-toc" aria-label="Secciones del caso"><p>En este caso</p><a href="#resumen">Resumen</a><a href="#el-problema">El problema</a><a href="#mi-aportacion">Mi aportación</a><a href="#arquitectura-del-recorrido">Arquitectura del recorrido</a><a href="#reto-tecnico-preparar-una-venta-con-contexto-y-unidades">Reto técnico: preparar una venta con contexto y unidades</a><a href="#evidencia-visual">Evidencia visual</a><a href="#alcance-de-la-evidencia">Alcance de la evidencia</a></nav><article class="case-article" aria-label="Caso de Gestión de frutas y verduras"><h2 id="resumen">Resumen</h2>
+<p>Desarrollé el frontend de una aplicación para consultar inventario, organizar viajes y preparar ventas de frutas y verduras. Mi trabajo incluyó formularios, filtros, paginación y estados de interfaz, además de la adaptación de las respuestas de la API a modelos y componentes TypeScript.</p>
+<p>El caso se centra en la preparación de ventas por cajas o kilogramos: un flujo que relaciona producto, proveedor, viaje y existencias. El backend fue desarrollado por otros integrantes; mi contribución corresponde al cliente web.</p>
+<h2 id="el-problema">El problema</h2>
+<p>Una venta necesita conservar el contexto del producto y del viaje del que procede, y representar cantidades con unidades distintas. La interfaz debe mostrar la disponibilidad, validar la captura y comunicar qué información falta o está pendiente de cargar antes de enviar la operación.</p>
+<h2 id="mi-aportacion">Mi aportación</h2>
+<ul>
+<li>Desarrollé vistas de inventario, viajes y ventas con componentes y formularios React/TypeScript.</li>
+<li>Integré las APIs REST del equipo para consultar productos, proveedores, viajes y existencias, y transformar sus respuestas para la interfaz.</li>
+<li>Implementé el flujo de selección y captura de cantidades en cajas o kilogramos, con validaciones y nueva consulta de disponibilidad antes del envío.</li>
+<li>Incorporé filtros, paginación y estados de carga/error en los recorridos de consulta; atendí errores reportados por el equipo durante su validación.</li>
+</ul>
+<h2 id="arquitectura-del-recorrido">Arquitectura del recorrido</h2>
+<p>La interfaz React organiza páginas y componentes y utiliza servicios HTTP para consultar las APIs del equipo. React Router gestiona la navegación y Context API participa en el estado compartido. TypeScript permite expresar los datos que la interfaz recibe y utiliza.</p>
+<p><strong>Tecnologías:</strong> React, TypeScript, JavaScript, Vite, React Router, Context API, Fetch y CSS.</p>
+<h2 id="reto-tecnico-preparar-una-venta-con-contexto-y-unidades">Reto técnico: preparar una venta con contexto y unidades</h2>
+<p>El recorrido debe mantener relacionados el producto, el proveedor, el viaje y las cantidades elegidas. La captura cambia según la información disponible y admite cajas y kilogramos. La solución en el frontend combina consultas REST, estado de selección, campos tipados y validación de cantidades; antes de enviar se consulta de nuevo la disponibilidad.</p>
+<p>Esa comprobación del cliente ayuda a trabajar con información reciente, pero la consistencia entre operaciones simultáneas pertenece al servidor. No presento este caso como una implementación personal de inventario transaccional en el backend.</p>
+<h2 id="evidencia-visual">Evidencia visual</h2>
+<p><strong>Preparación de una venta.</strong> La captura muestra un formulario de cantidades asociado a un viaje ficticio. Permite ver la selección de cajas y kilogramos y la información de disponibilidad que recibe la interfaz.</p>
+<p><em>Interfaz local con datos ficticios y API simulada. La captura se tomó antes de enviar la venta; no representa una operación registrada ni datos de producción.</em></p>
+<h2 id="alcance-de-la-evidencia">Alcance de la evidencia</h2>
+<p>Las imágenes documentan la interfaz ejecutada localmente con respuestas simuladas. Mi participación frontend está registrada en el expediente del proyecto; las pruebas del equipo y la implementación del backend son responsabilidades distintas. No atribuyo a este trabajo una suite automatizada frontend no documentada, cifras comerciales o un despliegue comprobado.</p>
+<p>No se ofrece un enlace de demo ni de código mientras no exista un destino público verificado para este caso.</p></article></div>
+<section class="case-bottom" aria-labelledby="caseContactTitle"><div><h2 id="caseContactTitle">¿Quieres conocer más de mi trabajo?</h2><p>Consulta mi experiencia o conversemos sobre una oportunidad.</p></div><div class="actions"><a class="button" href="/proyectos/">Volver a proyectos</a><a class="button primary" href="/#contacto">Contactar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a></div></section></div></main>
+<footer class="site-footer"><div class="container footer-inner"><p>© 2026 Andrés Arevalo Navarro · Tlaquepaque, Jalisco</p><a href="https://github.com/AndresArevalo1229/andresarevalo1229.github.io" target="_blank" rel="noopener noreferrer">Código de este portafolio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg></a></div></footer>
+</body>
+</html>
