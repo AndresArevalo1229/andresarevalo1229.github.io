@@ -273,3 +273,24 @@ figcaption { color: var(--muted); font-size: .8rem; line-height: 1.55; margin-to
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* V-01: approved project cards, isolated local review. */
+.refined-card .card-figure { position:relative; display:block; aspect-ratio:16/10; padding:0; flex:none; }
+.refined-card .card-figure img { position:absolute; inset:12px; width:calc(100% - 24px); height:calc(100% - 24px); object-fit:contain; }
+.evidence-caption { margin:0; padding:13px 24px; border-bottom:1px solid var(--line); color:var(--muted); background:#fafcff; font-size:.8rem; line-height:1.6; }
+.refined-card .card-content { padding:26px; }
+.personal-role { margin:0 0 14px; font-size:.94rem; color:var(--ink); }
+.refined-card h3 { margin-bottom:15px; }
+.refined-card .card-description { font-size:1rem; }
+.refined-card .stack { margin-bottom:24px; }
+.card-actions { display:flex; gap:10px 18px; flex-wrap:wrap; align-items:center; margin-top:auto; border-top:1px solid var(--line); padding-top:18px; }
+.read-case { min-height:46px; display:inline-flex; align-items:center; gap:18px; background:var(--blue); border-radius:8px; padding:10px 17px; color:white; text-decoration:none; font-weight:650; font-size:.9rem; }
+.read-case:hover { color:white; background:var(--blue-dark); }
+.open-image { min-height:46px; display:inline-flex; align-items:center; font-size:.9rem; font-weight:600; }
+
+@media (max-width: 560px) {
+  .refined-card .card-content { padding: 23px; }
+  .evidence-caption { padding: 12px 23px; }
+  .card-actions { gap: 8px 17px; }
+  .refined-card h3 { font-size: 1.5rem; }
+}
