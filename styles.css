@@ -294,3 +294,10 @@ figcaption { color: var(--muted); font-size: .8rem; line-height: 1.55; margin-to
   .card-actions { gap: 8px 17px; }
   .refined-card h3 { font-size: 1.5rem; }
 }
+
+/* Tarjeta de caso backend exclusivamente textual. */
+.text-case-visual { aspect-ratio:16/10; padding:32px; display:flex; flex-direction:column; justify-content:center; background:var(--soft); border-bottom:1px solid var(--line); color:var(--blue); }
+.text-case-visual .eyebrow { margin-bottom:16px; }
+.text-case-visual .text-case-title { font-size:clamp(1.8rem,3.2vw,2.8rem); font-weight:750; line-height:1.2; letter-spacing:-.035em; margin:0 0 18px; }
+.text-case-visual p:last-child { margin:0; color:var(--muted); font-size:.95rem; }
+@media(max-width:560px) { .text-case-visual { padding:26px; } }
