@@ -43,10 +43,11 @@ if (filters && projectCards.length && filterStatus) {
   function filterProjects(filter) {
     let count = 0;
     projectCards.forEach((card) => {
-      const visible = filter === "todos" || card.dataset.projectKind === filter;
+      const visible = filter === "todos" || (card.dataset.projectKinds || card.dataset.projectKind || "").split(" ").includes(filter);
       card.hidden = !visible;
       if (visible) count += 1;
     });
+    document.querySelectorAll("[data-catalog-group]").forEach((group) => { group.hidden = ![...group.querySelectorAll("[data-project-kind]")].some((card) => !card.hidden); });
     filterButtons.forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.filter === filter));
     });

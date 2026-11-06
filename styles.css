@@ -274,7 +274,7 @@ figcaption { color: var(--muted); font-size: .8rem; line-height: 1.55; margin-to
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 
-/* V-01: approved project cards, isolated local review. */
+/* V-01: tarjetas aprobadas. */
 .refined-card .card-figure { position:relative; display:block; aspect-ratio:16/10; padding:0; flex:none; }
 .refined-card .card-figure img { position:absolute; inset:12px; width:calc(100% - 24px); height:calc(100% - 24px); object-fit:contain; }
 .evidence-caption { margin:0; padding:13px 24px; border-bottom:1px solid var(--line); color:var(--muted); background:#fafcff; font-size:.8rem; line-height:1.6; }
@@ -301,3 +301,15 @@ figcaption { color: var(--muted); font-size: .8rem; line-height: 1.55; margin-to
 .text-case-visual .text-case-title { font-size:clamp(1.8rem,3.2vw,2.8rem); font-weight:750; line-height:1.2; letter-spacing:-.035em; margin:0 0 18px; }
 .text-case-visual p:last-child { margin:0; color:var(--muted); font-size:.95rem; }
 @media(max-width:560px) { .text-case-visual { padding:26px; } }
+
+/* Agrupación y aportaciones por capa, sobre el diseño aprobado. */
+.catalog-group { min-width:0; }
+.group-title { font-size:1.6rem; margin:34px 0 24px; }
+.group-title span { display:block; color:var(--muted); font:400 .95rem/1.6 ui-sans-serif,system-ui,sans-serif; margin-top:8px; letter-spacing:0; }
+.catalog-group + .catalog-group { margin-top:46px; }
+.contribution-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin-bottom:28px; }
+.contribution-panel { min-width:0; padding:22px; border:1px solid var(--line); border-radius:12px; background:var(--soft); }
+.contribution-panel h3 { font-size:1.15rem; margin:0 0 16px; color:var(--blue); }
+.contribution-panel ul { margin-bottom:0; }
+.case-toc a { overflow-wrap:anywhere; }
+@media(max-width:700px){ .contribution-grid { grid-template-columns:1fr; }.contribution-panel { padding:19px; } }

@@ -1,36 +1,26 @@
 # Andrés Arevalo · Portafolio
 
-Portafolio profesional de un Desarrollador Full Stack Junior con enfoque en React Frontend y Node.js Backend. HTML, CSS y JavaScript nativo, publicado en [GitHub Pages](https://andresarevalo1229.github.io/).
+Portafolio profesional de un Desarrollador Full Stack Junior con especialidades React Frontend y Node.js Backend. HTML, CSS y JavaScript nativo para GitHub Pages.
 
-## Contenido
+## Casos
 
-- Experiencia profesional, habilidades y contacto.
-- Cinco casos individuales: interfaz administrativa (frontend), portal de búsqueda y citas (frontend), API de operaciones administrativas (backend textual), gestión de frutas y verduras (frontend laboral) y TravelQuote (proyecto personal de escritorio).
-- Seis CV PDF de una página: Full Stack, React Frontend y Node.js Backend, en español e inglés.
+Siete proyectos profesionales desarrollados en equipo y un proyecto personal. Cada caso distingue mis ampliaciones del código base y del trabajo de otros integrantes.
 
-| Caso publicado | Alcance presentado |
-| --- | --- |
-| [Interfaz de seguimiento administrativo](https://andresarevalo1229.github.io/proyectos/interfaz-administrativa/) | Ampliaciones React/TypeScript e integración REST en equipo. |
-| [Portal de búsqueda y citas](https://andresarevalo1229.github.io/proyectos/portal-de-citas/) | Frontend React, filtros, citas y cliente API tipado. |
-| [API de operaciones administrativas](https://andresarevalo1229.github.io/proyectos/api-administrativa/) | Contribuciones backend: validaciones, reintentos, transacciones, migraciones y pruebas. |
-| [Gestión de frutas y verduras](https://andresarevalo1229.github.io/proyectos/frutas-verduras/) | Frontend laboral e integración con APIs del equipo. |
-| [TravelQuote](https://andresarevalo1229.github.io/proyectos/travelquote/) | Proyecto personal C#/.NET MAUI para escritorio. |
+- [Plataforma de gestión administrativa](https://andresarevalo1229.github.io/proyectos/interfaz-administrativa/): Formularios e integración REST; pólizas y reportes de cuentas por cobrar.
+- [Inventario y ventas con trazabilidad](https://andresarevalo1229.github.io/proyectos/inventario-ventas/): Formularios y cortes; trazabilidad, reintentos y controles de inventario.
+- [Portal de pacientes y API de reportes](https://andresarevalo1229.github.io/proyectos/portal-de-citas/): Búsqueda, filtros y citas; normalización de horarios y ampliaciones de reportes.
+- [API de operaciones administrativas](https://andresarevalo1229.github.io/proyectos/api-administrativa/): backend Node.js/Express/MySQL, validaciones y pruebas.
+- [Reservas y gestión de servicios](https://andresarevalo1229.github.io/proyectos/reservas-servicios/): Reserva pública y disponibilidad; sucursales, asignaciones y beneficios QR.
+- [Gestión de actividades y checklist](https://andresarevalo1229.github.io/proyectos/gestion-actividades/): Checklist y perfil; asistencia, permisos y avisos en ambas capas.
+- [Gestión de frutas y verduras](https://andresarevalo1229.github.io/proyectos/frutas-verduras/): frontend React/TypeScript e integración REST.
+- [TravelQuote](https://andresarevalo1229.github.io/proyectos/travelquote/): proyecto personal C#/.NET MAUI de escritorio.
 
-Cada caso identifica su evidencia: capturas locales con datos ficticios, API simulada, aplicación Mac Catalyst de demostración o recreaciones esquemáticas expresamente etiquetadas. Las recreaciones no demuestran operaciones reales. No son capturas de producción ni métricas de negocio. El sitio no incluye código de los productos presentados.
+Las capturas usan datos ficticios y señalan si la API está simulada. Las cuatro recreaciones y el esquema editorial están identificados y no demuestran operaciones reales. El sitio no incluye código empresarial, bases de datos o documentación interna.
 
-## Estructura
+## CV y estructura
 
-- `index.html`: presentación, experiencia, CV y contacto.
-- `proyectos/`: catálogo y páginas estáticas de casos.
-- `styles.css` y `app.js`: diseño adaptable, menú, filtros y copia de correo.
-- `assets/projects/`: recursos visuales seleccionados, con su procedencia y datos ficticios identificados en cada caso.
-- `assets/cv/`: PDF finales, sin conversiones ni modificaciones de contenido.
-- `404.html` y `sitemap.xml`: navegación y descubrimiento.
+Seis PDF originales de una página: Full Stack, React Frontend y Node.js Backend, en español e inglés. Se conservan sin conversiones o ediciones.
 
-No se requieren paquetes ni compilación de la aplicación. GitHub Pages publica desde `main` y la raíz. `_config.yml` excluye del sitio los documentos/demos heredados y mockups antiguos no utilizados; los archivos heredados restantes del repositorio no forman parte del catálogo ni del sitio desplegado. La documentación interna y los respaldos se conservan fuera del repositorio.
+`index.html` presenta experiencia, proyectos, CV y contacto. `proyectos/` contiene catálogo y casos. `styles.css` y `app.js` implementan el diseño responsive, el menú y filtros. `assets/projects/` guarda los visuales seleccionados y `assets/cv/` los PDF. No se requieren dependencias ni compilación.
 
-## Revisión local
-
-Para revisar únicamente los archivos del sitio, servir una copia de la selección publicada con la biblioteca estándar de Python, enlazada a `127.0.0.1`. El servidor simple no aplica las exclusiones Jekyll si se sirve directamente toda la raíz del repositorio.
-
-El contenido y la navegación principal funcionan sin JavaScript. Las imágenes enlazan a su tamaño original; los CV tienen enlaces de lectura y descarga, sin enlaces editables de Canva.
+GitHub Pages usa main y la raíz; `_config.yml` mantiene las exclusiones existentes de documentos/demos heredados. No copiar carpetas privadas o expedientes al repositorio. Un servidor simple no aplica las exclusiones de Jekyll si se sirve directamente toda la raíz histórica.
