@@ -1,21 +1,12 @@
-# Capacidades técnicas y funcionales
+# Capacidades demostradas en ocho casos de estudio
 
-## Resumen
+Contribuciones personales en siete proyectos profesionales desarrollados en equipo y un proyecto personal de escritorio. El catálogo público identifica el alcance de cada caso.
 
-Experiencia aplicada en interfaces, servicios, persistencia, seguridad e integraciones para sistemas administrativos y operativos.
+- Frontend: React, TypeScript, JavaScript/JSX, HTML y CSS; formularios, estados de interfaz e integración REST.
+- Backend: Node.js, Express y Sails.js según el proyecto; validaciones, permisos, reintentos y procesamiento transaccional de operaciones concretas.
+- Datos: MySQL, SQL, Prisma y Knex en los casos correspondientes; migraciones y mantenimiento de sistemas existentes.
+- Pruebas: node:test para cambios backend documentados y xUnit en TravelQuote.
+- Proyecto personal: C#, .NET MAUI y SQLite para escritorio, con evidencias Mac Catalyst. No se presenta como una aplicación móvil entregada.
+- Las contribuciones de otros integrantes y las bases heredadas conservan su atribución. Las imágenes indican datos ficticios, simulaciones o recreaciones. No se publica código empresarial ni información interna.
 
-## Áreas
-
-- Frontend web con React, TypeScript y Angular.
-- Aplicaciones móviles con .NET MAUI y C#.
-- Backend y APIs REST con ASP.NET Core, Node.js, Express y Sails.js.
-- Persistencia con MySQL y SQLite.
-- Autenticación, roles, permisos, JWT y OAuth.
-- Pagos, notificaciones e integraciones externas.
-- Inventarios, ventas, pedidos y reportes.
-- Pruebas, validaciones y manejo de errores.
-- Automatización y procesamiento multimedia con SignalR y FFprobe.
-
-## Privacidad
-
-La presentación agrupa capacidades sin rutas, marcas, clientes, código, credenciales ni información operativa privada.
+Catálogo: https://andresarevalo1229.github.io/proyectos/

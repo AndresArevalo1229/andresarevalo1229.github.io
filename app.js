@@ -79,3 +79,69 @@ document.querySelectorAll("[data-copy]").forEach((button) => {
     }
   });
 });
+
+// Conserva los enlaces a los recursos completos como alternativa sin JavaScript.
+if (typeof HTMLDialogElement !== "undefined" && document.querySelector("[data-image-preview]")) {
+  const dialog = document.createElement("dialog");
+  dialog.className = "image-dialog";
+  dialog.setAttribute("aria-labelledby", "imagePreviewTitle");
+  dialog.setAttribute("aria-describedby", "imagePreviewCaption");
+  dialog.innerHTML = `
+    <div class="image-dialog-header">
+      <h2 id="imagePreviewTitle">Imagen ampliada</h2>
+      <button class="image-dialog-close" type="button" autofocus>Cerrar ×</button>
+    </div>
+    <figure>
+      <img class="image-dialog-image" alt="">
+      <figcaption id="imagePreviewCaption"></figcaption>
+    </figure>
+    <div class="image-dialog-footer">
+      <span>Escape para cerrar · Datos de demostración</span>
+      <a class="image-link" target="_blank" rel="noopener noreferrer">Abrir archivo original ↗</a>
+    </div>`;
+  document.body.append(dialog);
+  const previewImage = dialog.querySelector("img");
+  const previewTitle = dialog.querySelector("h2");
+  const previewCaption = dialog.querySelector("figcaption");
+  const originalLink = dialog.querySelector("a");
+  let opener;
+
+  document.addEventListener("click", (event) => {
+    const link = event.target instanceof Element ? event.target.closest("a[data-image-preview]") : null;
+    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const figure = link.closest("figure") || link.closest("article")?.querySelector("figure");
+    const image = link.querySelector("img") || figure?.querySelector("img");
+    if (!image) return;
+    event.preventDefault();
+    opener = link;
+    previewImage.src = link.href;
+    previewImage.alt = image.alt;
+    previewTitle.textContent = link.closest("article.project-card")?.querySelector("h3")?.textContent || document.querySelector("main h1")?.textContent || "Imagen ampliada";
+    previewCaption.textContent = figure?.querySelector("figcaption")?.textContent || image.alt;
+    originalLink.href = link.href;
+    dialog.showModal();
+    document.body.classList.add("image-preview-open");
+  });
+  dialog.querySelector("button").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const first = dialog.querySelector("button");
+    const last = originalLink;
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  dialog.addEventListener("click", (event) => {
+    const bounds = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+  });
+  dialog.addEventListener("close", () => {
+    document.body.classList.remove("image-preview-open");
+    opener?.focus();
+    previewImage.removeAttribute("src");
+  });
+}

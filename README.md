@@ -1,12 +1,12 @@
 # Andrés Arevalo · Portafolio
 
-Portafolio profesional de un Desarrollador Full Stack Junior con especialidades React Frontend y Node.js Backend. HTML, CSS y JavaScript nativo para GitHub Pages.
+Portafolio profesional de un Desarrollador Full Stack especializado en React, TypeScript y Node.js. HTML, CSS y JavaScript nativo para GitHub Pages.
 
 ## Casos
 
 Siete proyectos profesionales desarrollados en equipo y un proyecto personal. Cada caso distingue mis ampliaciones del código base y del trabajo de otros integrantes.
 
-- [Plataforma de gestión administrativa](https://andresarevalo1229.github.io/proyectos/interfaz-administrativa/): Formularios e integración REST; pólizas y reportes de cuentas por cobrar.
+- [Gestión administrativa de arrendamiento](https://andresarevalo1229.github.io/proyectos/interfaz-administrativa/): Formularios e integración REST; pólizas y reportes de cuentas por cobrar.
 - [Inventario y ventas con trazabilidad](https://andresarevalo1229.github.io/proyectos/inventario-ventas/): Formularios y cortes; trazabilidad, reintentos y controles de inventario.
 - [Portal de pacientes y API de reportes](https://andresarevalo1229.github.io/proyectos/portal-de-citas/): Búsqueda, filtros y citas; normalización de horarios y ampliaciones de reportes.
 - [API de operaciones administrativas](https://andresarevalo1229.github.io/proyectos/api-administrativa/): backend Node.js/Express/MySQL, validaciones y pruebas.
